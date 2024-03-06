@@ -1,0 +1,3 @@
+[submodule "jaylog/themes/hugo-tranquilpeak-theme"]
+	path = jaylog/themes/hugo-tranquilpeak-theme
+	url = https://github.com/kakawait/hugo-tranquilpeak-theme.git
