@@ -1,386 +1,256 @@
-# Tranquilpeak
-# Version : 0.5.3-BETA
-# Author : Thibaud Leprêtre
+baseURL = 'http://xxx.xxx/'
+languageCode = 'en-us'
 
-# I STRONGLY recommend you to use a CDN to speed up loading of pages.
-# There is many free CDN like Cloudinary or you can also use indirectly
-# by using services like Google Photos.
+# website title
+# 网站标题
+title = 'NewBee'
+# theme
+# 主题
+theme = "NewBee"
+# default content of website
+# 网站默认语言
+defaultContentLanguage = "en"
+# whether to use robots.txt
+# 是否使用 robots.txt
+enableRobotsTXT = true
 
-# If you want to store images yourself, please read this guidelines:
-# For users, if you only use this theme, put your images directly in `source/assets/images` folder
-# But if you want to add local images, you can put your images directly in `source/assets/images` folder
-# For developpers, if you modify this theme, put your images in `source/images` folder and
-# use grunt task `build` to synchronize assets
+# length of summary
+# 摘要的字数限制
+summaryLength = 50
 
-baseURL = "https://example.org/"
-languageCode = "en-us"
-defaultContentLanguage = "en-us"
-title = "Hugo tranquilpeak theme"
-theme = "hugo-tranquilpeak-theme"
-disqusShortname = "hugo-tranquilpeak-theme"
-# googleAnalytics = "UA-123-45"
-paginate = 7
-canonifyurls = true
+# If true, auto-detect Chinese/Japanese/Korean Languages in the content.
+# This will make .Summary and .WordCount behave correctly for CJK languages.
+# 中日韩语言请改为 true
+hasCJKLanguage = false
 
-[permalinks]
-  posts = "/:year/:month/:slug/"
-
-[taxonomies]
-  tag = "tags"
-  category = "categories"
-  archive = "archives"
-
-# ------
-# Markup
-# ------
-[markup]
-  # Set startLevel = 1 to support # title (<h1>title</h1>) otherwise table of content is blank/empty
-  [markup.tableOfContents]
-    endLevel = 3
-    ordered = false
-    startLevel = 1
-
-# ------
-# Author
-# ------
 [author]
-  name = "Firstname Lastname"
-  bio = "Super bio with markdown support **COOL**"
-  job = "Your job title"
-  location = "France"
-  # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  gravatarEmail = "thibaud.lepretre@gmail.com"
-  # Your profile picture
-  # Overwritten by your gravatar image if `author.gravatarEmail` is filled
-  picture = "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
-  # Your Twitter username without the @. E.g : thibaudlepretre
-  # twitter = "thibaudlepretre"
-  # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
-  # googlePlus = "+ThibaudLepretre"
+    name = "xioyito"
+    description = "Be Water, My Friend."
+    # profile photo of author in author card
+    # 作者头像
+    image = "/images/author.jpeg"
+    # link of followme in author card and footer
+    # 作者卡片里 followme 和页脚作者的链接
+    link = "https://github.com/xioyito"
 
-# ------------
-# Sidebar menu
-# ------------
-[[menu.main]]
-  weight = 1
-  identifier = "home"
-  name = "Home"
-  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-home\" aria-hidden=\"true\"></i>"
-  url = "/"
-[[menu.main]]
-  weight = 2
-  identifier = "categories"
-  name = "Categories"
-  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-bookmark\" aria-hidden=\"true\"></i>"
-  url = "/categories"
-[[menu.main]]
-  weight = 3
-  identifier = "tags"
-  name = "Tags"
-  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-tags\" aria-hidden=\"true\"></i>"
-  url = "/tags"
-[[menu.main]]
-  weight = 4
-  identifier = "archives"
-  name = "Archives"
-  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-archive\" aria-hidden=\"true\"></i>"
-  url = "/archives"
-[[menu.main]]
-  weight = 5
-  identifier = "about"
-  name = "About"
-  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-question\" aria-hidden=\"true\"></i>"
-  url = "/#about"
-
-[[menu.links]]
-  weight = 1
-  identifier = "github"
-  name = "GitHub"
-  pre = "<i class=\"sidebar-button-icon fab fa-lg fa-github\" aria-hidden=\"true\"></i>"
-  url = "https://github.com/kakawait"
-[[menu.links]]
-  weight = 2
-  identifier = "stackoverflow"
-  name = "Stack Overflow"
-  pre = "<i class=\"sidebar-button-icon fab fa-lg fa-stack-overflow\" aria-hidden=\"true\"></i>"
-  url = "https://stackoverflow.com/users/636472/kakawait"
-
-[[menu.misc]]
-  weight = 1
-  identifier = "rss"
-  name = "RSS"
-  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-rss\" aria-hidden=\"true\"></i>"
-  url = "/index.xml"
-
-# -------------
-# Customization
-# -------------
+# Taxonomies, Currently, only the following 3 taxonomies are supported
+# If you don't want one of them，delete it in [menus] instead here
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+    series = "series"
+    
 [params]
-  # -----------
-  # Description
-  # -----------
-  description = "Hugo tranquilpeak theme demo"
+    [params.site]
+        onlyOneLang = false
+        # style of theme: auto, light, dark
+        mode = 'auto'
+    # page configuration
+    # 页面配置  
+    [params.page]
 
-  # ------------------
-  # Syntax highlighter
-  # ------------------
-  # Syntax highlighter, possible choice between: "highlight.js" and "prism.js"
-  # You can comment it to disable syntax highlighting
-  syntaxHighlighter = "highlight.js"
+        # top image in home page, note that the "/" in path is necessary, the same applies below
+        # 主页的顶部图，路径开头”/“是必需的。下同
+        homeTopImg = "/images/home.jpg"
+        # title in home top image, support Markdown
+        # 主页标题，支持Markdown语法
+        homeTitle = "XIOYITO"
+        # font size(px)
+        # 主页标题字号（单位：px）
+        homeTitleFontSize = 40
+        # content in home top image, support Markdown
+        # 主页内容，支持Markdown语法
+        homeContent = "Be Water, My Friend"
+        # font size(px)
+        # 主页内容字号（单位：px）
+        homeContentFontSize = 20
 
-  # -----------
-  # Date format
-  # -----------
-  # Customize date format use to render blog post date, categories and other
-  # You must use date format used by Go Time package https://golang.org/pkg/time/
-  # Months (not work with short month like "jan", "feb", etc) are translated if translation exists on i18n folders
-  # Default format is: January 2, 2006
-  #  dateFormat = "2 January 2006"
+        # top image in categories terms page
+        # 分类页面的顶部图
+        categoryTopImg = "/images/categories.jpg"
+        # description of categories terms page
+        # 子标题
+        categoryDes = "description of categories page"
 
-  # ---------------------------
-  # Posts related configuration
-  # ---------------------------
-  # Global keywords configuration. Following keywords will be add to every pages
-  #  keywords = ["development", "next-gen"]
+        # top image in tags terms page
+        # 标签页面的顶部图
+        tagTopImg = "/images/tag.jpg"
+        # description of tags terms page
+        # 子标题
+        tagDes = "description of tags page"
 
-  # Hide sidebar on all article page to let article take full width to improve reading, and enjoy wide images and cover images. (true: enable, false: disable)
-  clearReading = true
+        # top image in allosts page
+        # 所有文章页面的顶部图
+        allPostsTopImg = "/images/allPosts.jpg"
+        # description of allposts page
+        # 子标题
+        allPostsDes = "description of allPosts page"
 
-  # Define categories will create hierarchy between parents: `categories = ["foo", "bar"]` will consider "bar" a sub-category of "foo".
-  # If false it will flat categories.
-  hierarchicalCategories = true
+        # top image in about page
+        # 关于页面的顶部图
+        aboutTopImg = "/images/about.jpg"
+        # description of about page
+        # 子标题
+        aboutDes = "description of about page"
 
-  # Display `Next` on left side of the pagination, and `Prev` on right side one.
-  # If you set this value to `true`, these positions swap.
-  #  swapPaginator = true
+        # default image for a post without "image" param
+        # 当文章没有设置图片时，将用此图来替代
+        defaultPostImg = "/images/default.jpg"
+        
+        # 主页文章最大显示数量
+        maxHomePostCount = 5
+        # 相关文章最大显示数量
+        maxPageRelatedCount = 5
+        # 最新文章最大显示数量
+        maxPageNewestCount = 5
 
-  # ---------------------
-  # Sidebar configuration
-  # ---------------------
-  # Customization
-  # Define the behavior of the sidebar
-  # 1: Display extra large sidebar on extra large screen, large sidebar on large screen,
-  #    medium sidebar on medium screen and header bar on small screen and
-  # extra large sidebar is swiped on extra large screen and large sidebar on all lower screen (default)
-  # 2: Display large sidebar on large screen, medium sidebar on medium screen and
-  #    header bar on small screen and large sidebar is swiped
-  # 3: Display medium sidebar on large and medium screen and header bar on small screen and
-  #    medium sidebar is swiped
-  # 4: Display header bar on all screens, extra large sidebar is swiped on extra large screen and
-  #    large sidebar is swiped on all lower screens
-  # 5: Display header bar on all screens and large sidebar is swiped on large screen
-  # 6: Display header bar on all screens and medium sidebar is swiped
-  sidebarBehavior = 1
+    # Valine comment
+    # Valine评论（详情请移步：https://valine.js.org/）
+    [params.valine]
+        # 是否开启Valine评论系统
+        enable = false
+        # appid，具体请参考：https://valine.js.org/configuration.html#appId
+        appid = 'xxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxx'
+        # appKey，具体请参考：https://valine.js.org/configuration.html#appKey
+        appkey = 'xxxxxxxxxxxxxxxxxxxxxxxx'
+        # 输入框提示文字
+        placeholder = '输入你的评论'
+        # 头像，具体请参考：https://valine.js.org/avatar.html
+        avatar = 'robohash'
+        # 评论时要求的必须填写项，可选值：['nick']或['nick','mail']
+        requiredFields = ['nick']
+        # 文章访问量统计
+        visitor = true
+        # 单页最大评论数目
+        pageSize = 5
 
-  # Customize link of author avatar in sidebar
-  #  [params.sidebar.profile]
-  #    url = "/#about"
-
-  # -------------------
-  # Media configuration
-  # -------------------
-  # Your blog cover picture. I STRONGLY recommend you to use a CDN to speed up loading of pages.
-  # There is many free CDN like Cloudinary or you can also use indirectly
-  # by using services like Google Photos.
-  # Current image is on AWS S3 and delivered by AWS CloudFront.
-  # Otherwise put your image, for example `cover.jpg` in folder `static/images/`,
-  # and use relative url : `images/cover.jpg`
-  coverImage = "images/cover.jpg"
-
-  # Display an image gallery at the end of a post which have photos variables (false: disabled, true: enabled)
-  imageGallery = true
-
-  # Display thumbnail image of each post on index pages (false: disabled, true: enabled)
-  thumbnailImage = true
-  # Display thumbnail image at the right of title in index pages (`right`, `left` or `bottom`)
-  # Set this value to `right` if you have old posts to keep the old style on them
-  # and define `thumbnailImagePosition` on a post to overwrite this setting
-  thumbnailImagePosition = "bottom"
-  # Automatically select the cover image or the first photo from the gallery of a post if there is no thumbnail image as the thumbnail image
-  # Set this value to `true` if you have old posts that use the cover image or the first photo as the thumbnail image
-  # and set `autoThumbnailImage` to `false` on a post to overwrite this setting
-  autoThumbnailImage = true
-
-  # Your favicon path, default is "/favicon.png"
-  #  favicon = "/favicon.png"
-
-  # ------------------
-  # External resources
-  # ------------------
-  # Custom CSS. Put here your custom CSS files. They are loaded after the theme CSS;
-  # they have to be referred from static root. Example
-  #  [[params.customCSS]]
-  #    href = "css/mystyle.css"
-
-  # Custom JS. Put here your custom JS files. They are loaded after the theme JS;
-  # they have to be referred from static root. Example
-  #  [[params.customJS]]
-  #     src = "js/myscript.js"
-  [[params.customJS]]
-    src = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"
-    integrity = "sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw=="
-    crossorigin = "anonymous"
-    async = true
-    defer = true
-
-  [[params.customJS]]
-    src = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"
-    integrity = "sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow=="
-    crossorigin = "anonymous"
-    async = true
-    defer = true
-
-  [[params.customJS]]
-    src = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"
-    integrity = "sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ=="
-    crossorigin = "anonymous"
-    async = true
-    defer = true
-
-  [[params.customJS]]
-    src = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"
-    integrity = "sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA=="
-    crossorigin = "anonymous"
-    async = true
-    defer = true
-
-  [[params.customJS]]
-    src = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"
-    integrity = "sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg=="
-    crossorigin = "anonymous"
-    async = true
-    defer = true
-
-  [[params.customJS]]
-    src = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"
-    integrity = "sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog=="
-    crossorigin = "anonymous"
-    async = true
-    defer = true
-
-  [[params.customJS]]
-    src = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"
-    integrity = "sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA=="
-    crossorigin = "anonymous"
-    async = true
-    defer = true
-
-  [[params.customJS]]
-    src = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"
-    integrity = "sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w=="
-    crossorigin = "anonymous"
-    async = true
-    defer = true
-
-  [[params.customJS]]
-    src = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"
-    integrity = "sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg=="
-    crossorigin = "anonymous"
-    async = true
-    defer = true
-
-  [[params.customJS]]
-    src = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"
-    integrity = "sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw=="
-    crossorigin = "anonymous"
-    async = true
-    defer = true
-
-  # ---------------
-  # Sharing options
-  # ---------------
-  # Comment and uncomment to enable or disable sharing options
-  # If you wanna add a sharing option, read user documentation :
-  # Tranquilpeak configuration > Theme configuration > sharing-options
-  [[params.sharingOptions]]
-    name = "Facebook"
-    icon = "fab fa-facebook-square"
-    url = "https://www.facebook.com/sharer/sharer.php?u=%s"
-
-  [[params.sharingOptions]]
-    name = "Twitter"
-    icon = "fab fa-twitter"
-    url = "https://twitter.com/intent/tweet?text=%s"
+    # footer
+    # 页面底部配置
+    [params.footer]
+        # whether to enable footer
+        enable = true
+        # copyright
+        copyRight = true
+        from = 2022
+        # wheher to enable count of visitor and view
+        visitor = true
+        # wheher to enable theme information
+        themeInfo = true
 
 
-#  [[params.sharingOptions]]
-#    name = "Whatsapp"
-#    icon = "fab fa-whatsapp"
-#    url = "https://wa.me/?text=%s"
+[menus]
+    [[menus.main]]
+        # 名称
+        name = "Home"
+        # 路径
+        url = "/"
+        # order weight, more small more close to left, at least 1
+        # 排序的权重，越小越靠前（左），最小为1
+        weight = 1
+        # icon from FontAwesome in front of single entry
+        # 图标，本主题使用的图标来自FontAwesome
+        pre = "<i class='fa fa-home'></i>"
+    [[menus.main]]
+        name = "Posts"
+        url = "/posts"
+        weight = 2
+        pre = "<i class='fa fa-book'></i>"
+    [[menus.main]]
+        name = "Categories"
+        url = "/categories"
+        weight = 3
+        pre = "<i class='fa fa-folder-open'></i>"
+    [[menus.main]]
+        name = "Tags"
+        url = "/tags"
+        weight = 5
+        pre = "<i class='fa fa-tags'></i>"        
+    [[menus.main]]
+        name = "About"
+        url = "/about"
+        weight = 6
+        pre = "<i class='fa fa-info-circle'></i>"
 
-  [[params.sharingOptions]]
-    name = "Linkedin"
-    icon = "fab fa-linkedin"
-    url = "https://www.linkedin.com/sharing/share-offsite/?url=%s"
+    # social, maxum 6
+    # 作者卡片社交链接，最多6个
+    [[menus.social]]
+        name = "GitHub"
+        url = "https://github.com/xioyito"
+        pre = "<i class='fa fa-github'></i>"
+        weight = 1
+    [[menus.social]]
+        name = "YouTube"
+        url = "https://www.youtube.com"
+        pre = "<i class='fa fa-youtube'></i>"
+        weight = 2
 
-#  [[params.sharingOptions]]
-#    name = "Reddit"
-#    icon = "fab fa-reddit"
-#    url = "https://www.reddit.com/submit?url=%s"
-#
-#  [[params.sharingOptions]]
-#    name = "Pocket"
-#    icon = "fab fa-get-pocket"
-#    url = "https://getpocket.com/edit?url=%s"
-#
-#  [[params.sharingOptions]]
-#    name = "Hacker News"
-#    icon = "fab fa-hacker-news"
-#    url = "https://news.ycombinator.com/submitlink?u=%s"
+    # sponsor, maxum 3
+    # 赞赏，最多支持3个
+    [[menus.sponsor]]
+        name = "Wechat"
+        url = "/images/sponsor/Wechat.jpeg"
+        weight = 1
+    [[menus.sponsor]]
+        name = "Alipay"
+        url = "/images/sponsor/Alipay.jpeg"
+        weight = 2
 
-  # -------------------
-  # Integrated services
-  # -------------------
-  # Gravatar
-  #  >> See Author section
-  #    [author]
-  #      gravatarEmail =
-  # Google Analytics
-  #  >> See googleAnalytics
-  #    googleAnalytics =
-  # Your Facebook user ids used to connect your blog with your facebook user accounts (Facebook Insights). Separate ids with comma. e.g : 9830047,1003342
-  #  fbAdminIds =
-  # Your Facebook app id used to connect your blog with your facebook app account (Facebook Insights). E.g : 9841307
-  #  fbAppId =
+# related configuration, see more: https://gohugo.io/content-management/related/
+# 相关文章的配置。详情请移步：https://gohugo.io/content-management/related/
+[related]
+    # 取值0-100之间，越小匹配到的文章越多，但准确性稍差
+    threshold = 0
+    # 允许包含最新的文章
+    includeNewer = true
+    # 设置为true时，可以在索引和查询中同时使用小写关键字。
+    # 这可能会在轻微的性能损失下提供更准确的结果。
+    # 也可以在下面的子项中分别设置此值。
+    toLower = false
 
-  # --------------
-  # Comment system
-  # --------------
-  [params.comment]
-    [params.comment.disqus]
-      enable = true
-      shortname = "hugo-tranquilpeak-theme"
-    [params.comment.gitalk]
-      enable = false
-      # clientId =
-      # clientSecret =
-      # owner =
-      # repo =
-      # See all options: https://github.com/gitalk/gitalk#options
-      [params.comment.gitalk.options]
-        language = "en"
-        perPage = 10
-        distractionFreeMode = false
-        enableHotKey = true
-        pagerDirection = "first"
+    [[related.indices]]
+        # 匹配类别
+        name = "categories"
+        # 一个整数权重，表示此参数相对于其他参数的重要性。
+        # 可以是0，有关闭这个索引的效果，甚至是负数。
+        # 使用不同的值进行测试，以查看最适合您的内容的值。
+        weight = 100
+        # 同上toLower
+        toLower = false
 
-  # --------------------
-  # Header configuration
-  # --------------------
-  # The link at the right of the header is customizable
-  # You can add a link (as an icon) at the right of the header instead of the author's gravatar image or author's picture.
-  # By default, author's gravatar or author's picture is displayed.
-  #  url: /#search
-  #  icon: search
-  #  class: st-search-show-outputs
-  [params.header.rightLink]
-    class = ""
-    icon = ""
-    url = "/#about"
+    [[related.indices]]
+        name = "tags"
+        weight = 80
+        toLower = false
 
-  # --------------------
-  # Footer configuration
-  # --------------------
-  # Customize copyright value "© 2017 <CUSTOMIZATION>. All Rights Reserved"
-  #  [params.footer]
-  #    copyright = "<a href=\"https://github.com/kakawait\">kakawait</a>"
+    [[related.indices]]
+        name = "date"
+        weight = 10
+
+# Markup related configuration in Hugo
+# Hugo 解析文档的配置
+[markup]
+    # syntax highlight, see more: https://gohugo.io/functions/highlight/
+    # 语法高亮，详情请移步：https://gohugo.io/functions/highlight/
+    [markup.highlight]
+        codeFences = true
+        guessSyntax = false
+        hl_Lines = ''
+        lineAnchors = ''
+        lineNoStart = 1
+        # 显示每一行代码前的序号
+        lineNos = true
+        anchorLineNos = false
+        lineNumbersInTable = true
+        noClasses = false
+        noHl = false
+        hl_inline = false
+        # 代码高亮样式，更多样式请移步：https://xyproto.github.io/splash/docs/
+        style = 'monokailight'
+        tabWidth = 4
+
+    # enable the following code if there are html statements in your md file
+    # 如果md文件中有html语句，请启用以下代码
+    # [markup.goldmark]
+    #     [markup.goldmark.renderer]
+    #         unsafe = true
+  
