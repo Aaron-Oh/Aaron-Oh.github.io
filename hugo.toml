@@ -20,7 +20,7 @@ hasCJKLanguage = true
     name = "JAY OH"
     description = "고려대코딩개발협동조합 창단 멤버"
     # 작가 카드에 표시될 작가의 프로필 사진
-    image = "/images/author/jay1.jpeg"
+    image = "/images/jay1.jpeg"
     # 작가 카드 및 푸터에 표시될 followme 링크
     # 작가 카드와 푸터의 followme 링크
     link = "https://github.com/JayM-Oh"
