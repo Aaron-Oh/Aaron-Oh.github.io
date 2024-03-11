@@ -9,7 +9,7 @@ languageCode = 'en-us'
 title = 'Jay Log'
 # theme
 # 테마
-theme = "NewBee"
+# theme = "NewBee"
 # default content of website
 # 웹사이트 기본 언어
 defaultContentLanguage = "en"

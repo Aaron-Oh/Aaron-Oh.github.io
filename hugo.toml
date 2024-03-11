@@ -4,7 +4,7 @@ languageCode = 'en-us'
 # 웹사이트 제목
 title = 'Jay Log'
 # 테마
-theme = "NewBee"
+# theme = "NewBee"
 # 웹사이트 기본 언어
 defaultContentLanguage = "en"
 # robots.txt 사용 여부
