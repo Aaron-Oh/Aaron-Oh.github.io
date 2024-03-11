@@ -9,9 +9,9 @@ date: {{ .Date }}
 draft: true
 # one category: ["category-1"] 
 # more categories: ["category-1", "category-2", ...]
-categories: []
+categories: ["Algorithm"]
 # refer to categories
-tags: []
+tags: ["Linux"]
 # seires
 series: []
 # Top image for the post
