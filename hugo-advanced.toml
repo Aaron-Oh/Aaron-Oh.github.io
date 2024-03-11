@@ -32,7 +32,7 @@ hasCJKLanguage = true
     description = "고려대코딩개발협동조합 창단 멤버"
     # profile photo of author in author card
     # 작가 카드의 작가 프로필 사진
-    image = "/images/author.jpeg"
+    image = "/images/author/jay1.jpeg"
     # link of followme in author card and footer
     # 작가 카드와 푸터의 followme 링크
     link = "https://github.com/JayM-Oh"
