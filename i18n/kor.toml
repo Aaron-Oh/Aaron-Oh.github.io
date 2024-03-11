@@ -1,0 +1,109 @@
+# 홈에서의 문자열
+[Home_latestPosts]
+other = '최신 글'
+[Home_allPosts]
+other = '모든 글'
+
+# 글에서의 문자열
+[Posts_allPosts]
+other = '모든 글'
+
+# 카테고리 분류에서의 문자열
+[Categories_categories]
+other = '카테고리'
+[Categories_postUnit] # 단수와 복수 구분이 없으면 'one'과 'other'를 같게 유지
+one = '편'
+other = '편'
+# 카테고리 용어에서의 문자열
+[CategoriesTerms_category]
+other = '카테고리'
+
+# 태그 분류에서의 문자열
+[Tags_tags]
+other = '태그'
+# 태그 용어에서의 문자열
+[TagsTerms_tag]
+other = '태그'
+
+# 시리즈 분류에서의 문자열
+[Series_series]
+other = '시리즈'
+# 시리즈 용어에서의 문자열
+[SeriesTerms_series]
+other = '시리즈'
+
+# 소개에서의 문자열
+[About_about]
+other = '소개'
+
+# 사이드바에서의 문자열
+[sidebar_content] # 이 버튼은 댓글 기능이 켜질 때까지 나타나지 않음
+other = '목차'
+[sidebar_comment] # 이 버튼은 댓글 기능이 켜질 때까지 나타나지 않음
+other = '댓글'
+[sidebar_posts]
+other = '글'
+[sidebar_categories]
+other = '카테고리'
+[sidebar_tags]
+other = '태그'
+[sidebar_followMe]
+other = 'Follow Me'
+[sidebar_tableOfContent]
+other = '목차'
+[sidebar_latestPosts]
+other = '최신 글'
+[sidebar_relatedPosts]
+other = '관련 글'
+
+# 후원에서의 문자열
+[sponsor_sponsor]
+other = '후원하기'
+[sponsor_cancel]
+other = '취소'
+
+# 글 정보에서의 문자열
+[postInfo_postedOn]
+other = '게시일'
+[postInfo_updatedOn]
+other = '업데이트일'
+[postInfo_includedIn]
+other = '포함됨'
+[postInfo_notIncluded]
+other = '포함되지 않음'
+[postInfo_wordsCount]
+other = '글자 수'
+[postInfo_readingTime]
+other = '읽는 시간'
+[postInfo_minute] # 단수와 복수 구분이 없으면 'one'과 'other'를 같게 유지
+one = '분'
+other = '분'
+[postInfo_viewers]
+other = '조회수'
+
+# 검색에서의 문자열
+[search_search]
+other = '검색'
+[search_enterAKeyWord]
+other = '키워드 입력'
+[search_found]
+other = '검색 결과'
+# '[search_result]'와 '[search_results]'를 단수와 복수 구분이 없으면 같게 유지
+[search_result] # 단수
+other = '개 결과'
+[search_results] # 복수
+other = '개 결과'
+[search_theEnd]
+other = '더 이상 결과 없음'
+[search_nothing]
+other = '검색 결과 없음'
+
+# 404 페이지에서의 문자열
+[_404_sorry]
+other = '죄송합니다, 페이지를 찾을 수 없습니다...'
+[_404_backToHome]
+other = '홈으로 돌아가기'
+
+# 이미지 로딩 실패시의 문자열
+[imageLoadingFailed]
+other = '이미지 로딩 실패'
