@@ -51,7 +51,7 @@ hasCJKLanguage = true
         homeTitleFontSize = 40
 
         # 홈페이지 상단 이미지 내용, Markdown 지원
-        homeContent = "Be Water, My Friend"
+        homeContent = "고려대코딩개발협동조합 창단 멤버"
         
         # 홈페이지 내용 글꼴 크기(px)
         homeContentFontSize = 20
@@ -122,7 +122,7 @@ hasCJKLanguage = true
         visitor = true
         # 테마 정보 표시 활성화 여부
         themeInfo = true
-        
+
 [menus]
     [[menus.main]]
         # 이름
@@ -157,7 +157,7 @@ hasCJKLanguage = true
     # 소셜, 최대 6개
     [[menus.social]]
         name = "GitHub"
-        url = "https://github.com/xioyito"
+        url = "https://github.com/JayM-Oh"
         pre = "<i class='fa fa-github'></i>"
         weight = 1
     [[menus.social]]

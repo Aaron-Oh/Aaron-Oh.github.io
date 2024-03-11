@@ -6,7 +6,7 @@ categories:
 - database
 tags:
 - db
-draft: true
+draft: false
 ---
 저전력 만세
 <!--more-->
