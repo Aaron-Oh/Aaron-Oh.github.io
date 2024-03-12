@@ -223,7 +223,7 @@ hasCJKLanguage = true
     [languages.en]
         languageName = 'English'
         weight = 1
-        contentDir = 'content/en'
+        contentDir = '/content/en'
         [languages.en.menus]
         # navigation entries
         # 내비게이션 항목
@@ -291,7 +291,7 @@ hasCJKLanguage = true
     [languages.kor]
         languageName = '한국어'
         weight = 2
-        contentDir = 'content/kor'
+        contentDir = '/content/kor'
         [languages.kor.menus]
             [[languages.kor.menus.main]]
                 name = "홈페이지"

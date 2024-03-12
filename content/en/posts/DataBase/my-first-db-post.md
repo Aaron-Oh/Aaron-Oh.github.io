@@ -5,6 +5,6 @@ draft: false
 categories: ["데이터베이스"]
 tags: ["DB", "Hugo"]
 series: ["데이터베이스 시리즈"]
-image: "/path/to/image.jpg"
+image: "/images/default.jpg"
 hideFromHomePage: false
 ---
