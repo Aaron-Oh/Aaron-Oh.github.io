@@ -35,3 +35,38 @@ cdjcnk test englist text
 `d` `바보`
 
 
+> 이것은 인용 예시입니다.
+> 제대로 되면 참 좋겠죠
+> 되라 제발~
+
+```python
+close #클릭하면 열립니다
+import sys
+input = sys.stdin.readline
+
+def getUserInput():
+    n = input()
+    print(f'user input is : {n}')
+
+if __name__ == '__main__':
+    getUserInput()
+```
+
+> primary
+> 주요 문단입니다
+
+> success
+> 성공 문단입니디ㅏ
+
+> danger
+> 실패(위험) 문단입니디ㅏ
+
+> tip
+> 팁 문단입니다
+
+> warning
+> 경고 문단입니다
+
+
+
+
