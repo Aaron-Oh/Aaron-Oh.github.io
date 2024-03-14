@@ -37,7 +37,7 @@ function search() {
     clearPosts();
     var key = document.getElementById("search-key").value;
     var postCount = 0;
-    var searchBy = 'Search by <a href="https://github.com/xioyito/NewBee" class="search-by" >NewBee</a>';
+    var searchBy = 'Search by <a href="https://github.com/JayM-Oh/" class="search-by" >Jay</a>';
 
     if (!key) {
         $(".stip").html(search_nothing + '，' + searchBy);
