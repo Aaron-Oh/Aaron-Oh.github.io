@@ -94,7 +94,7 @@ hasCJKLanguage = true
     # Valine 댓글 시스템(자세한 내용은 https://valine.js.org/ 참조)
     [params.valine]
         # Valine 댓글 시스템 활성화 여부
-        enable = false
+        enable = true
         # appid, 자세한 내용은 https://valine.js.org/configuration.html#appId 참조
         appid = 'xxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxx'
         # appKey, 자세한 내용은 https://valine.js.org/configuration.html#appKey 참조
@@ -134,7 +134,7 @@ hasCJKLanguage = true
         pre = "<i class='fa fa-home'></i>"
     [[menus.main]]
         name = "Posts"
-        url = "/en/posts"
+        url = "/posts"
         weight = 2
         pre = "<i class='fa fa-book'></i>"
     [[menus.main]]

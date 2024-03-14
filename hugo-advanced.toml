@@ -16,7 +16,7 @@ defaultContentLanguage = "en"
 enableRobotsTXT = true
 # whether to use git info
 # git 정보 사용 여부
-enableGitInfo = false
+enableGitInfo = true
 # length of summary
 # 요약 길이
 summaryLength = 50
@@ -268,7 +268,7 @@ hasCJKLanguage = true
         # 소셜 링크, 최대 6개
         [[languages.en.menus.social]]
             name = "GitHub"
-            url = "https://github.com/xioyito"
+            url = "https://github.com/JayM-Oh"
             pre = "<i class='fa fa-github'></i>"
             weight = 1
         [[languages.en.menus.social]]

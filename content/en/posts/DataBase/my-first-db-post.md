@@ -8,3 +8,4 @@ series: ["데이터베이스 시리즈"]
 image: "/images/default.jpg"
 hideFromHomePage: false
 ---
+데이터 베이스를 구축하는 방법을 알아봅시다 ㅎㅎ 
