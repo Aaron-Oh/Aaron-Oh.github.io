@@ -1,22 +1,12 @@
 ---
 title: "Hugo로 첫 포스트 작성하기"
 date: 2024-03-12T09:00:00
-
-# 포스트의 마지막 수정 날짜: "2024-03-12"
 lastmod: "2024-03-12"
-
-# 포스트를 게시하려면 false로 설정
 draft: false
-# 하나의 카테고리: ["블로그 시작하기"] 
-# 여러 카테고리: ["블로그 시작하기", "Hugo"]
 categories: ["블로그 시작하기"]
-# 카테고리를 참조
 tags: ["Hugo", "첫 포스트", "블로그"]
-# 시리즈
 series: ["Hugo 블로그 구축"]
-# 포스트 상단 이미지
 image: "/images/default.jpg"
-# 홈 페이지에서 숨기기
 hideFromHomePage: false
 ---
 
