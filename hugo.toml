@@ -134,7 +134,7 @@ hasCJKLanguage = true
         pre = "<i class='fa fa-home'></i>"
     [[menus.main]]
         name = "Posts"
-        url = "/posts"
+        url = "/en/posts"
         weight = 2
         pre = "<i class='fa fa-book'></i>"
     [[menus.main]]

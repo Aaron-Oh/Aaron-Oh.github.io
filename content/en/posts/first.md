@@ -15,7 +15,7 @@ tags: ["Hugo", "첫 포스트", "블로그"]
 # 시리즈
 series: ["Hugo 블로그 구축"]
 # 포스트 상단 이미지
-image: "/images/my-first-post.jpg"
+image: "/images/default.jpg"
 # 홈 페이지에서 숨기기
 hideFromHomePage: false
 ---
