@@ -1,0 +1,289 @@
+# Uncommented options are not recommended for modification
+# 주석 처리되지 않은 옵션은 수정을 권장하지 않습니다.
+
+baseURL = 'http://xxx.xxx/'
+languageCode = 'en-us'
+
+# website title
+# 웹사이트 제목
+title = 'Jay Log'
+
+# default content of website
+# 웹사이트 기본 언어
+defaultContentLanguage = "en"
+# whether to use robots.txt
+# robots.txt 사용 여부
+enableRobotsTXT = true
+# whether to use git info
+# git 정보 사용 여부
+enableGitInfo = false
+# length of summary
+# 요약 길이
+summaryLength = 50
+
+# If true, auto-detect Chinese/Japanese/Korean Languages in the content.
+# 내용에서 중국어/일본어/한국어를 자동으로 감지하려면 true로 설정하세요.
+hasCJKLanguage = true
+
+[author]
+    name = "Jay Oh"
+    description = "고려대코딩개발협동조합 창단 멤버"
+    # profile photo of author in author card
+    # 작가 카드의 작가 프로필 사진
+    image = "/images/author/jay1.jpeg"
+    # link of followme in author card and footer
+    # 작가 카드와 푸터의 followme 링크
+    link = "https://github.com/JayM-Oh"
+
+# Taxonomies
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+    series = "series"
+    
+[params]
+    [params.site]
+        onlyOneLang = false
+        # style of theme: auto, light, dark
+        mode = 'auto'
+    # page configuration
+    # 페이지 설정
+    [params.page]
+
+        # top image in home page, note that the "/" in path is necessary, the same applies below
+        # 홈페이지 상단 이미지, 경로의 "/"가 필요함을 주의하세요. 아래에도 동일하게 적용됩니다.
+        homeTopImg = "/images/home.jpg"
+        # title in home top image, support Markdown
+        # 홈 상단 이미지의 제목, Markdown 지원
+        homeTitle = "JAY OH"
+        # font size(px)
+        # 홈 제목 글꼴 크기(단위: px)
+        homeTitleFontSize = 40
+        # content in home top image, support Markdown
+        # 홈 상단 이미지의 내용, Markdown 지원
+        homeContent = "고려대코딩개발협동조합 창단 멤버"
+        # font size(px)
+        # 홈 내용 글꼴 크기(단위: px)
+        homeContentFontSize = 20
+
+        # top image in categories terms page
+        # 카테고리 페이지 상단 이미지
+        categoryTopImg = "/images/categories.jpg"
+        # description of categories terms page
+        # 카테고리 페이지 설명
+        categoryDes = "categories page 설명"
+
+        # top image in series terms page
+        # 시리즈 페이지 상단 이미지
+        seriesTopImg = "/images/series.jpg"
+        # description of series terms page
+        # 시리즈 페이지 설명
+        seriesDes = "series page 설명"
+
+        # top image in tags terms page
+        # 태그 페이지 상단 이미지
+        tagTopImg = "/images/tag.jpg"
+        # description of tags terms page
+        # 태그 페이지 설명
+        tagDes = "tags page 설명"
+
+        # top image in allposts page
+        # 모든 게시글 페이지 상단 이미지
+        allPostsTopImg = "/images/allPosts.jpg"
+        # description of allposts page
+        # 모든 게시글 페이지 설명
+        allPostsDes = "allposts page 설명"
+
+        # top image in about page
+        # '소개' 페이지 상단 이미지
+        aboutTopImg = "/images/about.jpg"
+        # description of about page
+        # '소개' 페이지 설명
+        aboutDes = "'소개' 페이지 설명"
+
+        # default image for a post without "image" param
+        # "image" 매개변수가 없는 게시물의 기본 이미지
+        postsTopImg = "/images/default.jpg"
+        
+        # 홈페이지 게시물 최대 표시 수
+        maxHomePostCount = 5
+        # 관련 게시물 최대 표시 수
+        maxPageRelatedCount = 5
+        # 최신 게시물 최대 표시 수
+        maxPageNewestCount = 5
+
+    # Valine comment
+    # Valine 댓글(자세한 내용은 https://valine.js.org/ 참조)
+    [params.valine]
+        # Valine 댓글 시스템 사용 여부
+        enable = true
+        # appid, 자세한 내용은 https://valine.js.org/configuration.html#appId 참조
+        appid = '1bY2Xk28MG2rZwn5yhAgSf7J-MdYXbMMI'
+        # appKey, 자세한 내용은 https://valine.js.org/configuration.html#appKey 참조
+        appkey = '0PMhHHKR1uBcp1aw5bXHvge7'
+        # 입력 상자 텍스트
+        placeholder = '댓글을 입력하세요'
+        # 아바타, 자세한 내용은 https://valine.js.org/avatar.html 참조
+        avatar = 'robohash'
+        # 댓글 시 필수 입력 필드, ['nick'] 또는 ['nick','mail'] 사용 가능
+        requiredFields = ['nick']
+        # 방문자 수 카운트
+        visitor = true
+        # 페이지당 최대 댓글 수
+        pageSize = 5
+
+    # footer
+    # 페이지 하단 설정
+    [params.footer]
+        # 하단 정보 사용 여부
+        enable = true
+        # 저작권 표시
+        copyRight = true
+        from = 2022
+        # 방문자 및 조회 수 카운트 사용 여부
+        visitor = true
+        # 테마 정보 표시 사용 여부
+        themeInfo = false
+
+    # aplayer, 자세한 내용은 https://aplayer.js.org/#/zh-Hans/ 참조
+    # 음악 플레이어 설정
+    [params.aplayer]
+        enable = false
+        server = "netease"
+        type = "playlist"
+        id = 752439587
+        fixed = true
+        autoplay = false
+        loop = "all"
+        order = "random"
+        preload = "auto"
+        list_folded = "ture"
+        list_max_height = "500px"
+        lrc_type = 1
+
+# related configuration, see more: https://gohugo.io/content-management/related/
+# 관련 게시물 설정, 자세한 내용은 https://gohugo.io/content-management/related/ 참조
+[related]
+    # 0-100 사이의 값, 작을수록 더 많은 게시물이 매칭되지만 정확도가 다소 떨어짐
+    threshold = 0
+    # 최신 게시물 포함 여부
+    includeNewer = true
+    # 소문자 키워드를 인덱싱 및 쿼리에 사용할 수 있도록 설정하면
+    # 약간의 성능 손실을 감수하고 더 정확한 결과를 얻을 수 있음
+    toLower = false
+
+    [[related.indices]]
+        # 매칭 카테고리
+        name = "categories"
+        # 이 매개변수가 다른 매개변수에 비해 상대적으로 중요한 정도를 나타내는 정수 가중치
+        # 0이면 이 인덱스를 끄는 효과가 있고, 심지어는 음수도 가능
+        # 콘텐츠에 가장 적합한 값을 찾기 위해 다른 값으로 테스트해 보세요.
+        weight = 100
+        # 위의 toLower와 동일
+        toLower = false
+
+    [[related.indices]]
+        name = "tags"
+        weight = 80
+        toLower = false
+
+    [[related.indices]]
+        name = "date"
+        weight = 10
+
+# Markup related configuration in Hugo
+# Hugo에서 문서 파싱 설정
+[markup]
+    # syntax highlight, see more: https://gohugo.io/functions/highlight/
+    # 구문 강조, 자세한 내용은 https://gohugo.io/functions/highlight/ 참조
+    [markup.highlight]
+        codeFences = true
+        guessSyntax = false
+        hl_Lines = ''
+        lineAnchors = ''
+        lineNoStart = 1
+        # 각 코드 라인 앞에 순번 표시
+        lineNos = true
+        anchorLineNos = false
+        lineNumbersInTable = true
+        noClasses = false
+        noHl = false
+        # 코드 강조 스타일, 더 많은 스타일은 https://xyproto.github.io/splash/docs/ 참조
+        style = 'monokailight'
+        tabWidth = 4
+
+    # enable the following code if there are html statements in your md file
+    # md 파일에 html 문장이 있다면 다음 코드를 활성화하세요
+    # [markup.goldmark]
+    #     [markup.goldmark.renderer]
+    #         unsafe = true
+
+# 다국어 설정
+[languages]
+    [languages.en]
+        languageName = 'English'
+        weight = 1
+        contentDir = '/content/'
+        [languages.en.menus]
+        # navigation entries
+        # 내비게이션 항목
+        [[languages.en.menus.main]]
+            # 이름
+            name = "Home"
+            # 경로
+            url = "/en"
+            # 정렬 가중치, 작을수록 왼쪽에 가깝게 배치됨, 최소 1
+            # 정렬 가중치
+            weight = 1
+            # 단일 항목 앞에 FontAwesome의 아이콘
+            # 아이콘, 이 테마에서 사용하는 아이콘은 FontAwesome에서 옴
+            pre = "<i class='fa fa-home'></i>"
+        [[languages.en.menus.main]]
+            name = "Posts"
+            url = "/posts"
+            weight = 2
+            pre = "<i class='fa fa-book'></i>"
+        [[languages.en.menus.main]]
+            name = "Categories"
+            url = "/en/categories"
+            weight = 3
+            pre = "<i class='fa fa-folder-open'></i>"
+        [[languages.en.menus.main]]
+            name = "Series"
+            url = "/en/series"
+            weight = 4
+            pre = "<i class='fa fa-gears'></i>"
+        [[languages.en.menus.main]]
+            name = "Tags"
+            url = "/en/tags"
+            weight = 5
+            pre = "<i class='fa fa-tags'></i>"        
+        [[languages.en.menus.main]]
+            name = "About"
+            url = "/en/about"
+            weight = 6
+            pre = "<i class='fa fa-info-circle'></i>"
+
+        # social, maximum 6
+        # 소셜 링크, 최대 6개
+        [[languages.en.menus.social]]
+            name = "GitHub"
+            url = "https://github.com/JayM-Oh"
+            pre = "<i class='fa fa-github'></i>"
+            weight = 1
+        [[languages.en.menus.social]]
+            name = "YouTube"
+            url = "https://www.youtube.com"
+            pre = "<i class='fa fa-youtube'></i>"
+            weight = 2
+
+        # sponsor, maximum 3
+        # 후원, 최대 3개
+        [[languages.en.menus.sponsor]]
+            name = "Wechat"
+            url = "/images/sponsor/Wechat.jpeg"
+            weight = 1
+        [[languages.en.menus.sponsor]]
+            name = "Alipay"
+            url = "/images/sponsor/Alipay.jpeg"
+            weight = 2
