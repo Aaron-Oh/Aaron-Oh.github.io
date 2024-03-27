@@ -78,11 +78,11 @@ As you can see, more than 2 #, it just be bolder and smaller
 
 > success
 > 'success' 예약어를 사용한 경우입니다.
-> 성공 문단입니디ㅏ
+> 성공 문단입니다
 
 > danger
 > 'danger' 예약어를 사용한 경우입니다.
-> 실패(위험) 문단입니디ㅏ
+> 실패(위험) 문단입니다
 
 ---
 # Picture
@@ -137,6 +137,7 @@ Basically, picture has a shadow. so if you don't want to add it, just add `_no` 
     ```
 
     result:
+
     ::: tabs
     @tab jay
     Hi I'm jay!
@@ -147,6 +148,7 @@ Basically, picture has a shadow. so if you don't want to add it, just add `_no` 
     :::
 
 2. option `:active`
+   
    ```markdown
     ::: tabs
     @tab jay
@@ -159,6 +161,7 @@ Basically, picture has a shadow. so if you don't want to add it, just add `_no` 
     ```
 
     result:
+
     ::: tabs
     @tab jay
     Hi I'm jay!
@@ -172,7 +175,7 @@ Basically, picture has a shadow. so if you don't want to add it, just add `_no` 
    
     you can add 'id' into the tap container and if two containers have same 'id', they share tap switching event.
 
-    ```maekdown
+    ```markdown
     ::: tabs#install
 
     @tab npm
@@ -190,7 +193,7 @@ Basically, picture has a shadow. so if you don't want to add it, just add `_no` 
     :::
     ```
 
-    ```maekdown
+    ```markdown
     ::: tabs#install
 
     @tab npm
@@ -208,7 +211,8 @@ Basically, picture has a shadow. so if you don't want to add it, just add `_no` 
     :::
     ```
 
-    result:
+    result: 
+
     ::: tabs#install
 
     @tab npm
@@ -224,6 +228,7 @@ Basically, picture has a shadow. so if you don't want to add it, just add `_no` 
     MacPorts를 사용하여 xxx설치
 
     :::
+
     ::: tabs#install
 
     @tab npm
@@ -244,12 +249,14 @@ Basically, picture has a shadow. so if you don't want to add it, just add `_no` 
 ---
 # mermaid
 you can draw graph and flow chart with mermaid.
+
     ```mermaid
     flowchart LR
         A -- text --> B -- text2 --> C
     ```
 
 result:
+
     flowchart LR
         A -- text --> B -- text2 --> C
 
@@ -258,13 +265,16 @@ more usage in here: https://mermaid.js.org/#/
 ---
 # math
 use mathjax: https://www.mathjax.org
+
 1. math in line
+2. 
     ```math
     "<!-- '\(' 와 '\)' 로 인라인 수식의 시작과 끝을 표시 -->"
     행내 공식입니다：\( x = {-b \pm \sqrt{b^2-4ac} \over 2a} \)
     ```
 
-2. math in block
+3. math in block
+4. 
     ```math
     "<!-- '$$' 와 '$$' 로 수식 블록의 시작과 끝을 표시 -->"
     블럭 내 공식입니다：$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
