@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>첫 포스트 on Jay Log</title>
+    <link>http://xxx.xxx/tags/%EC%B2%AB-%ED%8F%AC%EC%8A%A4%ED%8A%B8/</link>
+    <description>Recent content in 첫 포스트 on Jay Log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://xxx.xxx/tags/%EC%B2%AB-%ED%8F%AC%EC%8A%A4%ED%8A%B8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo로 첫 포스트 작성하기</title>
+      <link>http://xxx.xxx/posts/first/</link>
+      <pubDate>Tue, 12 Mar 2024 09:00:00 +0000</pubDate>
+      <guid>http://xxx.xxx/posts/first/</guid>
+      <description>&lt;p&gt;Hugo를 사용하여 나의 첫 번째 블로그 포스트를 작성하는 방법을 소개합니다.&lt;/p&gt;&#xA;&lt;p&gt;Hugo는 간단하고 빠른 정적 사이트 생성기로, 마크다운을 사용하여 콘텐츠를 작성할 수 있습니다. Hugo와 GitHub Pages를 함께 사용하면, 복잡한 서버 설정 없이도 개인 블로그를 운영할 수 있습니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

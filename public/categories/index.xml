@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Jay Log</title>
+    <link>http://xxx.xxx/categories/</link>
+    <description>Recent content in Categories on Jay Log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://xxx.xxx/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>블로그 시작하기</title>
+      <link>http://xxx.xxx/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Tue, 12 Mar 2024 09:00:00 +0000</pubDate>
+      <guid>http://xxx.xxx/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>데이터베이스</title>
+      <link>http://xxx.xxx/categories/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/</link>
+      <pubDate>Sun, 30 Jul 2023 12:34:56 +0000</pubDate>
+      <guid>http://xxx.xxx/categories/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
