@@ -5,7 +5,6 @@ archetpes/
 layouts/
 i18n/
 static/
-
-
+images/
 
 *.toml

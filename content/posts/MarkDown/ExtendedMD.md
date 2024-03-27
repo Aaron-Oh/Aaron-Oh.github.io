@@ -158,23 +158,23 @@ Basically, picture has a shadow. so if you don't want to add it, just add `_no` 
     <!-- 필수 공백 줄 -->
     ```
 
-    result:
-    <!-- 필수 공백 줄 -->
+    
     ::: tabs
-    <!-- 필수 공백 줄 -->
+    
     @tab jay
-    <!-- 필수 공백 줄 -->
+    
     Hi I'm jay!
-    <!-- 필수 공백 줄 -->
+    
     @tab lay
-    <!-- 필수 공백 줄 -->
+    
     I'm lay!
-    <!-- 필수 공백 줄 -->
+    
     @tab kelvin
-    <!-- 필수 공백 줄 -->
+    
     yeah I'm kelvin!
-    <!-- 필수 공백 줄 -->
+    
     :::
+
 
 2. option `:active`
    
@@ -198,7 +198,7 @@ Basically, picture has a shadow. so if you don't want to add it, just add `_no` 
     <!-- 필수 공백 줄 -->
     ```
 
-    result:
+    
     <!-- 필수 공백 줄 -->
     ::: tabs
     <!-- 필수 공백 줄 -->
@@ -216,7 +216,8 @@ Basically, picture has a shadow. so if you don't want to add it, just add `_no` 
     <!-- 필수 공백 줄 -->
     :::
     <!-- 필수 공백 줄 -->
-    
+
+
 3. option `#id`  
     you can add 'id' into the tap container and if two containers have same 'id', they share tap switching event.
 
