@@ -17,15 +17,15 @@ Example: basic: "`name`"
 options: you can add options featuring as what you want to highlight
 just add (primary), (tip), (warning), (success), (danger) **with one white space**
 
-`name (primary)`  
+`name (primary)`
 
-`name (tip)`  
+`name (tip)`
 
-`name (warning)`  
+`name (warning)`
 
-`name (success)`  
+`name (success)`
 
-`name (danger)`  
+`name (danger)`
 
 
 ## Example of code block
@@ -64,36 +64,31 @@ As you can see, more than 2 #, it just be bolder and smaller
 ---
 # quotation
 
-> 이것은 인용 예시입니다.
+> 이것은 인용 예시입니다.  
+> 두 line을 개행하여 단락 구분을 할 수도 있고 두 space를 띄워 단락 내 개행을 할 수도 있습니다.
 > 
-> 기본 인용은 회색으로 표시되며 두 칸을 띄워야 개행이 됩니다.
-> 
+> 기본 인용은 회색으로 표시되며 두 칸을 띄워야 개행이 됩니다.  
 > 마찬가지로 옵셥을 추가할 수 있습니다.
 
 
 > primary
->  'primary' 예약어를 사용한 경우입니다.
-> 
+>  'primary' 예약어를 사용한 경우입니다.  
 >   주요 문단입니다
 
 > tip
->  'tip' 예약어를 사용한 경우입니다.
-> 
+>  'tip' 예약어를 사용한 경우입니다.  
 >   팁 문단입니다
 
 > warning
->  'warning' 예약어를 사용한 경우입니다.
-> 
+>  'warning' 예약어를 사용한 경우입니다.  
 >   경고 문단입니다
 
 > success
->   'success' 예약어를 사용한 경우입니다.
-> 
+>   'success' 예약어를 사용한 경우입니다.  
 >   성공 문단입니다
 
 > danger
->   'danger' 예약어를 사용한 경우입니다.
-> 
+>   'danger' 예약어를 사용한 경우입니다.  
 >    실패(위험) 문단입니다
 
 ---
@@ -137,10 +132,8 @@ Basically, picture has a shadow. so if you don't want to add it, just add `_no` 
 ---
 # Tap
 
-> ::: tabs와 :::을 탭 컨테이너의 시작과 끝으로 사용하며, @tab을 사용하여 다양한 탭을 표시하고 구분합니다. 
-> 
-> @tab 다음은 제목이며, 기본적으로 첫 번째 탭이 활성화됩니다. 
-> 
+> ::: tabs와 :::을 탭 컨테이너의 시작과 끝으로 사용하며, @tab을 사용하여 다양한 탭을 표시하고 구분합니다.   
+> @tab 다음은 제목이며, 기본적으로 첫 번째 탭이 활성화됩니다.   
 > 또한, @tab 다음에 텍스트 :active를 추가하여 해당 탭을 기본적으로 활성화할 수 있습니다.
 
 ## example of tap
@@ -223,8 +216,8 @@ Basically, picture has a shadow. so if you don't want to add it, just add `_no` 
     <!-- 필수 공백 줄 -->
     :::
     <!-- 필수 공백 줄 -->
-3. option `#id`
-   
+    
+3. option `#id`  
     you can add 'id' into the tap container and if two containers have same 'id', they share tap switching event.
 
     ```markdown
@@ -326,7 +319,7 @@ use mathjax: https://www.mathjax.org
 1. math in line
    
     ```markdown
-    
+
     ```math
     "<!-- '\(' 와 '\)' 로 인라인 수식의 시작과 끝을 표시 -->"
     행내 공식입니다：\( x = {-b \pm \sqrt{b^2-4ac} \over 2a} \)
