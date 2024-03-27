@@ -17,11 +17,16 @@ Example: basic: "`name`"
 options: you can add options featuring as what you want to highlight
 just add (primary), (tip), (warning), (success), (danger) **with one white space**
 
-`name (primary)`
-`name (tip)`
-`name (warning)`
-`name (success)`
-`name (danger)`
+`name (primary)`  
+
+`name (tip)`  
+
+`name (warning)`  
+
+`name (success)`  
+
+`name (danger)`  
+
 
 ## Example of code block
 ```python
@@ -60,29 +65,29 @@ As you can see, more than 2 #, it just be bolder and smaller
 # quotation
 
 > 이것은 인용 예시입니다.
-> 기본 인용은 회색으로 표시됩니다.
-> 마찬가지로 옵셥을 추가할 수 있습니다.
+>   기본 인용은 회색으로 표시됩니다.
+>   마찬가지로 옵셥을 추가할 수 있습니다.
 
 
 > primary
-> 'primary' 예약어를 사용한 경우입니다.
-> 주요 문단입니다
+>  'primary' 예약어를 사용한 경우입니다.
+>   주요 문단입니다
 
 > tip
-> 'tip' 예약어를 사용한 경우입니다.
-> 팁 문단입니다
+>  'tip' 예약어를 사용한 경우입니다.
+>   팁 문단입니다
 
 > warning
-> 'warning' 예약어를 사용한 경우입니다.
-> 경고 문단입니다
+>  'warning' 예약어를 사용한 경우입니다.
+>   경고 문단입니다
 
 > success
-> 'success' 예약어를 사용한 경우입니다.
-> 성공 문단입니다
+>   'success' 예약어를 사용한 경우입니다.
+>   성공 문단입니다
 
 > danger
-> 'danger' 예약어를 사용한 경우입니다.
-> 실패(위험) 문단입니다
+>   'danger' 예약어를 사용한 경우입니다.
+>    실패(위험) 문단입니다
 
 ---
 # Picture
@@ -250,13 +255,14 @@ Basically, picture has a shadow. so if you don't want to add it, just add `_no` 
 # mermaid
 you can draw graph and flow chart with mermaid.
 
-    ```mermaid
+    ```mermaid: true
     flowchart LR
         A -- text --> B -- text2 --> C
     ```
 
 result:
 
+mermaid: true
     flowchart LR
         A -- text --> B -- text2 --> C
 
@@ -267,15 +273,15 @@ more usage in here: https://mermaid.js.org/#/
 use mathjax: https://www.mathjax.org
 
 1. math in line
-2. 
-    ```math
+   
+    ```math: true
     "<!-- '\(' 와 '\)' 로 인라인 수식의 시작과 끝을 표시 -->"
     행내 공식입니다：\( x = {-b \pm \sqrt{b^2-4ac} \over 2a} \)
     ```
 
-3. math in block
-4. 
-    ```math
+2. math in block
+   
+    ```math: true
     "<!-- '$$' 와 '$$' 로 수식 블록의 시작과 끝을 표시 -->"
     블럭 내 공식입니다：$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
     ```
