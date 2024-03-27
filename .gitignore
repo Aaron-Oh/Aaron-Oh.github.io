@@ -1,3 +1,11 @@
 .DS_Store
-./archetpes/*
+
+
+archetpes/
+layouts/
+i18n/
+static/
+
+
+
 *.toml
