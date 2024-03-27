@@ -74,7 +74,7 @@ function search() {
     $(".sbody").show();
 }
 
-// 向页面中添加元素
+// 페이지에 요소 추가
 function addItem(title, pubDate, mark, link) {
     var pHtml = "<a href=\"" + link + "\" target=\"_blank\" class=\"post\" >" +
             "<div class=\"post-header\">" +
@@ -89,13 +89,13 @@ function addItem(title, pubDate, mark, link) {
     document.getElementsByClassName('sbody-1')[0].appendChild(div);
 }
 
-// 初始化搜索页面
+// 검색 페이지 초기화
 function clearPosts() {
     $(".sbody").hide();
     $(".post-root, .at-bottom").remove();
 }
 
-// 截取段落
+// 단락 잘라내기
 function toMark(oPlain, key) {
     var kIdx = oPlain.indexOf(key);
     
@@ -143,7 +143,7 @@ function toMarkTitle(oPlain, key) {
     return oPlain; 
 }
 
-// 高亮关键字
+// 키워드 하이라이트
 function hlHtml(oMark, key) {
     var keyIdx = oMark.indexOf(key);
     if (oMark && keyIdx >= 0) {
