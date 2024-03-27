@@ -1,0 +1,3 @@
+[submodule "SubModuleJayLog"]
+	path = SubModuleJayLog
+	url = https://github.com/JayM-Oh/SubModuleJayLog.git
