@@ -303,50 +303,57 @@ MacPorts를 사용하여 yyy설치
 # mermaid
 you can draw graph and flow chart with mermaid.
 
-    ```markdown
+```markdown
 
-    ```mermaid
-    flowchart LR
-        A -- text --> B -- text2 --> C
-    ```
+```mermaid
+flowchart LR
+    A -- text --> B -- text2 --> C
+```
 
-    ```
+```
+
+```mermaid
+flowchart LR
+    A -- text --> B -- text2 --> C
+```
 
 
 more usage in here: https://mermaid.js.org/#/
 
 ---
 # math
-use mathjax: https://www.mathjax.org
 
 1. math in line
-   
-    ```markdown
 
-    ```math
-    "<!-- '\(' 와 '\)' 로 인라인 수식의 시작과 끝을 표시 -->"
-    행내 공식입니다：\( x = {-b \pm \sqrt{b^2-4ac} \over 2a} \)
-    ```
+```markdown
 
-    ```
+```math
+"<!-- '\(' 와 '\)' 로 인라인 수식의 시작과 끝을 표시 -->"
+행내 공식입니다：\( x = {-b \pm \sqrt{b^2-4ac} \over 2a} \)
+```
 
-    #### result:
-    ```math
-    "<!-- '\(' 와 '\)' 로 인라인 수식의 시작과 끝을 표시 -->"
-    행내 공식입니다：\( x = {-b \pm \sqrt{b^2-4ac} \over 2a} \)
-    ```
+```
+
+
+```math
+"<!-- '\(' 와 '\)' 로 인라인 수식의 시작과 끝을 표시 -->"
+행내 공식입니다：\( x = {-b \pm \sqrt{b^2-4ac} \over 2a} \)
+```
 
 
 2. math in block
-    ```markdown
-    ```math
-    "<!-- '$$' 와 '$$' 로 수식 블록의 시작과 끝을 표시 -->"
-    블럭 내 공식입니다：$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
-    ```
 
-    ```
+```markdown
+```math
+"<!-- '$$' 와 '$$' 로 수식 블록의 시작과 끝을 표시 -->"
+블럭 내 공식입니다：$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+```
 
-    ```math
-    "<!-- '$$' 와 '$$' 로 수식 블록의 시작과 끝을 표시 -->"
-    블럭 내 공식입니다：$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
-    ```
+```
+
+```math
+"<!-- '$$' 와 '$$' 로 수식 블록의 시작과 끝을 표시 -->"
+블럭 내 공식입니다：$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+```
+
+more usage in here: mathjax: https://www.mathjax.org
