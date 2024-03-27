@@ -260,14 +260,13 @@ more usage in here: https://mermaid.js.org/#/
 use mathjax: https://www.mathjax.org
 1. math in line
     ```math
-    <!-- 用 '\(' 和 '\)' 表示行内公式的起始和结束 -->
-    这是一个行内公式：\( x = {-b \pm \sqrt{b^2-4ac} \over 2a} \)
+    "<!-- '\(' 와 '\)' 로 인라인 수식의 시작과 끝을 표시 -->"
+    행내 공식입니다：\( x = {-b \pm \sqrt{b^2-4ac} \over 2a} \)
     ```
 
 2. math in block
     ```math
-    <!-- 用 '$$' 和 '$$' 表示公式块的起始和结束 -->
-    这是一个公式块：$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+    "<!-- '$$' 와 '$$' 로 수식 블록의 시작과 끝을 표시 -->"
+    블럭 내 공식입니다：$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
     ```
-
 
