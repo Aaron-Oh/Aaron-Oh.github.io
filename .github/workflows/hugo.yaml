@@ -60,10 +60,8 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
-            hugo --config SubModuleJayLog/config.toml
-            hugo --config SubModuleJayLog/hugo.toml
-            hugo --config SubModuleJayLog/hugo-advanced.toml
+            --baseURL "${{ steps.pages.outputs.base_url }}/" \
+            --config SubModuleJayLog/*.toml
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
