@@ -1,10 +1,10 @@
 ---
-title: "Hugo로 첫 포스트 작성하기"
-date: 2024-03-12T09:00:00
-lastmod: "2024-03-12"
+title: "확장된 마크다운 문법 사용하기"
+date: 2024-02-12T09:00:00
+lastmod: "2024-02-12"
 draft: false
 categories: ["블로그 시작하기"]
-tags: ["Hugo", "첫 포스트", "블로그"]
+tags: ["Hugo", "마크다운", "markdown"]
 series: ["Hugo 블로그 구축"]
 image: "/images/default.jpg"
 hideFromHomePage: false
