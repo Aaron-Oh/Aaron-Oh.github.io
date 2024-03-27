@@ -8,6 +8,8 @@ tags: ["Hugo", "마크다운", "markdown"]
 series: ["Hugo 블로그 구축"]
 image: "/images/default.jpg"
 hideFromHomePage: false
+math: true
+mermaid: true
 ---
 
 <!--body-->
@@ -301,16 +303,15 @@ MacPorts를 사용하여 yyy설치
 # mermaid
 you can draw graph and flow chart with mermaid.
 
-    ```mermaid: true
+    ```markdown
+
+    ```mermaid
     flowchart LR
         A -- text --> B -- text2 --> C
     ```
 
-result:
+    ```
 
-mermaid: true
-    flowchart LR
-        A -- text --> B -- text2 --> C
 
 more usage in here: https://mermaid.js.org/#/
 
