@@ -15,7 +15,7 @@ mermaid: true
 <!--body-->
 # Code
 ## Code in line
-Example: basic: "`name`"
+Example: basic: "`name`"  
 options: you can add options featuring as what you want to highlight
 just add (primary), (tip), (warning), (success), (danger) **with one white space**
 
@@ -332,7 +332,6 @@ more usage in here: https://mermaid.js.org/#/
 
 
 ```math
-"<!-- '\(' 와 '\)' 로 인라인 수식의 시작과 끝을 표시 -->"
 행내 공식입니다：\( x = {-b \pm \sqrt{b^2-4ac} \over 2a} \)
 ```
 
@@ -347,7 +346,6 @@ more usage in here: https://mermaid.js.org/#/
 ```
 
 ```math
-"<!-- '$$' 와 '$$' 로 수식 블록의 시작과 끝을 표시 -->"
 블럭 내 공식입니다：$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 ```
 
