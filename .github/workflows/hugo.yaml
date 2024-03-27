@@ -56,12 +56,12 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-
+          cd SubModuleJayLog
           hugo \
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
-            --config SubModuleJayLog/*.toml
+            --destination ./public/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
