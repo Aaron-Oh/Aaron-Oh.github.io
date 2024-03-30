@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://xxx.xxx/</loc>
+    <lastmod>2024-03-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://xxx.xxx/posts/</loc>
+    <lastmod>2024-03-30T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://xxx.xxx/posts/docker/docker_1/</loc>
     <lastmod>2024-03-28T00:00:00+00:00</lastmod>
   </url><url>
@@ -17,13 +23,7 @@
     <loc>http://xxx.xxx/series/docker/</loc>
     <lastmod>2024-03-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://xxx.xxx/</loc>
-    <lastmod>2024-03-28T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://xxx.xxx/categories/part--understnding-docker-containers--images/</loc>
-    <lastmod>2024-03-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://xxx.xxx/posts/</loc>
     <lastmod>2024-03-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://xxx.xxx/series/</loc>
