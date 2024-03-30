@@ -16,7 +16,7 @@
       <description>&lt;p&gt;Welecome to the &lt;code&gt;Docker&lt;/code&gt; series and I&amp;rsquo;m gonna study this book, &lt;code&gt;Learn Docker in a Month of Lunches&lt;/code&gt;(2020), by own my word.&lt;/p&gt;&#xA;&lt;p&gt;This series consists of 4 parts:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Understaning Docker Containers &amp;amp; Images&lt;/li&gt;&#xA;&lt;li&gt;Running Distributed Applications in Containers&lt;/li&gt;&#xA;&lt;li&gt;Running at Scale with a Container Orchestrator&lt;/li&gt;&#xA;&lt;li&gt;Getting Your Containers Ready for Production&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;This is the first post about series &lt;code&gt;Docker&lt;/code&gt;.&#xA;In this part, you can get up to speed quickly on the core Docker concepts: containers, images, and registries. you&amp;rsquo;ll learn how to run applications in containers, package your own applications in containers, and share those applications for other people to use. You&amp;rsquo;ll also learn about storing data in Docker volumes and how you can run stateful apps in containers. After throughing this chapter, you&amp;rsquo;ll be comfortable with all the fundamentals of Docker, and you&amp;rsquo;ll be learning with best pracices baked in from the start.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>확장된 마크다운 문법 사용하기</title>
+      <title>How to use Extended Markdown</title>
       <link>http://xxx.xxx/posts/markdown/extendedmd/</link>
       <pubDate>Mon, 12 Feb 2024 09:00:00 +0000</pubDate>
       <guid>http://xxx.xxx/posts/markdown/extendedmd/</guid>

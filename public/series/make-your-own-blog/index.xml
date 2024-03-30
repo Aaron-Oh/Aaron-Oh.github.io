@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>블로그 시작하기 on Jay Log</title>
-    <link>http://xxx.xxx/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
-    <description>Recent content in 블로그 시작하기 on Jay Log</description>
+    <title>Make Your Own Blog on Jay Log</title>
+    <link>http://xxx.xxx/series/make-your-own-blog/</link>
+    <description>Recent content in Make Your Own Blog on Jay Log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 12 Feb 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://xxx.xxx/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://xxx.xxx/series/make-your-own-blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>확장된 마크다운 문법 사용하기</title>
+      <title>How to use Extended Markdown</title>
       <link>http://xxx.xxx/posts/markdown/extendedmd/</link>
       <pubDate>Mon, 12 Feb 2024 09:00:00 +0000</pubDate>
       <guid>http://xxx.xxx/posts/markdown/extendedmd/</guid>

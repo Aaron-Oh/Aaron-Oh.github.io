@@ -23,10 +23,10 @@
       <description></description>
     </item>
     <item>
-      <title>Hugo</title>
-      <link>http://xxx.xxx/tags/hugo/</link>
+      <title>Extended-Markdown</title>
+      <link>http://xxx.xxx/tags/extended-markdown/</link>
       <pubDate>Mon, 12 Feb 2024 09:00:00 +0000</pubDate>
-      <guid>http://xxx.xxx/tags/hugo/</guid>
+      <guid>http://xxx.xxx/tags/extended-markdown/</guid>
       <description></description>
     </item>
     <item>
@@ -34,13 +34,6 @@
       <link>http://xxx.xxx/tags/markdown/</link>
       <pubDate>Mon, 12 Feb 2024 09:00:00 +0000</pubDate>
       <guid>http://xxx.xxx/tags/markdown/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>마크다운</title>
-      <link>http://xxx.xxx/tags/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4/</link>
-      <pubDate>Mon, 12 Feb 2024 09:00:00 +0000</pubDate>
-      <guid>http://xxx.xxx/tags/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4/</guid>
       <description></description>
     </item>
   </channel>

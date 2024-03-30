@@ -1,18 +1,19 @@
 ---
-title: "확장된 마크다운 문법 사용하기"
+title: "How to use Extended Markdown"
+subtitle: "How to posting using markdown"
 date: 2024-02-12T09:00:00
 lastmod: "2024-02-12"
-draft: false
-categories: ["블로그 시작하기"]
-tags: ["Hugo", "마크다운", "markdown"]
-series: ["Hugo 블로그 구축"]
+series: ["Make your own blog"]
+categories: ["Extended Markdown Grammar"]
+tags: ["markdown", "extended-markdown"]
 image: "/images/default.jpg"
+draft: false
 hideFromHomePage: false
 math: true
 mermaid: true
 ---
 
-<!--body-->
+<!--more-->
 # Code
 ## Code in line
 Example: basic: "`name`"  
