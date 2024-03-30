@@ -13,10 +13,12 @@ hideFromHomePage: false
 math: false
 mermaid: false
 ---
-
+# Introduction  
+## What this post focus on  
 This posting will cover almost every concept of  `How to sort (primary)`. Plus, I'll post realistic algorithm problem of our real world so that you can apply those concept to real world problem and learn how to use it. I really hope so.
 
-<!--more-->
-Let's see the below example.
+---
+Let's see the below example. 
+
 
 
