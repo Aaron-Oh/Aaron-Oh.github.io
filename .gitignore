@@ -1,10 +1,4 @@
 .DS_Store
 
 
-archetpes/
-layouts/
-i18n/
-static/
-images/
-
 *.toml
