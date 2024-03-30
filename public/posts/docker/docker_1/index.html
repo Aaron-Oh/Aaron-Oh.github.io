@@ -3,19 +3,49 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jay Log | 블로그</title>
-    <meta name="description" content=" ">
-    <link rel="canonical" href="http://xxx.xxx/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8/" />
+    <title>Jay Log | Before you begin</title>
+    <meta name="description" content="Welecome to the Docker series and I&rsquo;m gonna study this book, Learn Docker in a Month of Lunches(2020), by own my word.
+This series consists of 4 parts:
+
+Understaning Docker Containers &amp; Images
+Running Distributed Applications in Containers
+Running at Scale with a Container Orchestrator
+Getting Your Containers Ready for Production
+
+This is the first post about series Docker.
+In this part, you can get up to speed quickly on the core Docker concepts: containers, images, and registries. you&rsquo;ll learn how to run applications in containers, package your own applications in containers, and share those applications for other people to use. You&rsquo;ll also learn about storing data in Docker volumes and how you can run stateful apps in containers. After throughing this chapter, you&rsquo;ll be comfortable with all the fundamentals of Docker, and you&rsquo;ll be learning with best pracices baked in from the start. ">
+    <link rel="canonical" href="http://xxx.xxx/posts/docker/docker_1/" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <meta property="og:title" content="블로그" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://xxx.xxx/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8/" />
+    <meta property="og:title" content="Before you begin" />
+<meta property="og:description" content="Welecome to the Docker series and I&rsquo;m gonna study this book, Learn Docker in a Month of Lunches(2020), by own my word.
+This series consists of 4 parts:
+
+Understaning Docker Containers &amp; Images
+Running Distributed Applications in Containers
+Running at Scale with a Container Orchestrator
+Getting Your Containers Ready for Production
+
+This is the first post about series Docker.
+In this part, you can get up to speed quickly on the core Docker concepts: containers, images, and registries. you&rsquo;ll learn how to run applications in containers, package your own applications in containers, and share those applications for other people to use. You&rsquo;ll also learn about storing data in Docker volumes and how you can run stateful apps in containers. After throughing this chapter, you&rsquo;ll be comfortable with all the fundamentals of Docker, and you&rsquo;ll be learning with best pracices baked in from the start." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://xxx.xxx/posts/docker/docker_1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-03-28T09:00:00+00:00" />
+<meta property="article:modified_time" content="2024-03-28T00:00:00+00:00" />
 
 
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="블로그"/>
-<meta name="twitter:description" content=""/>
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Before you begin"/>
+<meta name="twitter:description" content="Welecome to the Docker series and I&rsquo;m gonna study this book, Learn Docker in a Month of Lunches(2020), by own my word.
+This series consists of 4 parts:
+
+Understaning Docker Containers &amp; Images
+Running Distributed Applications in Containers
+Running at Scale with a Container Orchestrator
+Getting Your Containers Ready for Production
+
+This is the first post about series Docker.
+In this part, you can get up to speed quickly on the core Docker concepts: containers, images, and registries. you&rsquo;ll learn how to run applications in containers, package your own applications in containers, and share those applications for other people to use. You&rsquo;ll also learn about storing data in Docker volumes and how you can run stateful apps in containers. After throughing this chapter, you&rsquo;ll be comfortable with all the fundamentals of Docker, and you&rsquo;ll be learning with best pracices baked in from the start."/>
 
     
         
@@ -174,29 +204,41 @@
 
 
         <div id="content">
-    
 
 
 
 
-
-
-    
-        
-    
 
 
 
 
     <div class="hero">
         
-            
-                <div class="hero-img">
-                    <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt="">
-                </div>
-            
+            <div class="hero-img">
+                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/docker.jpg" alt="">
+            </div>
+        
         <div class="hero-content">
-            <h1 class="hero-title">Tag: 블로그</h1>
+            <div class="hero-title">Before you begin</div>
+            <div class="hero-subtitle">What is Docker</div>
+            <div class="hero-date">
+                    <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-3-28 &nbsp;</span>
+                    <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-3-28 &nbsp;</span>
+                    <span class="no-wrap"><i class="fa fa-folder"></i>
+                        includedIn:
+                        
+                            <a href='
+                                /categories/part-understnding-docker-containers-images
+                            '>
+                                PART Ⅰ: Understnding Docker Containers &amp; Images
+                            </a>
+                    </span>    
+            </div>
+            <div class="timelong">
+                <span class="no-wrap"><i class="fa fa-pencil"></i> wordsCount: 427 &nbsp;</span>
+                <span class="no-wrap"><i class="fa fa-clock-o"></i> readingTime: 3 mins &nbsp;</span>
+                <span class="no-wrap"><i class="fa fa-eye"></i> viewers: <span id="busuanzi_value_page_pv"></span></span>
+            </div>
         </div>
     </div>
 
@@ -215,7 +257,7 @@
     
 
 
-<div class="terms-body">
+<div class="content-root">
     <div class="long">
         <button class="tosides-1 text-wbd">
             <i class="fa fa-arrow-right"></i>
@@ -228,102 +270,85 @@
         </button>
     </div>
     
-        <div class="terms-row">
+        <div class="content">
+            <div class="content-self">
+                <p>Welecome to the <code>Docker</code> series and I&rsquo;m gonna study this book, <code>Learn Docker in a Month of Lunches</code>(2020), by own my word.</p>
+<p>This series consists of 4 parts:</p>
+<ol>
+<li>Understaning Docker Containers &amp; Images</li>
+<li>Running Distributed Applications in Containers</li>
+<li>Running at Scale with a Container Orchestrator</li>
+<li>Getting Your Containers Ready for Production</li>
+</ol>
+<p>This is the first post about series <code>Docker</code>.
+In this part, you can get up to speed quickly on the core Docker concepts: containers, images, and registries. you&rsquo;ll learn how to run applications in containers, package your own applications in containers, and share those applications for other people to use. You&rsquo;ll also learn about storing data in Docker volumes and how you can run stateful apps in containers. After throughing this chapter, you&rsquo;ll be comfortable with all the fundamentals of Docker, and you&rsquo;ll be learning with best pracices baked in from the start.</p>
+<h1 id="what-is-docker">What is Docker</h1>
+<p>Docker is a platform for running application in lightweight units called <em>containers.</em> Containers have taken hold in software everywhere, from werverless functions in the cloud to strategic planning in the enterprise. Docker is becoming a core com- petency for operators and developers across the industry—in the 2019 Stack Overflow survey, Docker polled as people’s number one “most wanted” technology   And Docker is a simple technology to learn. You can pick up this book as a com- plete beginner, and you’ll be running containers in chapter 2 and packaging appli- cations to run in Docker in chapter 3. Each chapter focuses on practical tasks, with examples and labs that work on any machine that runs Docker—Windows, Mac, and Linux users are all welcome here.   The journey you’ll follow in this book has been honed over the many years I’ve been teaching Docker. Every chapter is hands-on—except this one. Before you start learning Docker, it’s important to understand just how containers are being used in the real world and the type of problems they solve—that’s what I’ll cover here. This chapter also describes how I’ll be teaching Docker, so you can figure out if this is the right book for you.
+Now let’s look at what people are doing with containers—I’ll cover the five main scenarios where organizations are seeing huge success with Docker. You’ll see the wide range of problems you can solve with containers, some of which will certainly map to scenarios in your own work. By the end of this chapter you’ll understand why Docker is a technology you need to know, and you’ll see how this book will get you there.</p>
+<h2 id="why-containers-will-take-over-the-world">Why containers will take over the world</h2>
+            </div>
             
-            <div class="terms-root">
-                
-                
-
-
-
-<div class="card-large">
-    <div class="card-large-img">
-
-        
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt='image loading failed'>
-        
-    </div>
-    <div class="card-large-content">
-        <div class="up-title"><a href="/posts/first/">Hugo로 첫 포스트 작성하기</a></div>
-        <div class="up-date">
-            <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-3-12 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-3-12 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-folder"></i>
-                
-                    includedIn:
+                <div class="tags">
                     
-                        <a href='
-                                        /categories/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0
+                    <span class="down-type-item">
+                        <div class="type-text">
+                            <a href='
+                                        /tags/docker
                                     '>
-                                블로그 시작하기
+                                <i class="fa fa-tag"></i> Docker
                             </a>
-                
-            </span>
+                        </div>
+                    </span>
+                    
+                    <span class="down-type-item">
+                        <div class="type-text">
+                            <a href='
+                                        /tags/beginner
+                                    '>
+                                <i class="fa fa-tag"></i> Beginner
+                            </a>
+                        </div>
+                    </span>
+                    
+                </div>
+            
         </div>
-        <div class="down-summary"><p>Hugo를 사용하여 나의 첫 번째 블로그 포스트를 작성하는 방법을 소개합니다.</p>
-<p>Hugo는 간단하고 빠른 정적 사이트 생성기로, 마크다운을 사용하여 콘텐츠를 작성할 수 있습니다. Hugo와 GitHub Pages를 함께 사용하면, 복잡한 서버 설정 없이도 개인 블로그를 운영할 수 있습니다.</p></div>
-    </div>
-    <div class="card-readmore">
-        <a href="http://xxx.xxx/posts/first/">
-            <span><i class="fa fa-arrow-right"></i></span>
+        
+            
+                <div class="pre-next">
+                    
+    
+        
+        <a href="http://xxx.xxx/posts/first/" class="pre pre-last" style="text-align: center;">
+            <span class="pre-icon"><i class="fa fa-hand-o-left"></i></span>
+            <div class="pre-title-root">
+                <span>Hugo로 첫 포스트 작성하기</span>
+            </div>
         </a>
-    </div>
-</div>
-
-
-
+        
+    
     
 
+                </div>
+            
+        
+    
+</div>
 
-    <div class="down-type">
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/hugo
-                        '>
-                    <i class="fa fa-tag"></i> Hugo
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/%EC%B2%AB-%ED%8F%AC%EC%8A%A4%ED%8A%B8
-                        '>
-                    <i class="fa fa-tag"></i> 첫 포스트
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/%EB%B8%94%EB%A1%9C%EA%B7%B8
-                        '>
-                    <i class="fa fa-tag"></i> 블로그
-                </a>
-            </div>
-        </span>
-        
-    </div>
-
-<div class="dang"></div>
-            </div>
+    
+        <div class="content-last">
+            
+                <button class="aixin content-last-item efct-button">
+                    <i class="fa fa-heart"></i>
+                </button>
+            
+            
+                <button class="pinglun content-last-item efct-button">
+                    <i class="fa fa-comment"></i>
+                </button>
             
         </div>
     
-</div>
 
 
             </div>
@@ -331,6 +356,11 @@
                 
 <div class="zhuti-r-0">
     <div class="zhuti-r-1">
+        
+            <div class="button-r">
+                <button class="button-mulu efct-button" type="button"><span><i class="fa fa-bars"></i></span><span class="bars-text"> content</span></button>
+                <button class="button-comment efct-button" type="button"><span><i class="fa fa-comment"></i></span><span class="comment-text"> comment</span></button>
+            </div>
         
         <div id="r1">
             
@@ -400,42 +430,16 @@
 
 
 
+    
+    
+
 
 <div class="other">
     <div class="other-up">
-        <div class="other-qita text-wbd">latest Posts</div>
+        <div class="other-qita text-wbd">Related Posts</div>
         <div class="xian"></div>
     </div>
     <div class="list">
-        
-            <a href="http://xxx.xxx/posts/docker/docker_1/">
-                
-<a href="http://xxx.xxx/posts/docker/docker_1/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/docker.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                Before you begin
-            </div>
-            <div class="other-summary"><p>Welecome to the <code>Docker</code> series and I&rsquo;m gonna study this book, <code>Learn Docker in a Month of Lunches</code>(2020), by own my word.</p>
-<p>This series consists of 4 parts:</p>
-<ol>
-<li>Understaning Docker Containers &amp; Images</li>
-<li>Running Distributed Applications in Containers</li>
-<li>Running at Scale with a Container Orchestrator</li>
-<li>Getting Your Containers Ready for Production</li>
-</ol>
-<p>This is the first post about series <code>Docker</code>.
-In this part, you can get up to speed quickly on the core Docker concepts: containers, images, and registries. you&rsquo;ll learn how to run applications in containers, package your own applications in containers, and share those applications for other people to use. You&rsquo;ll also learn about storing data in Docker volumes and how you can run stateful apps in containers. After throughing this chapter, you&rsquo;ll be comfortable with all the fundamentals of Docker, and you&rsquo;ll be learning with best pracices baked in from the start.</p></div>
-            <div class="other-date">2024-3-28</div>
-        </div>
-    </div>
-</a>
-            </a>
         
             <a href="http://xxx.xxx/posts/first/">
                 
@@ -478,37 +482,73 @@ In this part, you can get up to speed quickly on the core Docker concepts: conta
 </a>
             </a>
         
-            <a href="http://xxx.xxx/posts/database/my-first-db-post/">
-                
-<a href="http://xxx.xxx/posts/database/my-first-db-post/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                Hugo로 첫 데이터베이스 포스트 작성하기
-            </div>
-            <div class="other-summary">데이터 베이스를 구축하는 방법을 알아봅시다 ㅎㅎ</div>
-            <div class="other-date">2023-7-30</div>
-        </div>
-    </div>
-</a>
-            </a>
-        
     </div>
 </div>
         </div>
         <div id="r2">
-            
+            <div id="vcomments"></div>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script type="text/javascript">
+    new Valine({
+        el: '#vcomments',
+        appId: "1bY2Xk28MG2rZwn5yhAgSf7J-MdYXbMMI",
+        appKey: "0PMhHHKR1uBcp1aw5bXHvge7",
+        avatar: "robohash",
+        placeholder: "댓글을 입력하세요",
+        requiredFields: ["nick"],
+        visitor:  true ,
+        pageSize:  5 ,
+        recordIP:  null ,
+        lang: 'en'
+});
+</script>
+
         </div> 
     </div>
 </div>
 
             </div>
         </div>
+    </div>
+</div>
+
+    
+
+<div class="sponsor">
+    <div class="sponsor-self">
+        <div class="sponsor-title">Sponsor</div>
+        <div class="sponsor-btn">
+            
+                
+                    
+                        <div class="sponsor-btn-1 border-r">Wechat</div>
+                    
+                
+                
+            
+                
+                    
+                        <div class="sponsor-btn-2 border-l">Alipay</div>
+                    
+                
+                
+            
+        </div>
+        
+        <div class="sponsor-img">
+            
+                
+                    <img class="sponsor-img-1" src="/images/sponsor/wechat.jpeg" alt="">
+                
+                
+            
+                
+                    <img class="sponsor-img-2" src="/images/sponsor/alipay.jpeg" alt="" style="display: none;">
+                
+                
+            
+        </div>
+        <div class="cancel efct-button">cancel</div>
     </div>
 </div>
 
@@ -593,7 +633,7 @@ In this part, you can get up to speed quickly on the core Docker concepts: conta
     var search_found = "Found";
     var search_result = "result";
     var search_results = "results";
-    var enable_mermaid =  null ;
+    var enable_mermaid =  false ;
 
     var baseURL = "http://xxx.xxx/";
 </script>

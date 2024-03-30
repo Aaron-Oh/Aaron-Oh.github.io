@@ -6,14 +6,21 @@
     <description>Recent content on Jay Log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://xxx.xxx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Before you begin</title>
+      <link>http://xxx.xxx/posts/docker/docker_1/</link>
+      <pubDate>Thu, 28 Mar 2024 09:00:00 +0000</pubDate>
+      <guid>http://xxx.xxx/posts/docker/docker_1/</guid>
+      <description>&lt;p&gt;Welecome to the &lt;code&gt;Docker&lt;/code&gt; series and I&amp;rsquo;m gonna study this book, &lt;code&gt;Learn Docker in a Month of Lunches&lt;/code&gt;(2020), by own my word.&lt;/p&gt;&#xA;&lt;p&gt;This series consists of 4 parts:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Understaning Docker Containers &amp;amp; Images&lt;/li&gt;&#xA;&lt;li&gt;Running Distributed Applications in Containers&lt;/li&gt;&#xA;&lt;li&gt;Running at Scale with a Container Orchestrator&lt;/li&gt;&#xA;&lt;li&gt;Getting Your Containers Ready for Production&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;This is the first post about series &lt;code&gt;Docker&lt;/code&gt;.&#xA;In this part, you can get up to speed quickly on the core Docker concepts: containers, images, and registries. you&amp;rsquo;ll learn how to run applications in containers, package your own applications in containers, and share those applications for other people to use. You&amp;rsquo;ll also learn about storing data in Docker volumes and how you can run stateful apps in containers. After throughing this chapter, you&amp;rsquo;ll be comfortable with all the fundamentals of Docker, and you&amp;rsquo;ll be learning with best pracices baked in from the start.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Hugo로 첫 포스트 작성하기</title>
       <link>http://xxx.xxx/posts/first/</link>
       <pubDate>Tue, 12 Mar 2024 09:00:00 +0000</pubDate>
       <guid>http://xxx.xxx/posts/first/</guid>
-      <description>Hugo를 사용하여 나의 첫 번째 블로그 포스트를 작성하는 방법을 소개합니다. Hugo는 간단하고 빠른 정적 사이트</description>
+      <description>&lt;p&gt;Hugo를 사용하여 나의 첫 번째 블로그 포스트를 작성하는 방법을 소개합니다.&lt;/p&gt;&#xA;&lt;p&gt;Hugo는 간단하고 빠른 정적 사이트 생성기로, 마크다운을 사용하여 콘텐츠를 작성할 수 있습니다. Hugo와 GitHub Pages를 함께 사용하면, 복잡한 서버 설정 없이도 개인 블로그를 운영할 수 있습니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>확장된 마크다운 문법 사용하기</title>

@@ -6,8 +6,15 @@
     <description>Recent content in Categories on Jay Log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://xxx.xxx/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PART Ⅰ: Understnding Docker Containers &amp; Images</title>
+      <link>http://xxx.xxx/categories/part--understnding-docker-containers--images/</link>
+      <pubDate>Thu, 28 Mar 2024 09:00:00 +0000</pubDate>
+      <guid>http://xxx.xxx/categories/part--understnding-docker-containers--images/</guid>
+      <description></description>
+    </item>
     <item>
       <title>블로그 시작하기</title>
       <link>http://xxx.xxx/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
