@@ -30,3 +30,11 @@ Docker is a platform for running application in lightweight units called *contai
    Now let’s look at what people are doing with containers—I’ll cover the five main scenarios where organizations are seeing huge success with Docker. You’ll see the wide range of problems you can solve with containers, some of which will certainly map to scenarios in your own work. By the end of this chapter you’ll understand why Docker is a technology you need to know, and you’ll see how this book will get you there.
 
 ## Why containers will take over the world
+
+## Creating lab envionment
+
+
+## Being immediately effective
+“Immediately effective” is another principle of the Month of Lunches series. In all the chapters that follow, the focus is on learning skills and putting them into practice.
+Every chapter starts with a short introduction to the topic, followed by try-it-now exercises where you put the ideas into practice using Docker. Then there’s a recap with some more detail that fills in some of the questions you may have from diving in. Lastly there’s a hands-on lab for you to go the next stage.
+All the topics center around tasks that are genuinely useful in the real world. You’ll learn how to be immediately effective with the topic during the chapter, and you’ll fin- ish by understanding how to apply the new skill. Let’s start running some containers!
