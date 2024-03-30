@@ -3,18 +3,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jay Log | PART Ⅰ: Understnding Docker Containers &amp; Images</title>
-    <meta name="description" content=" ">
-    <link rel="canonical" href="http://xxx.xxx/series/part--understnding-docker-containers--images/" />
+    <title>Jay Log | Sorting Problem</title>
+    <meta name="description" content="Let&#39;s learn how to sort data ">
+    <link rel="canonical" href="http://xxx.xxx/posts/algorithm/sorting/sorting_2/" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <meta property="og:title" content="PART Ⅰ: Understnding Docker Containers &amp; Images" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://xxx.xxx/series/part--understnding-docker-containers--images/" />
+    <meta property="og:title" content="Sorting Problem" />
+<meta property="og:description" content="Let&#39;s learn how to sort data" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://xxx.xxx/posts/algorithm/sorting/sorting_2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-03-29T17:20:00+00:00" />
+<meta property="article:modified_time" content="2024-03-29T00:00:00+00:00" />
+<meta property="og:see_also" content="http://xxx.xxx/posts/algorithm/sorting/sorting_1/" />
 
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="PART Ⅰ: Understnding Docker Containers &amp; Images"/>
-<meta name="twitter:description" content=""/>
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Sorting Problem"/>
+<meta name="twitter:description" content="Let&#39;s learn how to sort data"/>
 
     
         
@@ -188,29 +191,41 @@
 
 
         <div id="content">
-    
 
 
 
 
-
-
-    
-        
-    
 
 
 
 
     <div class="hero">
         
-            
-                <div class="hero-img">
-                    <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/docker.jpg" alt="">
-                </div>
-            
+            <div class="hero-img">
+                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt="">
+            </div>
+        
         <div class="hero-content">
-            <h1 class="hero-title">Series: PART Ⅰ: Understnding Docker Containers &amp; Images</h1>
+            <div class="hero-title">Sorting Problem</div>
+            <div class="hero-subtitle">with java</div>
+            <div class="hero-date">
+                    <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-3-29 &nbsp;</span>
+                    <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-3-29 &nbsp;</span>
+                    <span class="no-wrap"><i class="fa fa-folder"></i>
+                        includedIn:
+                        
+                            <a href='
+                                /categories/algorithms
+                            '>
+                                Algorithms
+                            </a>
+                    </span>    
+            </div>
+            <div class="timelong">
+                <span class="no-wrap"><i class="fa fa-pencil"></i> wordsCount: 171 &nbsp;</span>
+                <span class="no-wrap"><i class="fa fa-clock-o"></i> readingTime: 1 min &nbsp;</span>
+                <span class="no-wrap"><i class="fa fa-eye"></i> viewers: <span id="busuanzi_value_page_pv"></span></span>
+            </div>
         </div>
     </div>
 
@@ -229,7 +244,7 @@
     
 
 
-<div class="terms-body">
+<div class="content-root">
     <div class="long">
         <button class="tosides-1 text-wbd">
             <i class="fa fa-arrow-right"></i>
@@ -242,97 +257,105 @@
         </button>
     </div>
     
-        <div class="terms-row">
+        <div class="content">
+            <div class="content-self">
+                <h1 id="problem">Problem</h1>
+<p>Jay likes sequences, so he use to playing with a sequence of size N. He will transform the sequence according to K queries, and the format and process of the queries are as follows:</p>
+<ul>
+<li>L R X: Let&rsquo;s say the sequence sorted in ascending order is A[1], A[2], …, A[N].</li>
+<li>First, add X to A[L], A[L+1], …, A[R].</li>
+<li>Then, sort the sequence again in ascending order.</li>
+</ul>
+<p>Print the sequence after performing all the queries in order.</p>
+<h2 id="input">Input</h2>
+<blockquote>
+<p>tip
+The first line is given with N and K separated by a space. (1 ≤ N ≤ 100000, 1 ≤ K ≤ 1000)<br>
+The second line is given with N integers that make up the sequence, each having an absolute value of less than or equal to 10^18.<br>
+From the third line to the (K+2)th line, the queries L R X are given. (1 ≤ L ≤ R ≤ N, |X| ≤ 10^9)</p>
+</blockquote>
+<h2 id="output">Output</h2>
+<blockquote>
+<p>tip
+Print the sequence after performing all the queries in order.</p>
+</blockquote>
+<hr>
+<h1 id="how-to-approach">How to Approach?</h1>
+<p>Some might think that</p>
+
+            </div>
             
-            <div class="terms-root">
-                
-                
-
-
-
-<div class="card-large">
-    <div class="card-large-img">
-
-        
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/docker.jpg" alt='image loading failed'>
-        
-    </div>
-    <div class="card-large-content">
-        <div class="up-title"><a href="/posts/docker/docker_1/">Before you begin</a></div>
-        <div class="up-date">
-            <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-3-28 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-3-28 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-folder"></i>
-                
-                    includedIn:
+                <div class="tags">
                     
-                        <a href='
-                                        /categories/docker
+                    <span class="down-type-item">
+                        <div class="type-text">
+                            <a href='
+                                        /tags/algorithms
                                     '>
-                                Docker
+                                <i class="fa fa-tag"></i> Algorithms
                             </a>
-                
-            </span>
+                        </div>
+                    </span>
+                    
+                    <span class="down-type-item">
+                        <div class="type-text">
+                            <a href='
+                                        /tags/problem
+                                    '>
+                                <i class="fa fa-tag"></i> Problem
+                            </a>
+                        </div>
+                    </span>
+                    
+                    <span class="down-type-item">
+                        <div class="type-text">
+                            <a href='
+                                        /tags/sorting
+                                    '>
+                                <i class="fa fa-tag"></i> Sorting
+                            </a>
+                        </div>
+                    </span>
+                    
+                </div>
+            
         </div>
-        <div class="down-summary"><p>Welecome to the <code>Docker</code> series and I&rsquo;m gonna study this book, <code>Learn Docker in a Month of Lunches</code>(2020), by own my word.</p>
-<p>This series consists of 4 parts:</p>
-<ol>
-<li>Understaning Docker Containers &amp; Images</li>
-<li>Running Distributed Applications in Containers</li>
-<li>Running at Scale with a Container Orchestrator</li>
-<li>Getting Your Containers Ready for Production</li>
-</ol>
-<p>This is the first post about series <code>Docker</code>.
-In this part, you can get up to speed quickly on the core Docker concepts: containers, images, and registries. you&rsquo;ll learn how to run applications in containers, package your own applications in containers, and share those applications for other people to use. You&rsquo;ll also learn about storing data in Docker volumes and how you can run stateful apps in containers. After throughing this chapter, you&rsquo;ll be comfortable with all the fundamentals of Docker, and you&rsquo;ll be learning with best pracices baked in from the start.</p></div>
-    </div>
-    <div class="card-readmore">
-        <a href="http://xxx.xxx/posts/docker/docker_1/">
-            <span><i class="fa fa-arrow-right"></i></span>
+        
+            
+                <div class="pre-next">
+                    
+    
+        
+        <a href="http://xxx.xxx/posts/algorithm/sorting/sorting_1/" class="pre pre-last" style="text-align: center;">
+            <span class="pre-icon"><i class="fa fa-hand-o-left"></i></span>
+            <div class="pre-title-root">
+                <span>How to Sort Data</span>
+            </div>
         </a>
-    </div>
-</div>
-
-
-
+        
+    
     
 
+                </div>
+            
+        
+    
+</div>
 
-    <div class="down-type">
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/docker
-                        '>
-                    <i class="fa fa-tag"></i> Docker
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/beginner
-                        '>
-                    <i class="fa fa-tag"></i> Beginner
-                </a>
-            </div>
-        </span>
-        
-    </div>
-
-<div class="dang"></div>
-            </div>
+    
+        <div class="content-last">
+            
+                <button class="aixin content-last-item efct-button">
+                    <i class="fa fa-heart"></i>
+                </button>
+            
+            
+                <button class="pinglun content-last-item efct-button">
+                    <i class="fa fa-comment"></i>
+                </button>
             
         </div>
     
-</div>
 
 
             </div>
@@ -340,6 +363,11 @@ In this part, you can get up to speed quickly on the core Docker concepts: conta
                 
 <div class="zhuti-r-0">
     <div class="zhuti-r-1">
+        
+            <div class="button-r">
+                <button class="button-mulu efct-button" type="button"><span><i class="fa fa-bars"></i></span><span class="bars-text"> content</span></button>
+                <button class="button-comment efct-button" type="button"><span><i class="fa fa-comment"></i></span><span class="comment-text"> comment</span></button>
+            </div>
         
         <div id="r1">
             
@@ -409,34 +437,16 @@ In this part, you can get up to speed quickly on the core Docker concepts: conta
 
 
 
+    
+    
+
 
 <div class="other">
     <div class="other-up">
-        <div class="other-qita text-wbd">latest Posts</div>
+        <div class="other-qita text-wbd">Related Posts</div>
         <div class="xian"></div>
     </div>
     <div class="list">
-        
-            <a href="http://xxx.xxx/posts/algorithm/sorting/sorting_2/">
-                
-<a href="http://xxx.xxx/posts/algorithm/sorting/sorting_2/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                Sorting Problem
-            </div>
-            <div class="other-summary">Problem Jay likes sequences, so he use to playing with a sequence of size N. He will transform the sequence according to K queries, and the format and process of the queries are as follows:
-L R X: Let&rsquo;s say the sequence sorted in ascending order is A[1], A[2], …, A[N].</div>
-            <div class="other-date">2024-3-29</div>
-        </div>
-    </div>
-</a>
-            </a>
         
             <a href="http://xxx.xxx/posts/algorithm/sorting/sorting_1/">
                 
@@ -513,13 +523,69 @@ In this part, you can get up to speed quickly on the core Docker concepts: conta
 </div>
         </div>
         <div id="r2">
-            
+            <div id="vcomments"></div>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script type="text/javascript">
+    new Valine({
+        el: '#vcomments',
+        appId: "1bY2Xk28MG2rZwn5yhAgSf7J-MdYXbMMI",
+        appKey: "0PMhHHKR1uBcp1aw5bXHvge7",
+        avatar: "robohash",
+        placeholder: "댓글을 입력하세요",
+        requiredFields: ["nick"],
+        visitor:  true ,
+        pageSize:  10 ,
+        recordIP:  null ,
+        lang: 'en'
+});
+</script>
+
         </div> 
     </div>
 </div>
 
             </div>
         </div>
+    </div>
+</div>
+
+    
+
+<div class="sponsor">
+    <div class="sponsor-self">
+        <div class="sponsor-title">Sponsor</div>
+        <div class="sponsor-btn">
+            
+                
+                    
+                        <div class="sponsor-btn-1 border-r">Wechat</div>
+                    
+                
+                
+            
+                
+                    
+                        <div class="sponsor-btn-2 border-l">Alipay</div>
+                    
+                
+                
+            
+        </div>
+        
+        <div class="sponsor-img">
+            
+                
+                    <img class="sponsor-img-1" src="/images/sponsor/wechat.jpeg" alt="">
+                
+                
+            
+                
+                    <img class="sponsor-img-2" src="/images/sponsor/alipay.jpeg" alt="" style="display: none;">
+                
+                
+            
+        </div>
+        <div class="cancel efct-button">cancel</div>
     </div>
 </div>
 
@@ -604,7 +670,7 @@ In this part, you can get up to speed quickly on the core Docker concepts: conta
     var search_found = "Found";
     var search_result = "result";
     var search_results = "results";
-    var enable_mermaid =  null ;
+    var enable_mermaid =  false ;
 
     var baseURL = "http://xxx.xxx/";
 </script>

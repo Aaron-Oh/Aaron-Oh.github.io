@@ -6,8 +6,15 @@
     <description>Recent content in Categories on Jay Log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://xxx.xxx/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Algorithms</title>
+      <link>http://xxx.xxx/categories/algorithms/</link>
+      <pubDate>Fri, 29 Mar 2024 17:20:00 +0000</pubDate>
+      <guid>http://xxx.xxx/categories/algorithms/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Docker</title>
       <link>http://xxx.xxx/categories/docker/</link>
