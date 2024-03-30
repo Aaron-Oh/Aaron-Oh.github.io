@@ -18,15 +18,8 @@
     <item>
       <title>Hugo 블로그 구축</title>
       <link>http://xxx.xxx/series/hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95/</link>
-      <pubDate>Tue, 12 Mar 2024 09:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Feb 2024 09:00:00 +0000</pubDate>
       <guid>http://xxx.xxx/series/hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>데이터베이스 시리즈</title>
-      <link>http://xxx.xxx/series/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%8B%9C%EB%A6%AC%EC%A6%88/</link>
-      <pubDate>Sun, 30 Jul 2023 12:34:56 +0000</pubDate>
-      <guid>http://xxx.xxx/series/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%8B%9C%EB%A6%AC%EC%A6%88/</guid>
       <description></description>
     </item>
   </channel>
