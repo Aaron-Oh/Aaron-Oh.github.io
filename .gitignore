@@ -1,4 +1,10 @@
 .DS_Store
 
+i18n/
+layouts/
+static/
+images/
+
+
 
 *.toml
