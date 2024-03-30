@@ -1,11 +1,9 @@
 .DS_Store
 
-.github/
-
 i18n/
 static/
+content/
 images/
 
-*.toml
 
-.gitmodules
+*.toml
