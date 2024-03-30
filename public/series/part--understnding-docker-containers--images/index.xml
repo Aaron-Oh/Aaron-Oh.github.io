@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Docker on Jay Log</title>
-    <link>http://xxx.xxx/series/docker/</link>
-    <description>Recent content in Docker on Jay Log</description>
+    <title>PART Ⅰ: Understnding Docker Containers &amp; Images on Jay Log</title>
+    <link>http://xxx.xxx/series/part--understnding-docker-containers--images/</link>
+    <description>Recent content in PART Ⅰ: Understnding Docker Containers &amp; Images on Jay Log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 28 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://xxx.xxx/series/docker/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://xxx.xxx/series/part--understnding-docker-containers--images/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Before you begin</title>
       <link>http://xxx.xxx/posts/docker/docker_1/</link>

@@ -20,10 +20,10 @@
     <loc>http://xxx.xxx/tags/docker/</loc>
     <lastmod>2024-03-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://xxx.xxx/series/docker/</loc>
+    <loc>http://xxx.xxx/categories/docker/</loc>
     <lastmod>2024-03-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://xxx.xxx/categories/part--understnding-docker-containers--images/</loc>
+    <loc>http://xxx.xxx/series/part--understnding-docker-containers--images/</loc>
     <lastmod>2024-03-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://xxx.xxx/series/</loc>
@@ -32,16 +32,13 @@
     <loc>http://xxx.xxx/tags/</loc>
     <lastmod>2024-03-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://xxx.xxx/categories/extended-markdown-grammar/</loc>
-    <lastmod>2024-02-12T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://xxx.xxx/tags/extended-markdown/</loc>
     <lastmod>2024-02-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://xxx.xxx/posts/markdown/extendedmd/</loc>
     <lastmod>2024-02-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://xxx.xxx/series/make-your-own-blog/</loc>
+    <loc>http://xxx.xxx/categories/make-your-own-blog/</loc>
     <lastmod>2024-02-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://xxx.xxx/tags/markdown/</loc>

@@ -3,8 +3,8 @@ title: "How to use Extended Markdown"
 subtitle: "How to posting using markdown"
 date: 2024-02-12T09:00:00
 lastmod: "2024-02-12"
-series: ["Make your own blog"]
-categories: ["Extended Markdown Grammar"]
+categories: ["Make your own blog"]
+series: []
 tags: ["markdown", "extended-markdown"]
 image: "/images/default.jpg"
 draft: false

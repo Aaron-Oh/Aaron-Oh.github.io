@@ -9,17 +9,17 @@
     <lastBuildDate>Thu, 28 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://xxx.xxx/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>PART Ⅰ: Understnding Docker Containers &amp; Images</title>
-      <link>http://xxx.xxx/categories/part--understnding-docker-containers--images/</link>
+      <title>Docker</title>
+      <link>http://xxx.xxx/categories/docker/</link>
       <pubDate>Thu, 28 Mar 2024 09:00:00 +0000</pubDate>
-      <guid>http://xxx.xxx/categories/part--understnding-docker-containers--images/</guid>
+      <guid>http://xxx.xxx/categories/docker/</guid>
       <description></description>
     </item>
     <item>
-      <title>Extended Markdown Grammar</title>
-      <link>http://xxx.xxx/categories/extended-markdown-grammar/</link>
+      <title>Make Your Own Blog</title>
+      <link>http://xxx.xxx/categories/make-your-own-blog/</link>
       <pubDate>Mon, 12 Feb 2024 09:00:00 +0000</pubDate>
-      <guid>http://xxx.xxx/categories/extended-markdown-grammar/</guid>
+      <guid>http://xxx.xxx/categories/make-your-own-blog/</guid>
       <description></description>
     </item>
   </channel>

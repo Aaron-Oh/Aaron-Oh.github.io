@@ -3,9 +3,9 @@ title: "Before you begin"
 subtitle: "What is Docker"
 date: 2024-03-28T09:00:00
 lastmod: "2024-03-28"
-description: ""
-series: ["Docker"]
-categories: ["PART Ⅰ: Understnding Docker Containers & Images"]
+description: "Let's start docker!"
+categories: ["Docker"]
+series: ["PART Ⅰ: Understnding Docker Containers & Images"]
 tags: ["Docker", "Beginner"]
 image: "/images/docker.jpg"
 draft: false
