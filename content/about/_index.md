@@ -1,18 +1,3 @@
----
-title: "Who am I"
-subtitle: 
-date: 2024-03-28T09:00:00
-lastmod: "2024-03-28"
-description: ""
-series: ["Docker"]
-categories: []
-tags: []
-image: "/images/default.jpg"
-draft: false
-hideFromHomePage: false
-math: false
-mermaid: false
----
 
 # 저는
 평범한 컴퓨터학도입니다.
@@ -21,3 +6,4 @@ mermaid: false
 제주도에서 온 서울놈(?)입니다.
 맛있는 밥사주세요
 서울 구경 시켜주세요
+
