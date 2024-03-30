@@ -32,7 +32,7 @@ Docker is a platform for running application in lightweight units called *contai
 ## Why containers will take over the world
 
 ## Creating lab envionment
-
+how to install docker in your operaing system?
 
 ## Being immediately effective
 “Immediately effective” is another principle of the Month of Lunches series. In all the chapters that follow, the focus is on learning skills and putting them into practice.
