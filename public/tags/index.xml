@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Jay Log</title>
-    <link>http://xxx.xxx/tags/</link>
+    <link>http://jaym-oh.github.io/tags/</link>
     <description>Recent content in Tags on Jay Log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 29 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://xxx.xxx/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jaym-oh.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Algorithms</title>
-      <link>http://xxx.xxx/tags/algorithms/</link>
+      <link>http://jaym-oh.github.io/tags/algorithms/</link>
       <pubDate>Fri, 29 Mar 2024 17:20:00 +0000</pubDate>
-      <guid>http://xxx.xxx/tags/algorithms/</guid>
+      <guid>http://jaym-oh.github.io/tags/algorithms/</guid>
       <description></description>
     </item>
     <item>
       <title>Problem</title>
-      <link>http://xxx.xxx/tags/problem/</link>
+      <link>http://jaym-oh.github.io/tags/problem/</link>
       <pubDate>Fri, 29 Mar 2024 17:20:00 +0000</pubDate>
-      <guid>http://xxx.xxx/tags/problem/</guid>
+      <guid>http://jaym-oh.github.io/tags/problem/</guid>
       <description></description>
     </item>
     <item>
       <title>Sorting</title>
-      <link>http://xxx.xxx/tags/sorting/</link>
+      <link>http://jaym-oh.github.io/tags/sorting/</link>
       <pubDate>Fri, 29 Mar 2024 17:20:00 +0000</pubDate>
-      <guid>http://xxx.xxx/tags/sorting/</guid>
+      <guid>http://jaym-oh.github.io/tags/sorting/</guid>
       <description></description>
     </item>
     <item>
       <title>Concept</title>
-      <link>http://xxx.xxx/tags/concept/</link>
+      <link>http://jaym-oh.github.io/tags/concept/</link>
       <pubDate>Fri, 29 Mar 2024 16:00:00 +0000</pubDate>
-      <guid>http://xxx.xxx/tags/concept/</guid>
+      <guid>http://jaym-oh.github.io/tags/concept/</guid>
       <description></description>
     </item>
     <item>
       <title>Beginner</title>
-      <link>http://xxx.xxx/tags/beginner/</link>
+      <link>http://jaym-oh.github.io/tags/beginner/</link>
       <pubDate>Thu, 28 Mar 2024 09:00:00 +0000</pubDate>
-      <guid>http://xxx.xxx/tags/beginner/</guid>
+      <guid>http://jaym-oh.github.io/tags/beginner/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>http://xxx.xxx/tags/docker/</link>
+      <link>http://jaym-oh.github.io/tags/docker/</link>
       <pubDate>Thu, 28 Mar 2024 09:00:00 +0000</pubDate>
-      <guid>http://xxx.xxx/tags/docker/</guid>
+      <guid>http://jaym-oh.github.io/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Extended-Markdown</title>
-      <link>http://xxx.xxx/tags/extended-markdown/</link>
+      <link>http://jaym-oh.github.io/tags/extended-markdown/</link>
       <pubDate>Mon, 12 Feb 2024 09:00:00 +0000</pubDate>
-      <guid>http://xxx.xxx/tags/extended-markdown/</guid>
+      <guid>http://jaym-oh.github.io/tags/extended-markdown/</guid>
       <description></description>
     </item>
     <item>
       <title>Markdown</title>
-      <link>http://xxx.xxx/tags/markdown/</link>
+      <link>http://jaym-oh.github.io/tags/markdown/</link>
       <pubDate>Mon, 12 Feb 2024 09:00:00 +0000</pubDate>
-      <guid>http://xxx.xxx/tags/markdown/</guid>
+      <guid>http://jaym-oh.github.io/tags/markdown/</guid>
       <description></description>
     </item>
   </channel>

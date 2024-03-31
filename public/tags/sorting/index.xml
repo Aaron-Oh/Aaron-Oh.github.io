@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sorting on Jay Log</title>
-    <link>http://xxx.xxx/tags/sorting/</link>
+    <link>http://jaym-oh.github.io/tags/sorting/</link>
     <description>Recent content in Sorting on Jay Log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 29 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://xxx.xxx/tags/sorting/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jaym-oh.github.io/tags/sorting/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sorting Problem</title>
-      <link>http://xxx.xxx/posts/algorithm/sorting/sorting_2/</link>
+      <link>http://jaym-oh.github.io/posts/algorithm/sorting/sorting_2/</link>
       <pubDate>Fri, 29 Mar 2024 17:20:00 +0000</pubDate>
-      <guid>http://xxx.xxx/posts/algorithm/sorting/sorting_2/</guid>
+      <guid>http://jaym-oh.github.io/posts/algorithm/sorting/sorting_2/</guid>
       <description>Problem Jay likes sequences, so he use to playing with a sequence of size N. He will transform the sequence according to K queries, and the format and process of the queries are as follows:&#xA;L R X: Let&amp;rsquo;s say the sequence sorted in ascending order is A[1], A[2], …, A[N].</description>
     </item>
     <item>
       <title>How to Sort Data</title>
-      <link>http://xxx.xxx/posts/algorithm/sorting/sorting_1/</link>
+      <link>http://jaym-oh.github.io/posts/algorithm/sorting/sorting_1/</link>
       <pubDate>Fri, 29 Mar 2024 16:00:00 +0000</pubDate>
-      <guid>http://xxx.xxx/posts/algorithm/sorting/sorting_1/</guid>
+      <guid>http://jaym-oh.github.io/posts/algorithm/sorting/sorting_1/</guid>
       <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;&#xA;&lt;h2 id=&#34;what-this-post-focus-on&#34;&gt;What this post focus on&lt;/h2&gt;&#xA;&lt;p&gt;This posting will cover almost every concept of  &lt;code&gt;How to sort (primary)&lt;/code&gt;. Plus, I&amp;rsquo;ll post realistic algorithm problem of our real world so that you can apply those concept to real world problem and learn how to use it. I really hope so.&lt;/p&gt;</description>
     </item>
   </channel>
