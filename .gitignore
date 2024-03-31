@@ -7,3 +7,6 @@ images/
 
 
 *.toml
+
+
+!public/images/
