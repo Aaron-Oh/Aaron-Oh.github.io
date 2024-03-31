@@ -23,11 +23,11 @@
       <description>Introduction What this post focus on This posting will cover almost every concept of How to sort (primary). Plus, I&amp;rsquo;ll post realistic algorithm problem of our real world so that you can apply those concept to real world problem and learn how to use it. I really hope so. Let&amp;rsquo;s see the below example.</description>
     </item>
     <item>
-      <title></title>
-      <link>http://jaym-oh.github.io/posts/database/db_17/</link>
-      <pubDate>Thu, 28 Mar 2024 09:00:00 +0000</pubDate>
-      <guid>http://jaym-oh.github.io/posts/database/db_17/</guid>
-      <description></description>
+      <title>Data Type in DB</title>
+      <link>http://jaym-oh.github.io/posts/database/db_15_2/</link>
+      <pubDate>Fri, 29 Mar 2024 09:00:00 +0000</pubDate>
+      <guid>http://jaym-oh.github.io/posts/database/db_15_2/</guid>
+      <description>ENUM 테이블의 구조에 나열된 목록 중 하나의 값을 가질 수 있다. 1 2 3 4 5 6 create table tb_enum ( fd_enum enum(&amp;#39;PROCESSING&amp;#39;, &amp;#39;FAILURE&amp;#39;, &amp;#39;SUCCESS&amp;#39;) ); -- 매핑된 문자열이 아닌</description>
     </item>
     <item>
       <title>Before you begin</title>
