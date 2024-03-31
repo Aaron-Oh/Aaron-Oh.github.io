@@ -9,18 +9,18 @@
     <lastBuildDate>Fri, 29 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://jaym-oh.github.io/categories/database/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Data Type in DB</title>
-      <link>http://jaym-oh.github.io/posts/database/db_15_1/</link>
-      <pubDate>Fri, 29 Mar 2024 09:00:00 +0000</pubDate>
-      <guid>http://jaym-oh.github.io/posts/database/db_15_1/</guid>
-      <description>저장 공간 char vs varchar: 둘다 문자열을 저장할 수 있는 데이터 타입, 차이는 고정/가변 길이 두 타입 모두 한 글자를 저장하기 위해</description>
-    </item>
-    <item>
-      <title>Data Type in DB</title>
+      <title>ch15. Data type in DB</title>
       <link>http://jaym-oh.github.io/posts/database/db_15_2/</link>
-      <pubDate>Fri, 29 Mar 2024 09:00:00 +0000</pubDate>
+      <pubDate>Fri, 29 Mar 2024 14:00:00 +0000</pubDate>
       <guid>http://jaym-oh.github.io/posts/database/db_15_2/</guid>
       <description>ENUM 테이블의 구조에 나열된 목록 중 하나의 값을 가질 수 있다. 1 2 3 4 5 6 create table tb_enum ( fd_enum enum(&amp;#39;PROCESSING&amp;#39;, &amp;#39;FAILURE&amp;#39;, &amp;#39;SUCCESS&amp;#39;) ); -- 매핑된 문자열이 아닌</description>
+    </item>
+    <item>
+      <title>ch15. Data type in DB</title>
+      <link>http://jaym-oh.github.io/posts/database/db_15_1/</link>
+      <pubDate>Fri, 29 Mar 2024 08:00:00 +0000</pubDate>
+      <guid>http://jaym-oh.github.io/posts/database/db_15_1/</guid>
+      <description>저장 공간 char vs varchar: 둘다 문자열을 저장할 수 있는 데이터 타입, 차이는 고정/가변 길이 두 타입 모두 한 글자를 저장하기 위해</description>
     </item>
   </channel>
 </rss>
