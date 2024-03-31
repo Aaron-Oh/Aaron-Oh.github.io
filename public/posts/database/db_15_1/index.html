@@ -279,8 +279,8 @@
 <li>저장되는 문자열의 길이가 비슷한지</li>
 <li>컬럼의 값이 자주 변경되는지</li>
 </ul>
-<p><img src="/images/15_1.png" alt="photo">
-<img src="/images/15_2.png" alt="photo"></p>
+<p><img src="/images/15_1.jpg" alt="photo"><br>
+<img src="/images/15_2.jpg" alt="photo"></p>
 <ul>
 <li>char 타입은 이미 준비된 공간에 값을 업데이트하면 된다.</li>
 <li>varchar 타입에서 길이가 더 큰 값으로 변경되면 레코드 자체를 다른 공간으로 옮겨서 저장해야 한다.
@@ -310,7 +310,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="/images/online_ddl.png" alt="photo"></p>
+<p><img src="/images/online_ddl.jpg" alt="photo"></p>
 <ul>
 <li>컬럼의 타입을 varchar(63)으로 늘리는 경우 잠금 없이 빠르게 변경될 수 있음</li>
 <li>varchar(64)으로 늘리는 경우 inplace 알고리즘으로 스키마 변경이 허용되지 않음
@@ -336,13 +336,13 @@
 </li>
 <li>최근에는 여러 나라의 언어를 동시에 지원하기 위해 utf8mb4을 사용하는 추세</li>
 <li>MySQL 서버에서 사용 가능한 문자 집합은 <code>SHOW CHARACTER SET</code> 명령으로 확인한다.
-<img src="/images/show_character_set.png" alt="photo">
+<img src="/images/show_character_set.jpg" alt="photo">
 <ul>
 <li><code>default collation</code> 컬럼에는 해당 문자 집합의 기본 콜레이션을 표시</li>
 </ul>
 </li>
 <li>MySQL에는 문자 집합을 설정하는 시스템 변수가 여러가지 있음
-<img src="/images/15_3.png" alt="photo"></li>
+<img src="/images/15_3.jpg" alt="photo"></li>
 </ul>
 <h2 id="클라이언트로부터-쿼리를-요청했을-때의-문자-집합-변환">클라이언트로부터 쿼리를 요청했을 때의 문자 집합 변환</h2>
 <ul>
