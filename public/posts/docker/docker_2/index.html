@@ -3,18 +3,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jay Log | Docker</title>
-    <meta name="description" content=" ">
-    <link rel="canonical" href="http://jaym-oh.github.io/tags/docker/" />
+    <title>Jay Log | Understanding Docker and Running Hello World</title>
+    <meta name="description" content="Hello World ">
+    <link rel="canonical" href="http://jaym-oh.github.io/posts/docker/docker_2/" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <meta property="og:title" content="Docker" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://jaym-oh.github.io/tags/docker/" />
+    <meta property="og:title" content="Understanding Docker and Running Hello World" />
+<meta property="og:description" content="Hello World" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://jaym-oh.github.io/posts/docker/docker_2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-01T16:45:00+00:00" />
+<meta property="article:modified_time" content="2023-04-01T00:00:00+00:00" />
 
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Docker"/>
-<meta name="twitter:description" content=""/>
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Understanding Docker and Running Hello World"/>
+<meta name="twitter:description" content="Hello World"/>
 
     
         
@@ -188,29 +191,41 @@
 
 
         <div id="content">
-    
 
 
 
 
-
-
-    
-        
-    
 
 
 
 
     <div class="hero">
         
-            
-                <div class="hero-img">
-                    <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/docker.jpg" alt="">
-                </div>
-            
+            <div class="hero-img">
+                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/docker.jpg" alt="">
+            </div>
+        
         <div class="hero-content">
-            <h1 class="hero-title">Tag: Docker</h1>
+            <div class="hero-title">Understanding Docker and Running Hello World</div>
+            <div class="hero-subtitle">Running Hello World in a container</div>
+            <div class="hero-date">
+                    <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2023-4-1 &nbsp;</span>
+                    <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2023-4-1 &nbsp;</span>
+                    <span class="no-wrap"><i class="fa fa-folder"></i>
+                        includedIn:
+                        
+                            <a href='
+                                /categories/docker
+                            '>
+                                Docker
+                            </a>
+                    </span>    
+            </div>
+            <div class="timelong">
+                <span class="no-wrap"><i class="fa fa-pencil"></i> wordsCount: 162 &nbsp;</span>
+                <span class="no-wrap"><i class="fa fa-clock-o"></i> readingTime: 1 min &nbsp;</span>
+                <span class="no-wrap"><i class="fa fa-eye"></i> viewers: <span id="busuanzi_value_page_pv"></span></span>
+            </div>
         </div>
     </div>
 
@@ -229,7 +244,7 @@
     
 
 
-<div class="terms-body">
+<div class="content-root">
     <div class="long">
         <button class="tosides-1 text-wbd">
             <i class="fa fa-arrow-right"></i>
@@ -242,175 +257,111 @@
         </button>
     </div>
     
-        <div class="terms-row">
+        <div class="content">
+            <div class="content-self">
+                <h1 id="running-hello-world-in-a-container">Running Hello World in a container</h1>
+<p>Let&rsquo;s just simply run below code:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">docker container run diamol/ch02-hello-diamol
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>May you don&rsquo;t know the meaning of code, It&rsquo;s okay. At the end of this chapter, you will know what that means naturally. Since I already download image <code>diamol/ch02-hello-diamol</code>, print out like below:</p>
+<blockquote>
+<h2 id="docker-container-run-diamolch02-hello-diamol">success
+docker container run diamol/ch02-hello-diamol</h2>
+<h2 id="hello-from-chapter-2">Hello from Chapter 2!</h2>
+<h2 id="b56c8d50100a">My name is:
+b56c8d50100a</h2>
+<h2 id="linux-6616-linuxkit-aarch64">Im running on:
+Linux 6.6.16-linuxkit aarch64</h2>
+<h2 id="inet-addr1721702-bcast17217255255-mask25525500">My address is:
+inet addr:172.17.0.2 Bcast:172.17.255.255 Mask:255.255.0.0</h2>
+</blockquote>
+<p>If you want to run container with any image, you need that image first(if you don&rsquo;t have, docker download that image which Docker calls <code>pulling (success)</code>). Image have all</p>
+<p>This example simply print out message &lsquo;Hello from Chapter 2!&rsquo; with details of container running. The image contains all the content for the application, along with instructions telling Docker how to start the application.</p>
+<ul>
+<li>The machine name, in this example: b56c8d50100a</li>
+<li>The Operating system, in this example: Linux 6.6.16-linuxkit aarch64</li>
+<li>The network address, in this example: 172.17.0.2</li>
+</ul>
+
+            </div>
             
-            <div class="terms-root">
-                
-                
-
-
-
-<div class="card-large">
-    <div class="card-large-img">
-
-        
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/docker.jpg" alt='image loading failed'>
-        
-    </div>
-    <div class="card-large-content">
-        <div class="up-title"><a href="/posts/docker/docker_2/">Understanding Docker and Running Hello World</a></div>
-        <div class="up-date">
-            <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2023-4-1 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2023-4-1 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-folder"></i>
-                
-                    includedIn:
+                <div class="tags">
                     
-                        <a href='
-                                        /categories/docker
+                    <span class="down-type-item">
+                        <div class="type-text">
+                            <a href='
+                                        /tags/docker
                                     '>
-                                Docker
+                                <i class="fa fa-tag"></i> Docker
                             </a>
-                
-            </span>
-        </div>
-        <div class="down-summary">Running Hello World in a container Let&rsquo;s just simply run below code:
-1 docker container run diamol/ch02-hello-diamol May you don&rsquo;t know the meaning of code, It&rsquo;s okay. At the end of this chapter, you will know what that means naturally. Since I already download image diamol/ch02-hello-diamol, print out like below:</div>
-    </div>
-    <div class="card-readmore">
-        <a href="http://jaym-oh.github.io/posts/docker/docker_2/">
-            <span><i class="fa fa-arrow-right"></i></span>
-        </a>
-    </div>
-</div>
-
-
-
-    
-
-
-    <div class="down-type">
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/docker
-                        '>
-                    <i class="fa fa-tag"></i> Docker
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/beginner
-                        '>
-                    <i class="fa fa-tag"></i> Beginner
-                </a>
-            </div>
-        </span>
-        
-    </div>
-
-<div class="dang"></div>
-            </div>
-            
-            <div class="terms-root">
-                
-                
-
-
-
-<div class="card-large">
-    <div class="card-large-img">
-
-        
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/docker.jpg" alt='image loading failed'>
-        
-    </div>
-    <div class="card-large-content">
-        <div class="up-title"><a href="/posts/docker/docker_1/">Before you begin</a></div>
-        <div class="up-date">
-            <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2023-3-28 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2023-3-28 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-folder"></i>
-                
-                    includedIn:
+                        </div>
+                    </span>
                     
-                        <a href='
-                                        /categories/docker
+                    <span class="down-type-item">
+                        <div class="type-text">
+                            <a href='
+                                        /tags/beginner
                                     '>
-                                Docker
+                                <i class="fa fa-tag"></i> Beginner
                             </a>
-                
-            </span>
+                        </div>
+                    </span>
+                    
+                </div>
+            
         </div>
-        <div class="down-summary"><p>Welecome to the <code>Docker</code> series and I&rsquo;m gonna study this book, <code>Learn Docker in a Month of Lunches</code>(2020), by own my word.</p>
-<p>This series consists of 4 parts:</p>
-<ol>
-<li>Understaning Docker Containers &amp; Images</li>
-<li>Running Distributed Applications in Containers</li>
-<li>Running at Scale with a Container Orchestrator</li>
-<li>Getting Your Containers Ready for Production</li>
-</ol>
-<p>This is the first post about series <code>Docker</code>.
-In this part, you can get up to speed quickly on the core Docker concepts: containers, images, and registries. you&rsquo;ll learn how to run applications in containers, package your own applications in containers, and share those applications for other people to use. You&rsquo;ll also learn about storing data in Docker volumes and how you can run stateful apps in containers. After throughing this chapter, you&rsquo;ll be comfortable with all the fundamentals of Docker, and you&rsquo;ll be learning with best pracices baked in from the start.</p></div>
-    </div>
-    <div class="card-readmore">
-        <a href="http://jaym-oh.github.io/posts/docker/docker_1/">
-            <span><i class="fa fa-arrow-right"></i></span>
+        
+            
+                <div class="pre-next">
+                    
+    
+        
+        <a href="http://jaym-oh.github.io/posts/docker/docker_1/" class="pre">
+            <span class="pre-icon"><i class="fa fa-hand-o-left"></i></span>
+            <div class="pre-title-root">
+                <span>Before you begin</span>
+            </div>
         </a>
-    </div>
-</div>
+        
 
-
+        
+        <a href="http://jaym-oh.github.io/posts/database/db_15_1/" class="next">
+            <div class="next-title-root">
+                <span>ch15. Data type in DB</span>
+            </div>
+            <span class="next-icon"><i class="fa fa-hand-o-right"></i></span>
+        </a>
+        
 
     
+    
 
+                </div>
+            
+        
+    
+</div>
 
-    <div class="down-type">
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/docker
-                        '>
-                    <i class="fa fa-tag"></i> Docker
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/beginner
-                        '>
-                    <i class="fa fa-tag"></i> Beginner
-                </a>
-            </div>
-        </span>
-        
-    </div>
-
-<div class="dang"></div>
-            </div>
+    
+        <div class="content-last">
+            
+                <button class="aixin content-last-item efct-button">
+                    <i class="fa fa-heart"></i>
+                </button>
+            
+            
+                <button class="pinglun content-last-item efct-button">
+                    <i class="fa fa-comment"></i>
+                </button>
             
         </div>
     
-</div>
 
 
             </div>
@@ -418,6 +369,11 @@ In this part, you can get up to speed quickly on the core Docker concepts: conta
                 
 <div class="zhuti-r-0">
     <div class="zhuti-r-1">
+        
+            <div class="button-r">
+                <button class="button-mulu efct-button" type="button"><span><i class="fa fa-bars"></i></span><span class="bars-text"> content</span></button>
+                <button class="button-comment efct-button" type="button"><span><i class="fa fa-comment"></i></span><span class="comment-text"> comment</span></button>
+            </div>
         
         <div id="r1">
             
@@ -487,115 +443,16 @@ In this part, you can get up to speed quickly on the core Docker concepts: conta
 
 
 
+    
+    
+
 
 <div class="other">
     <div class="other-up">
-        <div class="other-qita text-wbd">latest Posts</div>
+        <div class="other-qita text-wbd">Related Posts</div>
         <div class="xian"></div>
     </div>
     <div class="list">
-        
-            <a href="http://jaym-oh.github.io/posts/algorithm/sorting/sorting_2/">
-                
-<a href="http://jaym-oh.github.io/posts/algorithm/sorting/sorting_2/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                Sorting Problem
-            </div>
-            <div class="other-summary">Problem Jay likes sequences, so he use to playing with a sequence of size N. He will transform the sequence according to K queries, and the format and process of the queries are as follows:
-L R X: Let&rsquo;s say the sequence sorted in ascending order is A[1], A[2], …, A[N].</div>
-            <div class="other-date">2024-3-29</div>
-        </div>
-    </div>
-</a>
-            </a>
-        
-            <a href="http://jaym-oh.github.io/posts/algorithm/sorting/sorting_1/">
-                
-<a href="http://jaym-oh.github.io/posts/algorithm/sorting/sorting_1/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                How to Sort Data
-            </div>
-            <div class="other-summary">Introduction What this post focus on This posting will cover almost every concept of How to sort (primary). Plus, I&rsquo;ll post realistic algorithm problem of our real world so that you can apply those concept to real world problem and learn how to use it. I really hope so. Let&rsquo;s see the below example.</div>
-            <div class="other-date">2024-3-29</div>
-        </div>
-    </div>
-</a>
-            </a>
-        
-            <a href="http://jaym-oh.github.io/posts/database/db_15_2/">
-                
-<a href="http://jaym-oh.github.io/posts/database/db_15_2/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                ch15. Data type in DB
-            </div>
-            <div class="other-summary">ENUM 테이블의 구조에 나열된 목록 중 하나의 값을 가질 수 있다. 1 2 3 4 5 6 create table tb_enum ( fd_enum enum(&#39;PROCESSING&#39;, &#39;FAILURE&#39;, &#39;SUCCESS&#39;) ); -- 매핑된 문자열이 아닌</div>
-            <div class="other-date">2024-3-29</div>
-        </div>
-    </div>
-</a>
-            </a>
-        
-            <a href="http://jaym-oh.github.io/posts/database/db_15_1/">
-                
-<a href="http://jaym-oh.github.io/posts/database/db_15_1/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                ch15. Data type in DB
-            </div>
-            <div class="other-summary">저장 공간 char vs varchar: 둘다 문자열을 저장할 수 있는 데이터 타입, 차이는 고정/가변 길이 두 타입 모두 한 글자를 저장하기 위해</div>
-            <div class="other-date">2024-3-29</div>
-        </div>
-    </div>
-</a>
-            </a>
-        
-            <a href="http://jaym-oh.github.io/posts/docker/docker_2/">
-                
-<a href="http://jaym-oh.github.io/posts/docker/docker_2/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/docker.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                Understanding Docker and Running Hello World
-            </div>
-            <div class="other-summary">Running Hello World in a container Let&rsquo;s just simply run below code:
-1 docker container run diamol/ch02-hello-diamol May you don&rsquo;t know the meaning of code, It&rsquo;s okay. At the end of this chapter, you will know what that means naturally. Since I already download image diamol/ch02-hello-diamol, print out like below:</div>
-            <div class="other-date">2023-4-1</div>
-        </div>
-    </div>
-</a>
-            </a>
         
             <a href="http://jaym-oh.github.io/posts/docker/docker_1/">
                 
@@ -630,13 +487,69 @@ In this part, you can get up to speed quickly on the core Docker concepts: conta
 </div>
         </div>
         <div id="r2">
-            
+            <div id="vcomments"></div>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script type="text/javascript">
+    new Valine({
+        el: '#vcomments',
+        appId: "1bY2Xk28MG2rZwn5yhAgSf7J-MdYXbMMI",
+        appKey: "0PMhHHKR1uBcp1aw5bXHvge7",
+        avatar: "robohash",
+        placeholder: "댓글을 입력하세요",
+        requiredFields: ["nick"],
+        visitor:  true ,
+        pageSize:  10 ,
+        recordIP:  null ,
+        lang: 'en'
+});
+</script>
+
         </div> 
     </div>
 </div>
 
             </div>
         </div>
+    </div>
+</div>
+
+    
+
+<div class="sponsor">
+    <div class="sponsor-self">
+        <div class="sponsor-title">Sponsor</div>
+        <div class="sponsor-btn">
+            
+                
+                    
+                        <div class="sponsor-btn-1 border-r">Wechat</div>
+                    
+                
+                
+            
+                
+                    
+                        <div class="sponsor-btn-2 border-l">Alipay</div>
+                    
+                
+                
+            
+        </div>
+        
+        <div class="sponsor-img">
+            
+                
+                    <img class="sponsor-img-1" src="/images/sponsor/wechat.jpeg" alt="">
+                
+                
+            
+                
+                    <img class="sponsor-img-2" src="/images/sponsor/alipay.jpeg" alt="" style="display: none;">
+                
+                
+            
+        </div>
+        <div class="cancel efct-button">cancel</div>
     </div>
 </div>
 
@@ -730,7 +643,7 @@ In this part, you can get up to speed quickly on the core Docker concepts: conta
     var search_found = "Found";
     var search_result = "result";
     var search_results = "results";
-    var enable_mermaid =  null ;
+    var enable_mermaid =  false ;
 
     var baseURL = "http://jaym-oh.github.io/";
 </script>
