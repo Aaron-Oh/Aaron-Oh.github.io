@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?><rss version="2.0"
-    xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?><rss version="2.0">
     <channel>
-        <title>Jay Log</title>...<item>
+        <title>Jay Log</title>
+        <link>http://jaym-oh.github.io/tags/docker/</link>
+        <description></description>
+        <language>en</language>
+        <pubDate>Sat, 01 Apr 2023 16:45:00 &#43;0000</pubDate>
+        <generator><meta name="generator" content="Hugo 0.124.1"></generator>
+        
+
+    
+        <item>
             <title>Sorting Problem</title>
             <link>http://jaym-oh.github.io/posts/algorithm/sorting/sorting_2/</link>
-            <pubDate>Fri, 29 Mar 2024 17:20:00 +0000</pubDate>
-            <guid>http://jaym-oh.github.io/posts/algorithm/sorting/sorting_2/</guid>
-            <description>Problem Jay likes sequences, so he use to playing with a sequence of size N. He will transform the sequence according to K queries, and the format and process of the queries are as follows:
-L R X: Let&amp;rsquo;s say the sequence sorted in ascending order is A[1], A[2], …, A[N].</description>
-            <content:encoded>&lt;h1 id=&#34;problem&#34;&gt;Problem&lt;/h1&gt;
+            <description>&lt;h1 id=&#34;problem&#34;&gt;Problem&lt;/h1&gt;
 &lt;p&gt;Jay likes sequences, so he use to playing with a sequence of size N. He will transform the sequence according to K queries, and the format and process of the queries are as follows:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;L R X: Let&amp;rsquo;s say the sequence sorted in ascending order is A[1], A[2], …, A[N].&lt;/li&gt;
@@ -119,25 +123,33 @@ Output:
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sequence&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</content:encoded>            
-        </item><item>
+&lt;/div&gt;</description>
+            <category></category>
+            <author></author>
+            <guid isPermaLink="true">http://jaym-oh.github.io/posts/algorithm/sorting/sorting_2/</guid>
+            <comments>http://jaym-oh.github.io/posts/algorithm/sorting/sorting_2/#comments</comments>
+            <pubDate>Fri, 29 Mar 2024 17:20:00 &#43;0000</pubDate>
+        </item>
+    
+        <item>
             <title>How to Sort Data</title>
             <link>http://jaym-oh.github.io/posts/algorithm/sorting/sorting_1/</link>
-            <pubDate>Fri, 29 Mar 2024 16:00:00 +0000</pubDate>
-            <guid>http://jaym-oh.github.io/posts/algorithm/sorting/sorting_1/</guid>
-            <description>Introduction What this post focus on This posting will cover almost every concept of How to sort (primary). Plus, I&amp;rsquo;ll post realistic algorithm problem of our real world so that you can apply those concept to real world problem and learn how to use it. I really hope so. Let&amp;rsquo;s see the below example.</description>
-            <content:encoded>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+            <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
 &lt;h2 id=&#34;what-this-post-focus-on&#34;&gt;What this post focus on&lt;/h2&gt;
 &lt;h2 id=&#34;this-posting-will-cover-almost-every-concept-of--how-to-sort-primary-plus-ill-post-realistic-algorithm-problem-of-our-real-world-so-that-you-can-apply-those-concept-to-real-world-problem-and-learn-how-to-use-it-i-really-hope-so&#34;&gt;This posting will cover almost every concept of  &lt;code&gt;How to sort (primary)&lt;/code&gt;. Plus, I&amp;rsquo;ll post realistic algorithm problem of our real world so that you can apply those concept to real world problem and learn how to use it. I really hope so.&lt;/h2&gt;
 &lt;p&gt;Let&amp;rsquo;s see the below example.&lt;/p&gt;
-</content:encoded>            
-        </item><item>
+</description>
+            <category></category>
+            <author></author>
+            <guid isPermaLink="true">http://jaym-oh.github.io/posts/algorithm/sorting/sorting_1/</guid>
+            <comments>http://jaym-oh.github.io/posts/algorithm/sorting/sorting_1/#comments</comments>
+            <pubDate>Fri, 29 Mar 2024 16:00:00 &#43;0000</pubDate>
+        </item>
+    
+        <item>
             <title>ch15. Data type in DB</title>
             <link>http://jaym-oh.github.io/posts/database/db_15_2/</link>
-            <pubDate>Fri, 29 Mar 2024 14:00:00 +0000</pubDate>
-            <guid>http://jaym-oh.github.io/posts/database/db_15_2/</guid>
-            <description>ENUM 테이블의 구조에 나열된 목록 중 하나의 값을 가질 수 있다. 1 2 3 4 5 6 create table tb_enum ( fd_enum enum(&amp;#39;PROCESSING&amp;#39;, &amp;#39;FAILURE&amp;#39;, &amp;#39;SUCCESS&amp;#39;) ); -- 매핑된 문자열이 아닌</description>
-            <content:encoded>&lt;h1 id=&#34;enum&#34;&gt;ENUM&lt;/h1&gt;
+            <description>&lt;h1 id=&#34;enum&#34;&gt;ENUM&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;테이블의 구조에 나열된 목록 중 하나의 값을 가질 수 있다.&lt;/li&gt;
 &lt;/ul&gt;
@@ -683,14 +695,18 @@ Output:
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded>            
-        </item><item>
+</description>
+            <category></category>
+            <author></author>
+            <guid isPermaLink="true">http://jaym-oh.github.io/posts/database/db_15_2/</guid>
+            <comments>http://jaym-oh.github.io/posts/database/db_15_2/#comments</comments>
+            <pubDate>Fri, 29 Mar 2024 14:00:00 &#43;0000</pubDate>
+        </item>
+    
+        <item>
             <title>ch15. Data type in DB</title>
             <link>http://jaym-oh.github.io/posts/database/db_15_1/</link>
-            <pubDate>Fri, 29 Mar 2024 08:00:00 +0000</pubDate>
-            <guid>http://jaym-oh.github.io/posts/database/db_15_1/</guid>
-            <description>저장 공간 char vs varchar: 둘다 문자열을 저장할 수 있는 데이터 타입, 차이는 고정/가변 길이 두 타입 모두 한 글자를 저장하기 위해</description>
-            <content:encoded>&lt;h1 id=&#34;저장-공간&#34;&gt;저장 공간&lt;/h1&gt;
+            <description>&lt;h1 id=&#34;저장-공간&#34;&gt;저장 공간&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;char vs varchar: 둘다 문자열을 저장할 수 있는 데이터 타입, 차이는 고정/가변 길이&lt;/p&gt;
@@ -1434,15 +1450,18 @@ Output:
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</content:encoded>            
-        </item><item>
+&lt;/div&gt;</description>
+            <category></category>
+            <author></author>
+            <guid isPermaLink="true">http://jaym-oh.github.io/posts/database/db_15_1/</guid>
+            <comments>http://jaym-oh.github.io/posts/database/db_15_1/#comments</comments>
+            <pubDate>Fri, 29 Mar 2024 08:00:00 &#43;0000</pubDate>
+        </item>
+    
+        <item>
             <title>Understanding Docker and Running Hello World</title>
             <link>http://jaym-oh.github.io/posts/docker/docker_2/</link>
-            <pubDate>Sat, 01 Apr 2023 16:45:00 +0000</pubDate>
-            <guid>http://jaym-oh.github.io/posts/docker/docker_2/</guid>
-            <description>Running Hello World in a container Let&amp;rsquo;s just simply run below code:
-1 docker container run diamol/ch02-hello-diamol May you don&amp;rsquo;t know the meaning of code, It&amp;rsquo;s okay. At the end of this chapter, you will know what that means naturally. Since I already download image diamol/ch02-hello-diamol, print out like below:</description>
-            <content:encoded>&lt;h1 id=&#34;running-hello-world-in-a-container&#34;&gt;Running Hello World in a container&lt;/h1&gt;
+            <description>&lt;h1 id=&#34;running-hello-world-in-a-container&#34;&gt;Running Hello World in a container&lt;/h1&gt;
 &lt;p&gt;Let&amp;rsquo;s just simply run below code:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1471,23 +1490,18 @@ inet addr:172.17.0.2 Bcast:172.17.255.255 Mask:255.255.0.0&lt;/h2&gt;
 &lt;li&gt;The Operating system, in this example: Linux 6.6.16-linuxkit aarch64&lt;/li&gt;
 &lt;li&gt;The network address, in this example: 172.17.0.2&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded>            
-        </item><item>
+</description>
+            <category></category>
+            <author></author>
+            <guid isPermaLink="true">http://jaym-oh.github.io/posts/docker/docker_2/</guid>
+            <comments>http://jaym-oh.github.io/posts/docker/docker_2/#comments</comments>
+            <pubDate>Sat, 01 Apr 2023 16:45:00 &#43;0000</pubDate>
+        </item>
+    
+        <item>
             <title>Before you begin</title>
             <link>http://jaym-oh.github.io/posts/docker/docker_1/</link>
-            <pubDate>Tue, 28 Mar 2023 09:00:00 +0000</pubDate>
-            <guid>http://jaym-oh.github.io/posts/docker/docker_1/</guid>
             <description>&lt;p&gt;Welecome to the &lt;code&gt;Docker&lt;/code&gt; series and I&amp;rsquo;m gonna study this book, &lt;code&gt;Learn Docker in a Month of Lunches&lt;/code&gt;(2020), by own my word.&lt;/p&gt;
-&lt;p&gt;This series consists of 4 parts:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Understaning Docker Containers &amp;amp; Images&lt;/li&gt;
-&lt;li&gt;Running Distributed Applications in Containers&lt;/li&gt;
-&lt;li&gt;Running at Scale with a Container Orchestrator&lt;/li&gt;
-&lt;li&gt;Getting Your Containers Ready for Production&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This is the first post about series &lt;code&gt;Docker&lt;/code&gt;.
-In this part, you can get up to speed quickly on the core Docker concepts: containers, images, and registries. you&amp;rsquo;ll learn how to run applications in containers, package your own applications in containers, and share those applications for other people to use. You&amp;rsquo;ll also learn about storing data in Docker volumes and how you can run stateful apps in containers. After throughing this chapter, you&amp;rsquo;ll be comfortable with all the fundamentals of Docker, and you&amp;rsquo;ll be learning with best pracices baked in from the start.&lt;/p&gt;</description>
-            <content:encoded>&lt;p&gt;Welecome to the &lt;code&gt;Docker&lt;/code&gt; series and I&amp;rsquo;m gonna study this book, &lt;code&gt;Learn Docker in a Month of Lunches&lt;/code&gt;(2020), by own my word.&lt;/p&gt;
 &lt;p&gt;This series consists of 4 parts:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Understaning Docker Containers &amp;amp; Images&lt;/li&gt;
@@ -1515,14 +1529,18 @@ Now let’s look at what people are doing with containers—I’ll cover the fiv
 &lt;h2 id=&#34;being-immediately-effective&#34;&gt;Being immediately effective&lt;/h2&gt;
 &lt;p&gt;“Immediately effective” is another principle of the Month of Lunches series. In all the chapters that follow, the focus is on learning skills and putting them into practice.
 Every chapter starts with a short introduction to the topic, followed by try-it-now exercises where you put the ideas into practice using Docker. Then there’s a recap with some more detail that fills in some of the questions you may have from diving in. Lastly there’s a hands-on lab for you to go the next stage.
-All the topics center around tasks that are genuinely useful in the real world. You’ll learn how to be immediately effective with the topic during the chapter, and you’ll fin- ish by understanding how to apply the new skill. Let’s start running some containers!&lt;/p&gt;</content:encoded>            
-        </item><item>
+All the topics center around tasks that are genuinely useful in the real world. You’ll learn how to be immediately effective with the topic during the chapter, and you’ll fin- ish by understanding how to apply the new skill. Let’s start running some containers!&lt;/p&gt;</description>
+            <category></category>
+            <author></author>
+            <guid isPermaLink="true">http://jaym-oh.github.io/posts/docker/docker_1/</guid>
+            <comments>http://jaym-oh.github.io/posts/docker/docker_1/#comments</comments>
+            <pubDate>Tue, 28 Mar 2023 09:00:00 &#43;0000</pubDate>
+        </item>
+    
+        <item>
             <title>How to use Extended Markdown</title>
             <link>http://jaym-oh.github.io/posts/markdown/extendedmd/</link>
-            <pubDate>Sat, 12 Feb 2022 09:00:00 +0000</pubDate>
-            <guid>http://jaym-oh.github.io/posts/markdown/extendedmd/</guid>
-            <description>Code Code in line Example: basic: &amp;ldquo;name&amp;rdquo; options: you can add options featuring as what you want to highlight just add (primary), (tip), (warning), (success), (danger) with one white space name (primary) name (tip) name (warning) name (success) name (danger) Example of code block 1 2 3 4 5 6</description>
-            <content:encoded>&lt;h1 id=&#34;code&#34;&gt;Code&lt;/h1&gt;
+            <description>&lt;h1 id=&#34;code&#34;&gt;Code&lt;/h1&gt;
 &lt;h2 id=&#34;code-in-line&#34;&gt;Code in line&lt;/h2&gt;
 &lt;p&gt;Example: basic: &amp;ldquo;&lt;code&gt;name&lt;/code&gt;&amp;rdquo;&lt;br&gt;
 options: you can add options featuring as what you want to highlight
@@ -1957,6 +1975,13 @@ you can add &amp;lsquo;id&amp;rsquo; into the tap container and if two container
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-math&#34; data-lang=&#34;math&#34;&gt;블럭 내 공식입니다：$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;more usage in here: mathjax: &lt;a href=&#34;https://www.mathjax.org&#34;&gt;https://www.mathjax.org&lt;/a&gt;&lt;/p&gt;</content:encoded>            
-        </item></channel>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;more usage in here: mathjax: &lt;a href=&#34;https://www.mathjax.org&#34;&gt;https://www.mathjax.org&lt;/a&gt;&lt;/p&gt;</description>
+            <category></category>
+            <author></author>
+            <guid isPermaLink="true">http://jaym-oh.github.io/posts/markdown/extendedmd/</guid>
+            <comments>http://jaym-oh.github.io/posts/markdown/extendedmd/#comments</comments>
+            <pubDate>Sat, 12 Feb 2022 09:00:00 &#43;0000</pubDate>
+        </item>
+    
+    </channel>
 </rss>
