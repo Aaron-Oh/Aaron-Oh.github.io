@@ -6,6 +6,7 @@
         <language>{{ .Site.Language.Lang }}</language>
         <pubDate>{{ .Date.Format "Mon, 08 April 2024 15:04:05 -0700" }}</pubDate>
         <generator>{{ hugo.Generator }}</generator>
+        <atom:link href="{{ .Permalink }}index.xml" rel="self" type="application/xml" />
         <image>
             <title>{{ .Site.Title }}</title>
             <url>{{ .Site.Params.imageUrl }}</url>
@@ -25,3 +26,4 @@
     {{ end }}
     </channel>
 </rss>
+

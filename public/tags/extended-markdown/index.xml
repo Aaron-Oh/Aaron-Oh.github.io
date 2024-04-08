@@ -6,6 +6,7 @@
         <language>en</language>
         <pubDate>Sat, 08 April 12120 09:00:00 &#43;0000</pubDate>
         <generator><meta name="generator" content="Hugo 0.124.1"></generator>
+        <atom:link href="http://jaym-oh.github.io/tags/extended-markdown/index.xml" rel="self" type="application/xml" />
         <image>
             <title>Jay Log</title>
             <url></url>
@@ -1988,3 +1989,4 @@ you can add &amp;lsquo;id&amp;rsquo; into the tap container and if two container
     
     </channel>
 </rss>
+
