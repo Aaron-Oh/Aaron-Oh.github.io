@@ -1,4 +1,3 @@
-{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>" | safeHTML -}}
 <rss version="2.0">
     <channel>
         <title>{{ .Site.Title }}</title>
@@ -7,8 +6,11 @@
         <language>{{ .Site.Language.Lang }}</language>
         <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
         <generator>{{ hugo.Generator }}</generator>
-        <!-- 기타 필요한 태그들 -->
-
+        <image>
+            <title>{{ .Site.Title }}</title>
+            <url>{{ .Site.Params.imageUrl }}</url>
+            <link>{{ .Site.BaseURL }}</link>
+        </image>
     {{ range .Site.RegularPages }}
         <item>
             <title>{{ .Title | html }}</title>
