@@ -57,15 +57,15 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div></blockquote>
-<p>If you want to run container with any image, you need that image first(if you don&rsquo;t have, docker download that image which Docker calls <code>pulling (success)</code> ). Image have all</p>
+<p>If you want to run container with any image, you need that image first(if you don&rsquo;t have, docker download that image which Docker calls <code>pulling (tip)</code> ). Image have all</p>
 <p>This example simply print out message &lsquo;Hello from Chapter 2!&rsquo; with details of container running. The image contains all the content for the application, along with instructions telling Docker how to start the application.</p>
 <ul>
 <li>The machine name, in this example: b56c8d50100a</li>
 <li>The Operating system, in this example: Linux 6.6.16-linuxkit aarch64</li>
 <li>The network address, in this example: 172.17.0.2</li>
 </ul>
-<p>Though It&rsquo;s very simple example, we could see the fundamental of docker workflow. <code>build (tip)</code> - <code>share (tip)</code> - <code>run (tip)</code> For the specific descriptions, Someone packages their application to run in a container, and then publishes it so it’s available to other users. Then anyone with access can run the app in a container.</p>
-<p>These three concepts are powerful enough to describe how docker works. Because the workflow is the same no matter how complicated the application is. And Docker images can be packaged to run on any com- puter that supports Docker, which makes the app completely portable—<code>portability (primary)</code> is one of Docker’s key benefits.</p>
+<p>Though It&rsquo;s very simple example, we could see the fundamental of docker workflow. <code>build (primary)</code> - <code>share (primary)</code> - <code>run (primary)</code> For the specific descriptions, Someone packages their application to run in a container, and then publishes it so it’s available to other users. Then anyone with access can run the app in a container.</p>
+<p>These three concepts are powerful enough to describe how docker works. Because the workflow is the same no matter how complicated the application is. And Docker images can be packaged to run on any com- puter that supports Docker, which makes the app completely portable—<code>portability (tip)</code> is one of Docker’s key benefits.</p>
 <blockquote>
 <p>tip
 Try it agin</p>
@@ -112,14 +112,26 @@ Try it agin</p>
 <p><img src="/images/2_2.jpeg" alt="photo" title="Fig 2.2"></p>
 <p>A Docker container is the same idea as a physical container—think of it like a box with an application in it. Inside the box, the application seems to have a computer all to itself: it has its own machine name and IP address, and it also has its own disk drive (Windows containers have their own Windows Registry too). Figure 2.2 shows how the app is boxed by the container.<br>
 Those things are all virtual resources—the hostname, IP address, and filesystem are created by Docker. They’re logical objects that are managed by Docker, and they’re all joined together to create an environment where an application can run. That’s the “box” of the container.<br>
-The application inside the box can’t see anything outside the box, but the box is running on a computer, and that computer can also be running lots of other boxes. The applications in those boxes have their own separate environments (managed by Docker), but they all share the CPU and memory of the computer, and they all share the computer’s operating system. You can see in figure 2.3 how containers on the same computer are isolated.</p>
+The application inside the box can’t see anything outside the box, but the box is running on a computer, and that computer can also be running lots of other boxes. The applications in those boxes have their own separate environments (managed by Docker), but they all share the CPU and memory of the computer, and they all share the computer’s operating system. You can see in <em>figure 2.3</em> how containers on the same computer are isolated.</p>
 <p><img src="/images/2_2.jpeg" alt="photo" title="Fig 2.3"></p>
-<p>Why is this so important? It fixes two conflicting problems in computing: isolation and density. Density means running as many applications on your computers as possible, to utilize all the processor and memory that you have. But apps may not work nicely with other apps—they might use different versions of Java or .NET, they may use incompatible versions of tools or libraries, or one might have a heavy workload and starve the others of processing power. Applications really need to be isolated from each other, and that stops you running lots of them on a single computer, so you don’t get density.<br>
-The original attempt to fix that problem was to use virtual machines (VMs). Virtual machines are similar in concept to containers, in that they give you a box to run your application in, but the box for a VM needs to contain its own operating system—it doesn’t share the OS of the computer where the VM is running. Compare figure 2.3, which shows multiple containers, with figure 2.4, which shows multiple VMs on one computer.</p>
+<p>Why is this so important? It fixes two conflicting problems in computing: <code>isolation (tip)</code> and <code>density (tip)</code>. Density means running as many applications on your computers as possible, to utilize all the processor and memory that you have. But apps may not work nicely with other apps—they might use different versions of Java or .NET, they may use incompatible versions of tools or libraries, or one might have a heavy workload and starve the others of processing power. Applications really need to be isolated from each other, and that stops you running lots of them on a single computer, so you don’t get density.<br>
+The original attempt to fix that problem was to use virtual machines (VMs). Virtual machines are similar in concept to containers, in that they give you a box to run your application in, but the box for a VM needs to contain its own operating system—it doesn’t share the OS of the computer where the VM is running. Compare <em>figure 2.3</em>, which shows multiple containers, with <em>figure 2.4</em>, which shows multiple VMs on one computer.</p>
 <p><img src="/images/2_4.jpeg" alt="photo" title="Fig 2.4"></p>
-<p>That may look like a small difference in the diagrams, but it has huge implica- tions. Every VM needs its own operating system, and that OS can use gigabytes of memory and lots of CPU time—soaking up compute power that should be available for your applications. There are other concerns too, like licensing costs for the OS and the maintenance burden of installing OS updates. VMs provide isolation at the cost of density.<br>
+<p>That may look like a small difference in the diagrams, but it has huge implications. Every VM needs its own operating system, and that OS can use gigabytes of memory and lots of CPU time—soaking up compute power that should be available for your applications. There are other concerns too, like licensing costs for the OS and the maintenance burden of installing OS updates. VMs provide isolation at the cost of density.<br>
 Containers give you both. Each container shares the operating system of the com- puter running the container, and that makes them extremely lightweight. Containers start quickly and run lean, so you can run many more containers than VMs on the same hardware—typically five to ten times as many. You get density, but each app is in its own container, so you get isolation too. That’s another key feature of Docker: efficiency.<br>
 Now you know how Docker does its magic. In the next exercise we’ll work more closely with containers.</p>
+<h2 id="connecting-to-a-container-like-a-remote-computer">Connecting to a container like a remote computer</h2>
+<p>You can work with containers in other ways too. Next you’ll see how you can run a container and connect to a terminal inside the container, just as if you were connecting to a remote machine. You use the same docker container run command, but you pass some additional flags to run an interactive container with a connected terminal session.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">docker container run --interactive --tty diamol/base
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The &ndash;interactive flag tells Docker you want to set up a connection to the container, and the &ndash;tty flag means you want to connect to a terminal session inside the con- tainer. The output will show Docker pulling the image, and then you’ll be left with a command prompt. That command prompt is for a terminal session inside the container, as you can see in <em>figure 2.5</em>.</p>
+<p><img src="/images/2_5.jpeg" alt="photo" title="Fig 2.5"></p>
 ]]></description>
             <pubDate>Sat, 01 Apr 2023 16:45:00 &#43;0000</pubDate>
             <guid isPermaLink="true">http://jaym-oh.github.io/posts/docker/docker_2/</guid>
