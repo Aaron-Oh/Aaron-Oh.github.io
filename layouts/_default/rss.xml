@@ -1,29 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
     <channel>
         <title>{{ .Site.Title }}</title>
-        <link>{{ .Permalink }}</link>
+        <link>{{ .Site.BaseURL }}</link>
         <description>{{ .Site.Params.description }}</description>
-        <language>{{ .Site.Language.Lang }}</language>
-        <pubDate>{{ .Date.Format "Mon, 08 April 2024 15:04:05 -0700" }}</pubDate>
-        <generator>{{ hugo.Generator }}</generator>
-        <atom:link href="{{ .Permalink }}index.xml" rel="self" type="application/xml" />
-        <image>
-            <title>{{ .Site.Title }}</title>
-            <url>{{ .Site.Params.imageUrl }}</url>
-            <link>{{ .Site.BaseURL }}</link>
-        </image>
-    {{ range .Site.RegularPages }}
+        <language>en-us</language>
+        <generator>Hugo -- gohugo.io</generator>
+    {{ range .Pages }}
         <item>
-            <title>{{ .Title | html }}</title>
+            <title>{{ .Title }}</title>
             <link>{{ .Permalink }}</link>
-            <description>{{ .Content | html }}</description>
-            <category>{{ with .Params.category }}{{ . }}{{ end }}</category>
-            <author>{{ .Params.author }}</author>
+            <description><![CDATA[{{ .Content }}]]></description>
+            <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
             <guid isPermaLink="true">{{ .Permalink }}</guid>
-            <comments>{{ .Permalink }}#comments</comments>
-            <pubDate>{{ .Date.Format "Mon, 08 April 2024 15:04:05 -0700" }}</pubDate>
         </item>
     {{ end }}
     </channel>
 </rss>
-
