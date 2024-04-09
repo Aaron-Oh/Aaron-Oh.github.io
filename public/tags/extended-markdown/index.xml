@@ -98,7 +98,7 @@ just add (primary), (tip), (warning), (success), (danger) <strong>with one white
 실패(위험) 문단입니다</p>
 </blockquote>
 <hr>
-<h1 id="picture">Picture</h1>
+<h1 id="photo">Photo</h1>
 <p>Basically, picture has a shadow. so if you don&rsquo;t want to add it, just add <code>_no</code> at the end of the text in quotation</p>
 <ol>
 <li>
