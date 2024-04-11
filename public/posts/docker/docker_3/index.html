@@ -3,21 +3,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jay Log | How to Sort Data</title>
-    <meta name="description" content="Let&#39;s learn how to sort data ">
-    <link rel="canonical" href="http://jaym-oh.github.io/posts/algorithm/sorting/sorting_1/" />
+    <title>Jay Log | Building your own Docker images</title>
+    <meta name="description" content="Let&#39;s build docker image! ">
+    <link rel="canonical" href="http://jaym-oh.github.io/posts/docker/docker_3/" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <meta property="og:title" content="How to Sort Data" />
-<meta property="og:description" content="Let&#39;s learn how to sort data" />
+    <meta property="og:title" content="Building your own Docker images" />
+<meta property="og:description" content="Let&#39;s build docker image!" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://jaym-oh.github.io/posts/algorithm/sorting/sorting_1/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-03-29T16:00:00+00:00" />
-<meta property="article:modified_time" content="2024-03-29T00:00:00+00:00" />
-<meta property="og:see_also" content="http://jaym-oh.github.io/posts/algorithm/sorting/sorting_2/" />
+<meta property="og:url" content="http://jaym-oh.github.io/posts/docker/docker_3/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-03T15:24:00+00:00" />
+<meta property="article:modified_time" content="2023-04-03T00:00:00+00:00" />
 
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="How to Sort Data"/>
-<meta name="twitter:description" content="Let&#39;s learn how to sort data"/>
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Building your own Docker images"/>
+<meta name="twitter:description" content="Let&#39;s build docker image!"/>
 
     
         
@@ -202,27 +202,27 @@
     <div class="hero">
         
             <div class="hero-img">
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt="">
+                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/docker.jpg" alt="">
             </div>
         
         <div class="hero-content">
-            <div class="hero-title">How to Sort Data</div>
-            <div class="hero-subtitle">What is Sorting</div>
+            <div class="hero-title">Building your own Docker images</div>
+            <div class="hero-subtitle">Understanding of image</div>
             <div class="hero-date">
-                    <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-3-29 &nbsp;</span>
-                    <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-3-29 &nbsp;</span>
+                    <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2023-4-3 &nbsp;</span>
+                    <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2023-4-3 &nbsp;</span>
                     <span class="no-wrap"><i class="fa fa-folder"></i>
                         includedIn:
                         
                             <a href='
-                                /categories/algorithms
+                                /categories/docker
                             '>
-                                Algorithms
+                                Docker
                             </a>
                     </span>    
             </div>
             <div class="timelong">
-                <span class="no-wrap"><i class="fa fa-pencil"></i> wordsCount: 54 &nbsp;</span>
+                <span class="no-wrap"><i class="fa fa-pencil"></i> wordsCount: 7 &nbsp;</span>
                 <span class="no-wrap"><i class="fa fa-clock-o"></i> readingTime: 1 min &nbsp;</span>
                 <span class="no-wrap"><i class="fa fa-eye"></i> viewers: <span id="busuanzi_value_page_pv"></span></span>
             </div>
@@ -259,10 +259,7 @@
     
         <div class="content">
             <div class="content-self">
-                <h1 id="introduction">Introduction</h1>
-<h2 id="what-this-post-focus-on">What this post focus on</h2>
-<h2 id="this-posting-will-cover-almost-every-concept-of--how-to-sort-primary-plus-ill-post-realistic-algorithm-problem-of-our-real-world-so-that-you-can-apply-those-concept-to-real-world-problem-and-learn-how-to-use-it-i-really-hope-so">This posting will cover almost every concept of  <code>How to sort (primary)</code>. Plus, I&rsquo;ll post realistic algorithm problem of our real world so that you can apply those concept to real world problem and learn how to use it. I really hope so.</h2>
-<p>Let&rsquo;s see the below example.</p>
+                <h1 id="using-a-container-image-from-docker-hub">Using a container image from Docker Hub</h1>
 
             </div>
             
@@ -271,9 +268,9 @@
                     <span class="down-type-item">
                         <div class="type-text">
                             <a href='
-                                        /tags/algorithms
+                                        /tags/docker
                                     '>
-                                <i class="fa fa-tag"></i> Algorithms
+                                <i class="fa fa-tag"></i> Docker
                             </a>
                         </div>
                     </span>
@@ -281,19 +278,9 @@
                     <span class="down-type-item">
                         <div class="type-text">
                             <a href='
-                                        /tags/concept
+                                        /tags/beginner
                                     '>
-                                <i class="fa fa-tag"></i> Concept
-                            </a>
-                        </div>
-                    </span>
-                    
-                    <span class="down-type-item">
-                        <div class="type-text">
-                            <a href='
-                                        /tags/sorting
-                                    '>
-                                <i class="fa fa-tag"></i> Sorting
+                                <i class="fa fa-tag"></i> Beginner
                             </a>
                         </div>
                     </span>
@@ -307,18 +294,18 @@
                     
     
         
-        <a href="http://jaym-oh.github.io/posts/database/db_15_2/" class="pre">
+        <a href="http://jaym-oh.github.io/posts/docker/docker_2/" class="pre">
             <span class="pre-icon"><i class="fa fa-hand-o-left"></i></span>
             <div class="pre-title-root">
-                <span>ch15. Data type in DB</span>
+                <span>Understanding Docker and Running Hello World</span>
             </div>
         </a>
         
 
         
-        <a href="http://jaym-oh.github.io/posts/algorithm/sorting/sorting_2/" class="next">
+        <a href="http://jaym-oh.github.io/posts/database/db_15_1/" class="next">
             <div class="next-title-root">
-                <span>Sorting Problem</span>
+                <span>ch15. Data type in DB</span>
             </div>
             <span class="next-icon"><i class="fa fa-hand-o-right"></i></span>
         </a>
@@ -439,62 +426,51 @@
     </div>
     <div class="list">
         
-            <a href="http://jaym-oh.github.io/posts/algorithm/sorting/sorting_2/">
+            <a href="http://jaym-oh.github.io/posts/docker/docker_2/">
                 
-<a href="http://jaym-oh.github.io/posts/algorithm/sorting/sorting_2/">
+<a href="http://jaym-oh.github.io/posts/docker/docker_2/">
     <div class="list-item">
         <div class="icon-other-root">
             
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
+                <div class="icon-other" style="background-image: url( /images/docker.jpg );"></div>
             
         </div>
         <div class="list-right">
             <div class="other-title">
-                Sorting Problem
+                Understanding Docker and Running Hello World
             </div>
-            <div class="other-summary">Problem Jay likes sequences, so he use to playing with a sequence of size N. He will transform the sequence according to K queries, and the format and process of the queries are as follows:
-L R X: Let&rsquo;s say the sequence sorted in ascending order is A[1], A[2], …, A[N].</div>
-            <div class="other-date">2024-3-29</div>
+            <div class="other-summary">Running Hello World in a container Let&rsquo;s just simply run below code:
+1 docker container run diamol/ch02-hello-diamol May you don&rsquo;t know the meaning of code, It&rsquo;s okay. At the end of this post, you will know what that means naturally. Since I already download image diamol/ch02-hello-diamol, print out like below:</div>
+            <div class="other-date">2023-4-1</div>
         </div>
     </div>
 </a>
             </a>
         
-            <a href="http://jaym-oh.github.io/posts/database/db_15_2/">
+            <a href="http://jaym-oh.github.io/posts/docker/docker_1/">
                 
-<a href="http://jaym-oh.github.io/posts/database/db_15_2/">
+<a href="http://jaym-oh.github.io/posts/docker/docker_1/">
     <div class="list-item">
         <div class="icon-other-root">
             
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
+                <div class="icon-other" style="background-image: url( /images/docker.jpg );"></div>
             
         </div>
         <div class="list-right">
             <div class="other-title">
-                ch15. Data type in DB
+                Before you begin
             </div>
-            <div class="other-summary">ENUM 테이블의 구조에 나열된 목록 중 하나의 값을 가질 수 있다. 1 2 3 4 5 6 create table tb_enum ( fd_enum enum(&#39;PROCESSING&#39;, &#39;FAILURE&#39;, &#39;SUCCESS&#39;) ); -- 매핑된 문자열이 아닌</div>
-            <div class="other-date">2024-3-29</div>
-        </div>
-    </div>
-</a>
-            </a>
-        
-            <a href="http://jaym-oh.github.io/posts/database/db_15_1/">
-                
-<a href="http://jaym-oh.github.io/posts/database/db_15_1/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                ch15. Data type in DB
-            </div>
-            <div class="other-summary">저장 공간 char vs varchar: 둘다 문자열을 저장할 수 있는 데이터 타입, 차이는 고정/가변 길이 두 타입 모두 한 글자를 저장하기 위해</div>
-            <div class="other-date">2024-3-29</div>
+            <div class="other-summary"><p>Welecome to the <code>Docker</code> series and I&rsquo;m gonna study this book, <code>Learn Docker in a Month of Lunches</code>(2020), by own my word.</p>
+<p>This series consists of 4 parts:</p>
+<ol>
+<li>Understaning Docker Containers &amp; Images</li>
+<li>Running Distributed Applications in Containers</li>
+<li>Running at Scale with a Container Orchestrator</li>
+<li>Getting Your Containers Ready for Production</li>
+</ol>
+<p>This is the first post about series <code>Docker</code>.
+In this part, you can get up to speed quickly on the core Docker concepts: containers, images, and registries. you&rsquo;ll learn how to run applications in containers, package your own applications in containers, and share those applications for other people to use. You&rsquo;ll also learn about storing data in Docker volumes and how you can run stateful apps in containers. After throughing this chapter, you&rsquo;ll be comfortable with all the fundamentals of Docker, and you&rsquo;ll be learning with best pracices baked in from the start.</p></div>
+            <div class="other-date">2023-3-28</div>
         </div>
     </div>
 </a>

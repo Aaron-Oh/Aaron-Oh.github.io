@@ -8,6 +8,15 @@
         <generator>Hugo -- gohugo.io</generator>
     
         <item>
+            <title>Building your own Docker images</title>
+            <link>http://jaym-oh.github.io/posts/docker/docker_3/</link>
+            <description>&lt;![CDATA[<h1 id="using-a-container-image-from-docker-hub">Using a container image from Docker Hub</h1>
+]]></description>
+            <pubDate>Mon, 03 Apr 2023 15:24:00 &#43;0000</pubDate>
+            <guid isPermaLink="true">http://jaym-oh.github.io/posts/docker/docker_3/</guid>
+        </item>
+    
+        <item>
             <title>Understanding Docker and Running Hello World</title>
             <link>http://jaym-oh.github.io/posts/docker/docker_2/</link>
             <description>&lt;![CDATA[<h1 id="running-hello-world-in-a-container">Running Hello World in a container</h1>
