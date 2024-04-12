@@ -3,18 +3,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jay Log | Sortng</title>
-    <meta name="description" content=" ">
-    <link rel="canonical" href="http://localhost:1313/series/sortng/" />
+    <title>Jay Log | High Score Kit: DFS&amp;BFS#2</title>
+    <meta name="description" content="Problem In the ROR game, you play on a team that competes to destroy the opposing team&rsquo;s base first, making it advantageous to reach the enemy base as quickly as possible. Suppose you&rsquo;re a team member and are located at position (row: 1, column: 1) on a 5x5 map, while the enemy base is at (row: 5, column: 5). ">
+    <link rel="canonical" href="http://localhost:1313/posts/algorithm/highscore_kit/dfsbfs/gamemap/" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <meta property="og:title" content="Sortng" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/series/sortng/" />
+    <meta property="og:title" content="High Score Kit: DFS&amp;BFS#2" />
+<meta property="og:description" content="Problem In the ROR game, you play on a team that competes to destroy the opposing team&rsquo;s base first, making it advantageous to reach the enemy base as quickly as possible. Suppose you&rsquo;re a team member and are located at position (row: 1, column: 1) on a 5x5 map, while the enemy base is at (row: 5, column: 5)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/algorithm/highscore_kit/dfsbfs/gamemap/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-04-11T17:18:00+00:00" />
+<meta property="article:modified_time" content="2024-04-11T00:00:00+00:00" />
 
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Sortng"/>
-<meta name="twitter:description" content=""/>
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="High Score Kit: DFS&amp;BFS#2"/>
+<meta name="twitter:description" content="Problem In the ROR game, you play on a team that competes to destroy the opposing team&rsquo;s base first, making it advantageous to reach the enemy base as quickly as possible. Suppose you&rsquo;re a team member and are located at position (row: 1, column: 1) on a 5x5 map, while the enemy base is at (row: 5, column: 5)."/>
 
     
 
@@ -186,29 +189,41 @@
 
 
         <div id="content">
-    
 
 
 
 
-
-
-    
-        
-    
 
 
 
 
     <div class="hero">
         
-            
-                <div class="hero-img">
-                    <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt="">
-                </div>
-            
+            <div class="hero-img">
+                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt="">
+            </div>
+        
         <div class="hero-content">
-            <h1 class="hero-title">Series: Sortng</h1>
+            <div class="hero-title">High Score Kit: DFS&amp;BFS#2</div>
+            <div class="hero-subtitle">Game Map</div>
+            <div class="hero-date">
+                    <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-4-11 &nbsp;</span>
+                    <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-4-11 &nbsp;</span>
+                    <span class="no-wrap"><i class="fa fa-folder"></i>
+                        includedIn:
+                        
+                            <a href='
+                                /categories/highscorekit
+                            '>
+                                HighScoreKit
+                            </a>
+                    </span>    
+            </div>
+            <div class="timelong">
+                <span class="no-wrap"><i class="fa fa-pencil"></i> wordsCount: 571 &nbsp;</span>
+                <span class="no-wrap"><i class="fa fa-clock-o"></i> readingTime: 3 mins &nbsp;</span>
+                <span class="no-wrap"><i class="fa fa-eye"></i> viewers: <span id="busuanzi_value_page_pv"></span></span>
+            </div>
         </div>
     </div>
 
@@ -227,7 +242,7 @@
     
 
 
-<div class="terms-body">
+<div class="content-root">
     <div class="long">
         <button class="tosides-1 text-wbd">
             <i class="fa fa-arrow-right"></i>
@@ -240,463 +255,242 @@
         </button>
     </div>
     
-        <div class="terms-row">
+        <div class="content">
+            <div class="content-self">
+                <h1 id="problem">Problem</h1>
+<p>In the ROR game, you play on a team that competes to destroy the opposing team&rsquo;s base first, making it advantageous to reach the enemy base as quickly as possible. Suppose you&rsquo;re a team member and are located at position (row: 1, column: 1) on a 5x5 map, while the enemy base is at (row: 5, column: 5). The game map is comprised of cells that can either be passable or blocked by walls. Your character can move up, down, left, or right, and cannot move outside the boundaries of the map.</p>
+<p>Given the state of the game map <code>maps</code>, represented as a 2D array where 1s are passable cells and 0s are walls, implement a function <code>solution</code> that returns the minimum number of cells your character must pass through to reach the enemy base located at the bottom-right corner of the map. If it&rsquo;s impossible to reach the enemy base due to walls blocking the way, return -1.</p>
+<h2 id="constraints">Constraints</h2>
+<ul>
+<li><code>maps</code> is an <code>n x m</code> 2D array, where both <code>n</code> and <code>m</code> are natural numbers between 1 and 100.</li>
+<li><code>n</code> and <code>m</code> could be the same or different, but the case where both <code>n</code> and <code>m</code> are 1 will not be provided as input.</li>
+<li>The character starts at the top-left corner of the map, and the enemy base is at the bottom-right corner.</li>
+<li>The map only contains 0s and 1s, where 0 indicates a wall and 1 indicates a passable cell.</li>
+</ul>
+<h2 id="example">Example</h2>
+<table>
+<thead>
+<tr>
+<th>maps</th>
+<th>answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[[1,0,1,1,1],[1,0,1,0,1],[1,0,1,1,1],[1,1,1,0,1],[0,0,0,0,1]]</td>
+<td>11</td>
+</tr>
+<tr>
+<td>[[1,0,1,1,1],[1,0,1,0,1],[1,0,1,1,1],[1,1,1,0,0],[0,0,0,0,1]]</td>
+<td>-1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="explanation-of-examples">Explanation of Examples</h3>
+<ul>
+<li><strong>Example 1:</strong>
+<ul>
+<li>The character can reach the enemy base by traversing 11 cells, following a path that circumvents walls effectively.</li>
+</ul>
+</li>
+<li><strong>Example 2:</strong>
+<ul>
+<li>Walls block all possible paths to the enemy base, making it impossible to reach, thus the function returns -1.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="how-to-approach">How to Approach?</h1>
+<h2 id="step1-initialize-variables-in-loop">Step1: Initialize variables in loop</h2>
+<h1 id="final-code">Final Code</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayDeque</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Deque</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">class</span> <span class="nc">Point</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">count</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Point</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">count</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">solution</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">maps</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">maps</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">maps</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Directions for moving right, left, down, up</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">dx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">dy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">1</span><span class="p">};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Deque</span><span class="o">&lt;</span><span class="n">Point</span><span class="o">&gt;</span><span class="w"> </span><span class="n">deque</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayDeque</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">boolean</span><span class="o">[][]</span><span class="w"> </span><span class="n">visited</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">boolean</span><span class="o">[</span><span class="n">n</span><span class="o">][</span><span class="n">m</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Start BFS from the top-left corner</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">deque</span><span class="p">.</span><span class="na">offer</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">visited</span><span class="o">[</span><span class="n">0</span><span class="o">][</span><span class="n">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">deque</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">Point</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">deque</span><span class="p">.</span><span class="na">poll</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// Check if reached the bottom-right corner</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">current</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">current</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">current</span><span class="p">.</span><span class="na">count</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// Explore four possible movements</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">4</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">nx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">current</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dx</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">ny</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">current</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dy</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="c1">// Ensure the move is within boundaries, on a walkable path, and not visited</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nx</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">nx</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">ny</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">ny</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">maps</span><span class="o">[</span><span class="n">nx</span><span class="o">][</span><span class="n">ny</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">visited</span><span class="o">[</span><span class="n">nx</span><span class="o">][</span><span class="n">ny</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="n">visited</span><span class="o">[</span><span class="n">nx</span><span class="o">][</span><span class="n">ny</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="n">deque</span><span class="p">.</span><span class="na">offer</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Point</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="n">ny</span><span class="p">,</span><span class="w"> </span><span class="n">current</span><span class="p">.</span><span class="na">count</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">1</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// If there is no path to the destination, return -1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="n">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+            </div>
             
-            <div class="terms-root">
-                
-                
-
-
-
-<div class="card-large">
-    <div class="card-large-img">
-
-        
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt='image loading failed'>
-        
-    </div>
-    <div class="card-large-content">
-        <div class="up-title"><a href="/posts/algorithm/highscore_kit/sorting/h_index/">High Score Kit: Sorting#3</a></div>
-        <div class="up-date">
-            <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-4-10 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-4-10 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-folder"></i>
-                
-                    includedIn:
+                <div class="tags">
                     
-                        <a href='
-                                        /categories/highscorekit
+                    <span class="down-type-item">
+                        <div class="type-text">
+                            <a href='
+                                        /tags/algorithms
                                     '>
-                                HighScoreKit
+                                <i class="fa fa-tag"></i> Algorithms
                             </a>
-                
-            </span>
-        </div>
-        <div class="down-summary">Problem The H-Index is a metric that measures the productivity and impact of a scientist&rsquo;s research. It represents the highest number h such that the scientist has published h papers that have each been cited at least h times. According to Wikipedia, the H-Index is calculated as follows:
-For a given scientist who has published n papers, if h of these papers have at least h citations each, and the other papers have no more than h citations each, then h is the maximum value for this scientist&rsquo;s H-Index.</div>
-    </div>
-    <div class="card-readmore">
-        <a href="http://localhost:1313/posts/algorithm/highscore_kit/sorting/h_index/">
-            <span><i class="fa fa-arrow-right"></i></span>
-        </a>
-    </div>
-</div>
-
-
-
-    
-
-
-    <div class="down-type">
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/algorithms
-                        '>
-                    <i class="fa fa-tag"></i> Algorithms
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/sorting
-                        '>
-                    <i class="fa fa-tag"></i> Sorting
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/java
-                        '>
-                    <i class="fa fa-tag"></i> Java
-                </a>
-            </div>
-        </span>
-        
-    </div>
-
-<div class="dang"></div>
-            </div>
-            
-            <div class="terms-root">
-                
-                
-
-
-
-<div class="card-large">
-    <div class="card-large-img">
-
-        
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt='image loading failed'>
-        
-    </div>
-    <div class="card-large-content">
-        <div class="up-title"><a href="/posts/algorithm/highscore_kit/sorting/maximum_number/">High Score Kit: Sorting#2</a></div>
-        <div class="up-date">
-            <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-4-10 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-4-10 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-folder"></i>
-                
-                    includedIn:
+                        </div>
+                    </span>
                     
-                        <a href='
-                                        /categories/highscorekit
+                    <span class="down-type-item">
+                        <div class="type-text">
+                            <a href='
+                                        /tags/bfs
                                     '>
-                                HighScoreKit
+                                <i class="fa fa-tag"></i> BFS
                             </a>
-                
-            </span>
-        </div>
-        <div class="down-summary">Problem Given an array of non-negative integers, your task is to determine the largest number that can be formed by concatenating the integers together. For example, with the integers [6, 10, 2], you can form the numbers [6102, 6210, 1062, 1026, 2610, 2106] through different arrangements. The largest number from these combinations is 6210.</div>
-    </div>
-    <div class="card-readmore">
-        <a href="http://localhost:1313/posts/algorithm/highscore_kit/sorting/maximum_number/">
-            <span><i class="fa fa-arrow-right"></i></span>
-        </a>
-    </div>
-</div>
-
-
-
-    
-
-
-    <div class="down-type">
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/algorithms
-                        '>
-                    <i class="fa fa-tag"></i> Algorithms
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/sorting
-                        '>
-                    <i class="fa fa-tag"></i> Sorting
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/java
-                        '>
-                    <i class="fa fa-tag"></i> Java
-                </a>
-            </div>
-        </span>
-        
-    </div>
-
-<div class="dang"></div>
-            </div>
-            
-            <div class="terms-root">
-                
-                
-
-
-
-<div class="card-large">
-    <div class="card-large-img">
-
-        
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt='image loading failed'>
-        
-    </div>
-    <div class="card-large-content">
-        <div class="up-title"><a href="/posts/algorithm/highscore_kit/sorting/kth_number/">High Score Kit: Sorting#1</a></div>
-        <div class="up-date">
-            <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-4-10 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-4-10 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-folder"></i>
-                
-                    includedIn:
+                        </div>
+                    </span>
                     
-                        <a href='
-                                        /categories/highscorekit
+                    <span class="down-type-item">
+                        <div class="type-text">
+                            <a href='
+                                        /tags/java
                                     '>
-                                HighScoreKit
+                                <i class="fa fa-tag"></i> Java
                             </a>
-                
-            </span>
-        </div>
-        <div class="down-summary">Problem To find a number at the k-th position after slicing and sorting the array from the i-th to j-th number, consider the following: For example, if the array is [1, 5, 2, 6, 3, 7, 4], i = 2, j = 5, and k = 3, slicing the array from the 2nd to the 5th number yields [5, 2, 6, 3].</div>
-    </div>
-    <div class="card-readmore">
-        <a href="http://localhost:1313/posts/algorithm/highscore_kit/sorting/kth_number/">
-            <span><i class="fa fa-arrow-right"></i></span>
-        </a>
-    </div>
-</div>
-
-
-
-    
-
-
-    <div class="down-type">
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/algorithms
-                        '>
-                    <i class="fa fa-tag"></i> Algorithms
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/sorting
-                        '>
-                    <i class="fa fa-tag"></i> Sorting
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/java
-                        '>
-                    <i class="fa fa-tag"></i> Java
-                </a>
-            </div>
-        </span>
-        
-    </div>
-
-<div class="dang"></div>
-            </div>
-            
-            <div class="terms-root">
-                
-                
-
-
-
-<div class="card-large">
-    <div class="card-large-img">
-
-        
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt='image loading failed'>
-        
-    </div>
-    <div class="card-large-content">
-        <div class="up-title"><a href="/posts/algorithm/sorting/sorting_2/">Sorting Problem</a></div>
-        <div class="up-date">
-            <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-3-29 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-3-29 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-folder"></i>
-                
-                    includedIn:
+                        </div>
+                    </span>
                     
-                        <a href='
-                                        /categories/algorithms
-                                    '>
-                                Algorithms
-                            </a>
-                
-            </span>
-        </div>
-        <div class="down-summary">Problem Jay likes sequences, so he use to playing with a sequence of size N. He will transform the sequence according to K queries, and the format and process of the queries are as follows:
-L R X: Let&rsquo;s say the sequence sorted in ascending order is A[1], A[2], …, A[N].</div>
-    </div>
-    <div class="card-readmore">
-        <a href="http://localhost:1313/posts/algorithm/sorting/sorting_2/">
-            <span><i class="fa fa-arrow-right"></i></span>
-        </a>
-    </div>
-</div>
-
-
-
-    
-
-
-    <div class="down-type">
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/algorithms
-                        '>
-                    <i class="fa fa-tag"></i> Algorithms
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/problem
-                        '>
-                    <i class="fa fa-tag"></i> Problem
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/sorting
-                        '>
-                    <i class="fa fa-tag"></i> Sorting
-                </a>
-            </div>
-        </span>
-        
-    </div>
-
-<div class="dang"></div>
-            </div>
+                </div>
             
-            <div class="terms-root">
-                
-                
-
-
-
-<div class="card-large">
-    <div class="card-large-img">
-
+        </div>
         
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt='image loading failed'>
-        
-    </div>
-    <div class="card-large-content">
-        <div class="up-title"><a href="/posts/algorithm/sorting/sorting_1/">How to Sort Data</a></div>
-        <div class="up-date">
-            <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-3-29 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-3-29 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-folder"></i>
-                
-                    includedIn:
+            
+                <div class="pre-next">
                     
-                        <a href='
-                                        /categories/algorithms
-                                    '>
-                                Algorithms
-                            </a>
-                
-            </span>
-        </div>
-        <div class="down-summary">Introduction What this post focus on This posting will cover almost every concept of How to sort (primary). Plus, I&rsquo;ll post realistic algorithm problem of our real world so that you can apply those concept to real world problem and learn how to use it. I really hope so. Let&rsquo;s see the below example.</div>
-    </div>
-    <div class="card-readmore">
-        <a href="http://localhost:1313/posts/algorithm/sorting/sorting_1/">
-            <span><i class="fa fa-arrow-right"></i></span>
+    
+        
+        <a href="http://localhost:1313/posts/algorithm/highscore_kit/dfsbfs/target_number/" class="pre pre-last" style="text-align: center;">
+            <span class="pre-icon"><i class="fa fa-hand-o-left"></i></span>
+            <div class="pre-title-root">
+                <span>High Score Kit: DFS&amp;BFS#1</span>
+            </div>
         </a>
-    </div>
-</div>
-
-
-
+        
+    
     
 
+                </div>
+            
+        
+    
+</div>
 
-    <div class="down-type">
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/algorithms
-                        '>
-                    <i class="fa fa-tag"></i> Algorithms
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/concept
-                        '>
-                    <i class="fa fa-tag"></i> Concept
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/sorting
-                        '>
-                    <i class="fa fa-tag"></i> Sorting
-                </a>
-            </div>
-        </span>
-        
-    </div>
-
-<div class="dang"></div>
-            </div>
+    
+        <div class="content-last">
+            
+                <button class="aixin content-last-item efct-button">
+                    <i class="fa fa-heart"></i>
+                </button>
+            
+            
+                <button class="pinglun content-last-item efct-button">
+                    <i class="fa fa-comment"></i>
+                </button>
             
         </div>
     
-</div>
 
 
             </div>
@@ -704,6 +498,11 @@ L R X: Let&rsquo;s say the sequence sorted in ascending order is A[1], A[2], …
                 
 <div class="zhuti-r-0">
     <div class="zhuti-r-1">
+        
+            <div class="button-r">
+                <button class="button-mulu efct-button" type="button"><span><i class="fa fa-bars"></i></span><span class="bars-text"> content</span></button>
+                <button class="button-comment efct-button" type="button"><span><i class="fa fa-comment"></i></span><span class="comment-text"> comment</span></button>
+            </div>
         
         <div id="r1">
             
@@ -773,33 +572,16 @@ L R X: Let&rsquo;s say the sequence sorted in ascending order is A[1], A[2], …
 
 
 
+    
+    
+
 
 <div class="other">
     <div class="other-up">
-        <div class="other-qita text-wbd">latest Posts</div>
+        <div class="other-qita text-wbd">Related Posts</div>
         <div class="xian"></div>
     </div>
     <div class="list">
-        
-            <a href="http://localhost:1313/posts/algorithm/highscore_kit/dfsbfs/gamemap/">
-                
-<a href="http://localhost:1313/posts/algorithm/highscore_kit/dfsbfs/gamemap/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                High Score Kit: DFS&amp;BFS#2
-            </div>
-            <div class="other-summary">Problem In the ROR game, you play on a team that competes to destroy the opposing team&rsquo;s base first, making it advantageous to reach the enemy base as quickly as possible. Suppose you&rsquo;re a team member and are located at position (row: 1, column: 1) on a 5x5 map, while the enemy base is at (row: 5, column: 5).</div>
-            <div class="other-date">2024-4-11</div>
-        </div>
-    </div>
-</a>
-            </a>
         
             <a href="http://localhost:1313/posts/algorithm/highscore_kit/dfsbfs/target_number/">
                 
@@ -901,17 +683,94 @@ L R X: Let&rsquo;s say the sequence sorted in ascending order is A[1], A[2], …
 </a>
             </a>
         
+            <a href="http://localhost:1313/posts/algorithm/highscore_kit/sorting/h_index/">
+                
+<a href="http://localhost:1313/posts/algorithm/highscore_kit/sorting/h_index/">
+    <div class="list-item">
+        <div class="icon-other-root">
+            
+                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
+            
+        </div>
+        <div class="list-right">
+            <div class="other-title">
+                High Score Kit: Sorting#3
+            </div>
+            <div class="other-summary">Problem The H-Index is a metric that measures the productivity and impact of a scientist&rsquo;s research. It represents the highest number h such that the scientist has published h papers that have each been cited at least h times. According to Wikipedia, the H-Index is calculated as follows:
+For a given scientist who has published n papers, if h of these papers have at least h citations each, and the other papers have no more than h citations each, then h is the maximum value for this scientist&rsquo;s H-Index.</div>
+            <div class="other-date">2024-4-10</div>
+        </div>
+    </div>
+</a>
+            </a>
+        
     </div>
 </div>
         </div>
         <div id="r2">
-            
+            <div id="vcomments"></div>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script type="text/javascript">
+    new Valine({
+        el: '#vcomments',
+        appId: "1bY2Xk28MG2rZwn5yhAgSf7J-MdYXbMMI",
+        appKey: "0PMhHHKR1uBcp1aw5bXHvge7",
+        avatar: "robohash",
+        placeholder: "댓글을 입력하세요",
+        requiredFields: ["nick"],
+        visitor:  true ,
+        pageSize:  10 ,
+        recordIP:  null ,
+        lang: 'en'
+});
+</script>
+
         </div> 
     </div>
 </div>
 
             </div>
         </div>
+    </div>
+</div>
+
+    
+
+<div class="sponsor">
+    <div class="sponsor-self">
+        <div class="sponsor-title">Sponsor</div>
+        <div class="sponsor-btn">
+            
+                
+                    
+                        <div class="sponsor-btn-1 border-r">Wechat</div>
+                    
+                
+                
+            
+                
+                    
+                        <div class="sponsor-btn-2 border-l">Alipay</div>
+                    
+                
+                
+            
+        </div>
+        
+        <div class="sponsor-img">
+            
+                
+                    <img class="sponsor-img-1" src="/images/sponsor/wechat.jpeg" alt="">
+                
+                
+            
+                
+                    <img class="sponsor-img-2" src="/images/sponsor/alipay.jpeg" alt="" style="display: none;">
+                
+                
+            
+        </div>
+        <div class="cancel efct-button">cancel</div>
     </div>
 </div>
 
@@ -1035,7 +894,7 @@ L R X: Let&rsquo;s say the sequence sorted in ascending order is A[1], A[2], …
     var search_found = "Found";
     var search_result = "result";
     var search_results = "results";
-    var enable_mermaid =  null ;
+    var enable_mermaid =  false ;
 
     var baseURL = "http://localhost:1313/";
 </script>

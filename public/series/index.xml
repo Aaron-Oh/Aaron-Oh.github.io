@@ -8,6 +8,14 @@
         <generator>Hugo -- gohugo.io</generator>
     
         <item>
+            <title>DFS &amp; BFS</title>
+            <link>http://localhost:1313/series/dfs--bfs/</link>
+            <description>&lt;![CDATA[]]></description>
+            <pubDate>Thu, 11 Apr 2024 15:25:00 &#43;0000</pubDate>
+            <guid isPermaLink="true">http://localhost:1313/series/dfs--bfs/</guid>
+        </item>
+    
+        <item>
             <title>Brute Force</title>
             <link>http://localhost:1313/series/brute-force/</link>
             <description>&lt;![CDATA[]]></description>
