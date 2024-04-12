@@ -1,0 +1,111 @@
+&lt;?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Jay Log</title>
+        <link>http://localhost:1313/</link>
+        <description></description>
+        <language>en-us</language>
+        <generator>Hugo -- gohugo.io</generator>
+    
+        <item>
+            <title>High Score Kit: Brute Force#1</title>
+            <link>http://localhost:1313/posts/algorithm/highscore_kit/bruteforce/fatigue/</link>
+            <description>&lt;![CDATA[<h1 id="problem">Problem</h1>
+<p>In the XX game, there is a fatigue system represented by non-negative integers, allowing players to explore dungeons by using a certain amount of fatigue. Each dungeon requires a &ldquo;minimum required fatigue&rdquo; to start exploring and consumes a certain amount of &ldquo;fatigue&rdquo; upon completion. For example, to explore a dungeon with a &ldquo;minimum required fatigue&rdquo; of 80 and a &ldquo;consumption fatigue&rdquo; of 20, a player&rsquo;s current remaining fatigue must be at least 80, and it will decrease by 20 after exploring the dungeon. The game features multiple dungeons that can be explored once a day, and a player aims to maximize the number of dungeons explored in a day. Given the player&rsquo;s current fatigue <code>k</code> and a 2D array <code>dungeons</code> that contains the &ldquo;minimum required fatigue&rdquo; and &ldquo;consumption fatigue&rdquo; for each dungeon, implement a function <code>solution</code> to return the maximum number of dungeons a player can explore.</p>
+<h2 id="constraints">Constraints</h2>
+<ul>
+<li><code>k</code> is a natural number between 1 and 5,000.</li>
+<li>The length of the <code>dungeons</code> array (number of dungeons) is between 1 and 8.</li>
+<li>Each row in the <code>dungeons</code> array has 2 elements representing the [&ldquo;minimum required fatigue&rdquo;, &ldquo;consumption fatigue&rdquo;] for each dungeon.</li>
+<li>&ldquo;Minimum required fatigue&rdquo; is always equal to or greater than &ldquo;consumption fatigue&rdquo;.</li>
+<li>Both &ldquo;minimum required fatigue&rdquo; and &ldquo;consumption fatigue&rdquo; range from 1 to 1,000.</li>
+<li>Different dungeons can have the same [&ldquo;minimum required fatigue&rdquo;, &ldquo;consumption fatigue&rdquo;] values.</li>
+</ul>
+<h2 id="example-inputs-and-outputs">Example Inputs and Outputs</h2>
+<table>
+<thead>
+<tr>
+<th>k</th>
+<th>dungeons</th>
+<th>result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>80</td>
+<td>[[80,20],[50,40],[30,10]]</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="explanation-of-examples">Explanation of Examples</h3>
+<p>In the example, the player starts with a fatigue of 80. If the player explores the dungeons in the sequence of the first → third → second, here&rsquo;s how it goes:</p>
+<ul>
+<li>Initial fatigue is 80, matching the first dungeon&rsquo;s &ldquo;minimum required fatigue&rdquo; of 80. After exploring, the remaining fatigue is 60.</li>
+<li>The remaining fatigue is 60, which is enough for the third dungeon&rsquo;s &ldquo;minimum required fatigue&rdquo; of 30. After exploring, the remaining fatigue is 50.</li>
+<li>The remaining fatigue is 50, matching the second dungeon&rsquo;s &ldquo;minimum required fatigue&rdquo; of 50. After exploring, the remaining fatigue is 10.
+Thus, in this scenario, the player can explore all three dungeons, making the maximum number of dungeons explored 3.</li>
+</ul>
+<hr>
+<h1 id="how-to-approach">How to Approach?</h1>
+<h2 id="step1-initialize-variables-in-loop">Step1: Initialize variables in loop</h2>
+<h2 id="step2-array-copy-and-sort">Step2: Array copy and sort</h2>
+<h2 id="step3-designate-elements-to-output-array">Step3: Designate elements to output array</h2>
+<h1 id="final-code">Final Code</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="nf">solution</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Deque</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayDeque</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">stack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="n">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="na">peek</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">stack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">answer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">stack</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="n">stack</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="o">-</span><span class="n">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">answer</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stack</span><span class="p">.</span><span class="na">pop</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">answer</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
+            <pubDate>Thu, 11 Apr 2024 10:20:00 &#43;0000</pubDate>
+            <guid isPermaLink="true">http://localhost:1313/posts/algorithm/highscore_kit/bruteforce/fatigue/</guid>
+        </item>
+    
+    </channel>
+</rss>

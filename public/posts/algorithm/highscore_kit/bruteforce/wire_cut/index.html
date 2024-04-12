@@ -3,18 +3,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jay Log | Sortng</title>
-    <meta name="description" content=" ">
-    <link rel="canonical" href="http://localhost:1313/series/sortng/" />
+    <title>Jay Log | High Score Kit: Brute Force#2</title>
+    <meta name="description" content="Problem In a power grid network composed of n transmission towers connected in a tree structure via wires, you are tasked with dividing the network into two parts by cutting one of the wires. The goal is to make the number of transmission towers in each part as equal as possible. ">
+    <link rel="canonical" href="http://localhost:1313/posts/algorithm/highscore_kit/bruteforce/wire_cut/" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <meta property="og:title" content="Sortng" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/series/sortng/" />
+    <meta property="og:title" content="High Score Kit: Brute Force#2" />
+<meta property="og:description" content="Problem In a power grid network composed of n transmission towers connected in a tree structure via wires, you are tasked with dividing the network into two parts by cutting one of the wires. The goal is to make the number of transmission towers in each part as equal as possible." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/algorithm/highscore_kit/bruteforce/wire_cut/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-04-11T13:34:00+00:00" />
+<meta property="article:modified_time" content="2024-04-11T00:00:00+00:00" />
 
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Sortng"/>
-<meta name="twitter:description" content=""/>
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="High Score Kit: Brute Force#2"/>
+<meta name="twitter:description" content="Problem In a power grid network composed of n transmission towers connected in a tree structure via wires, you are tasked with dividing the network into two parts by cutting one of the wires. The goal is to make the number of transmission towers in each part as equal as possible."/>
 
     
 
@@ -186,29 +189,41 @@
 
 
         <div id="content">
-    
 
 
 
 
-
-
-    
-        
-    
 
 
 
 
     <div class="hero">
         
-            
-                <div class="hero-img">
-                    <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt="">
-                </div>
-            
+            <div class="hero-img">
+                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt="">
+            </div>
+        
         <div class="hero-content">
-            <h1 class="hero-title">Series: Sortng</h1>
+            <div class="hero-title">High Score Kit: Brute Force#2</div>
+            <div class="hero-subtitle">Wire Cut</div>
+            <div class="hero-date">
+                    <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-4-11 &nbsp;</span>
+                    <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-4-11 &nbsp;</span>
+                    <span class="no-wrap"><i class="fa fa-folder"></i>
+                        includedIn:
+                        
+                            <a href='
+                                /categories/highscorekit
+                            '>
+                                HighScoreKit
+                            </a>
+                    </span>    
+            </div>
+            <div class="timelong">
+                <span class="no-wrap"><i class="fa fa-pencil"></i> wordsCount: 532 &nbsp;</span>
+                <span class="no-wrap"><i class="fa fa-clock-o"></i> readingTime: 3 mins &nbsp;</span>
+                <span class="no-wrap"><i class="fa fa-eye"></i> viewers: <span id="busuanzi_value_page_pv"></span></span>
+            </div>
         </div>
     </div>
 
@@ -227,7 +242,7 @@
     
 
 
-<div class="terms-body">
+<div class="content-root">
     <div class="long">
         <button class="tosides-1 text-wbd">
             <i class="fa fa-arrow-right"></i>
@@ -240,463 +255,287 @@
         </button>
     </div>
     
-        <div class="terms-row">
+        <div class="content">
+            <div class="content-self">
+                <h1 id="problem">Problem</h1>
+<p>In a power grid network composed of <code>n</code> transmission towers connected in a tree structure via wires, you are tasked with dividing the network into two parts by cutting one of the wires. The goal is to make the number of transmission towers in each part as equal as possible. Given the number of towers <code>n</code> and the wire connections <code>wires</code>, your function <code>solution</code> should return the smallest difference in the number of transmission towers between the two resulting networks after one cut.</p>
+<h2 id="constraints">Constraints</h2>
+<ul>
+<li><code>n</code> is a natural number between 2 and 100, inclusive.</li>
+<li><code>wires</code> is a two-dimensional array of integers with a length of <code>n-1</code>.</li>
+<li>Each element in <code>wires</code> is a pair <code>[v1, v2]</code>, indicating that the transmission tower <code>v1</code> is connected to tower <code>v2</code> via a wire.</li>
+<li><code>1 ≤ v1 &lt; v2 ≤ n</code>.</li>
+<li>The network always forms a single tree structure.</li>
+</ul>
+<h2 id="example">Example</h2>
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th>wires</th>
+<th>result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9</td>
+<td>[[1,3],[2,3],[3,4],[4,5],[4,6],[4,7],[7,8],[7,9]]</td>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>[[1,2],[2,3],[3,4]]</td>
+<td>0</td>
+</tr>
+<tr>
+<td>7</td>
+<td>[[1,2],[2,7],[3,7],[3,4],[4,5],[6,7]]</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="explanation-of-examples">Explanation of Examples</h3>
+<ul>
+<li><strong>Example 1:</strong>
+<ul>
+<li>There are 9 towers connected by 8 wires forming a tree. By choosing the optimal wire to cut, the difference in the number of towers between the two resulting networks can be minimized to 3.</li>
+</ul>
+</li>
+<li><strong>Example 2:</strong>
+<ul>
+<li>With 4 towers connected in a straight line, cutting any of the wires results in two parts with an equal number of towers, resulting in a difference of 0.</li>
+</ul>
+</li>
+<li><strong>Example 3:</strong>
+<ul>
+<li>A network of 7 towers can be split by the optimal wire cut to achieve a minimum tower difference of 1 between the two networks.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="how-to-approach">How to Approach?</h1>
+<h2 id="step1-initialize-variables-in-loop">Step1: Initialize variables in loop</h2>
+<h1 id="final-code">Final Code</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">List</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">adjList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">boolean</span><span class="o">[]</span><span class="w"> </span><span class="n">visited</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">totalTowers</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">minDifference</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">MAX_VALUE</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">solution</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">wires</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">totalTowers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">visited</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">boolean</span><span class="o">[</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">1</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Initialize adjacency list for all nodes</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">adjList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Construct the tree using adjacency list</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">wire</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">wires</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wire</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wire</span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">adjList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">v1</span><span class="p">).</span><span class="na">add</span><span class="p">(</span><span class="n">v2</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">adjList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">v2</span><span class="p">).</span><span class="na">add</span><span class="p">(</span><span class="n">v1</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Try cutting each wire and calculate the difference</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">wire</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">wires</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wire</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wire</span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// Remove the connection (cut the wire)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">adjList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">v1</span><span class="p">).</span><span class="na">remove</span><span class="p">(</span><span class="n">Integer</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">v2</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">adjList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">v2</span><span class="p">).</span><span class="na">remove</span><span class="p">(</span><span class="n">Integer</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">v1</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// Reset visited array for new DFS</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">visited</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">boolean</span><span class="o">[</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">1</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">towersInSubtree</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">countTowersDFS</span><span class="p">(</span><span class="n">v1</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// Calculate difference in towers and update minDifference</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">difference</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">totalTowers</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">towersInSubtree</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">minDifference</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">min</span><span class="p">(</span><span class="n">minDifference</span><span class="p">,</span><span class="w"> </span><span class="n">difference</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// Reconnect the wire</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">adjList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">v1</span><span class="p">).</span><span class="na">add</span><span class="p">(</span><span class="n">v2</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">adjList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">v2</span><span class="p">).</span><span class="na">add</span><span class="p">(</span><span class="n">v1</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">minDifference</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">countTowersDFS</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">node</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">visited</span><span class="o">[</span><span class="n">node</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">towersCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// Count the current node</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Recurse on all adjacent nodes</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">adjNode</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">adjList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">node</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">visited</span><span class="o">[</span><span class="n">adjNode</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">towersCount</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">countTowersDFS</span><span class="p">(</span><span class="n">adjNode</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">towersCount</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+            </div>
             
-            <div class="terms-root">
-                
-                
-
-
-
-<div class="card-large">
-    <div class="card-large-img">
-
-        
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt='image loading failed'>
-        
-    </div>
-    <div class="card-large-content">
-        <div class="up-title"><a href="/posts/algorithm/highscore_kit/sorting/h_index/">High Score Kit: Sorting#3</a></div>
-        <div class="up-date">
-            <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-4-10 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-4-10 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-folder"></i>
-                
-                    includedIn:
+                <div class="tags">
                     
-                        <a href='
-                                        /categories/highscorekit
+                    <span class="down-type-item">
+                        <div class="type-text">
+                            <a href='
+                                        /tags/algorithms
                                     '>
-                                HighScoreKit
+                                <i class="fa fa-tag"></i> Algorithms
                             </a>
-                
-            </span>
-        </div>
-        <div class="down-summary">Problem The H-Index is a metric that measures the productivity and impact of a scientist&rsquo;s research. It represents the highest number h such that the scientist has published h papers that have each been cited at least h times. According to Wikipedia, the H-Index is calculated as follows:
-For a given scientist who has published n papers, if h of these papers have at least h citations each, and the other papers have no more than h citations each, then h is the maximum value for this scientist&rsquo;s H-Index.</div>
-    </div>
-    <div class="card-readmore">
-        <a href="http://localhost:1313/posts/algorithm/highscore_kit/sorting/h_index/">
-            <span><i class="fa fa-arrow-right"></i></span>
-        </a>
-    </div>
-</div>
-
-
-
-    
-
-
-    <div class="down-type">
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/algorithms
-                        '>
-                    <i class="fa fa-tag"></i> Algorithms
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/sorting
-                        '>
-                    <i class="fa fa-tag"></i> Sorting
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/java
-                        '>
-                    <i class="fa fa-tag"></i> Java
-                </a>
-            </div>
-        </span>
-        
-    </div>
-
-<div class="dang"></div>
-            </div>
-            
-            <div class="terms-root">
-                
-                
-
-
-
-<div class="card-large">
-    <div class="card-large-img">
-
-        
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt='image loading failed'>
-        
-    </div>
-    <div class="card-large-content">
-        <div class="up-title"><a href="/posts/algorithm/highscore_kit/sorting/maximum_number/">High Score Kit: Sorting#2</a></div>
-        <div class="up-date">
-            <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-4-10 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-4-10 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-folder"></i>
-                
-                    includedIn:
+                        </div>
+                    </span>
                     
-                        <a href='
-                                        /categories/highscorekit
+                    <span class="down-type-item">
+                        <div class="type-text">
+                            <a href='
+                                        /tags/brute-force
                                     '>
-                                HighScoreKit
+                                <i class="fa fa-tag"></i> Brute Force
                             </a>
-                
-            </span>
-        </div>
-        <div class="down-summary">Problem Given an array of non-negative integers, your task is to determine the largest number that can be formed by concatenating the integers together. For example, with the integers [6, 10, 2], you can form the numbers [6102, 6210, 1062, 1026, 2610, 2106] through different arrangements. The largest number from these combinations is 6210.</div>
-    </div>
-    <div class="card-readmore">
-        <a href="http://localhost:1313/posts/algorithm/highscore_kit/sorting/maximum_number/">
-            <span><i class="fa fa-arrow-right"></i></span>
-        </a>
-    </div>
-</div>
-
-
-
-    
-
-
-    <div class="down-type">
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/algorithms
-                        '>
-                    <i class="fa fa-tag"></i> Algorithms
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/sorting
-                        '>
-                    <i class="fa fa-tag"></i> Sorting
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/java
-                        '>
-                    <i class="fa fa-tag"></i> Java
-                </a>
-            </div>
-        </span>
-        
-    </div>
-
-<div class="dang"></div>
-            </div>
-            
-            <div class="terms-root">
-                
-                
-
-
-
-<div class="card-large">
-    <div class="card-large-img">
-
-        
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt='image loading failed'>
-        
-    </div>
-    <div class="card-large-content">
-        <div class="up-title"><a href="/posts/algorithm/highscore_kit/sorting/kth_number/">High Score Kit: Sorting#1</a></div>
-        <div class="up-date">
-            <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-4-10 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-4-10 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-folder"></i>
-                
-                    includedIn:
+                        </div>
+                    </span>
                     
-                        <a href='
-                                        /categories/highscorekit
+                    <span class="down-type-item">
+                        <div class="type-text">
+                            <a href='
+                                        /tags/java
                                     '>
-                                HighScoreKit
+                                <i class="fa fa-tag"></i> Java
                             </a>
-                
-            </span>
-        </div>
-        <div class="down-summary">Problem To find a number at the k-th position after slicing and sorting the array from the i-th to j-th number, consider the following: For example, if the array is [1, 5, 2, 6, 3, 7, 4], i = 2, j = 5, and k = 3, slicing the array from the 2nd to the 5th number yields [5, 2, 6, 3].</div>
-    </div>
-    <div class="card-readmore">
-        <a href="http://localhost:1313/posts/algorithm/highscore_kit/sorting/kth_number/">
-            <span><i class="fa fa-arrow-right"></i></span>
-        </a>
-    </div>
-</div>
-
-
-
-    
-
-
-    <div class="down-type">
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/algorithms
-                        '>
-                    <i class="fa fa-tag"></i> Algorithms
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/sorting
-                        '>
-                    <i class="fa fa-tag"></i> Sorting
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/java
-                        '>
-                    <i class="fa fa-tag"></i> Java
-                </a>
-            </div>
-        </span>
-        
-    </div>
-
-<div class="dang"></div>
-            </div>
-            
-            <div class="terms-root">
-                
-                
-
-
-
-<div class="card-large">
-    <div class="card-large-img">
-
-        
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt='image loading failed'>
-        
-    </div>
-    <div class="card-large-content">
-        <div class="up-title"><a href="/posts/algorithm/sorting/sorting_2/">Sorting Problem</a></div>
-        <div class="up-date">
-            <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-3-29 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-3-29 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-folder"></i>
-                
-                    includedIn:
+                        </div>
+                    </span>
                     
-                        <a href='
-                                        /categories/algorithms
-                                    '>
-                                Algorithms
-                            </a>
-                
-            </span>
-        </div>
-        <div class="down-summary">Problem Jay likes sequences, so he use to playing with a sequence of size N. He will transform the sequence according to K queries, and the format and process of the queries are as follows:
-L R X: Let&rsquo;s say the sequence sorted in ascending order is A[1], A[2], …, A[N].</div>
-    </div>
-    <div class="card-readmore">
-        <a href="http://localhost:1313/posts/algorithm/sorting/sorting_2/">
-            <span><i class="fa fa-arrow-right"></i></span>
-        </a>
-    </div>
-</div>
-
-
-
-    
-
-
-    <div class="down-type">
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/algorithms
-                        '>
-                    <i class="fa fa-tag"></i> Algorithms
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/problem
-                        '>
-                    <i class="fa fa-tag"></i> Problem
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/sorting
-                        '>
-                    <i class="fa fa-tag"></i> Sorting
-                </a>
-            </div>
-        </span>
-        
-    </div>
-
-<div class="dang"></div>
-            </div>
+                </div>
             
-            <div class="terms-root">
-                
-                
-
-
-
-<div class="card-large">
-    <div class="card-large-img">
-
+        </div>
         
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt='image loading failed'>
-        
-    </div>
-    <div class="card-large-content">
-        <div class="up-title"><a href="/posts/algorithm/sorting/sorting_1/">How to Sort Data</a></div>
-        <div class="up-date">
-            <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-3-29 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-3-29 &nbsp;</span>
-            <span class="no-wrap"><i class="fa fa-folder"></i>
-                
-                    includedIn:
+            
+                <div class="pre-next">
                     
-                        <a href='
-                                        /categories/algorithms
-                                    '>
-                                Algorithms
-                            </a>
-                
-            </span>
-        </div>
-        <div class="down-summary">Introduction What this post focus on This posting will cover almost every concept of How to sort (primary). Plus, I&rsquo;ll post realistic algorithm problem of our real world so that you can apply those concept to real world problem and learn how to use it. I really hope so. Let&rsquo;s see the below example.</div>
-    </div>
-    <div class="card-readmore">
-        <a href="http://localhost:1313/posts/algorithm/sorting/sorting_1/">
-            <span><i class="fa fa-arrow-right"></i></span>
+    
+        
+        <a href="http://localhost:1313/posts/algorithm/highscore_kit/bruteforce/fatigue/" class="pre">
+            <span class="pre-icon"><i class="fa fa-hand-o-left"></i></span>
+            <div class="pre-title-root">
+                <span>High Score Kit: Brute Force#1</span>
+            </div>
         </a>
-    </div>
-</div>
+        
 
-
+        
+        <a href="http://localhost:1313/posts/algorithm/highscore_kit/dfsbfs/target_number/" class="next">
+            <div class="next-title-root">
+                <span>High Score Kit: DFS&amp;BFS#2</span>
+            </div>
+            <span class="next-icon"><i class="fa fa-hand-o-right"></i></span>
+        </a>
+        
 
     
+    
 
+                </div>
+            
+        
+    
+</div>
 
-    <div class="down-type">
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/algorithms
-                        '>
-                    <i class="fa fa-tag"></i> Algorithms
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/concept
-                        '>
-                    <i class="fa fa-tag"></i> Concept
-                </a>
-            </div>
-        </span>
-        
-        <span class="down-type-item">
-            <div class="shuxian-root">
-                <div class="shuxian"></div>
-            </div>
-            <div class="type-text">
-                <a href='
-                            /tags/sorting
-                        '>
-                    <i class="fa fa-tag"></i> Sorting
-                </a>
-            </div>
-        </span>
-        
-    </div>
-
-<div class="dang"></div>
-            </div>
+    
+        <div class="content-last">
+            
+                <button class="aixin content-last-item efct-button">
+                    <i class="fa fa-heart"></i>
+                </button>
+            
+            
+                <button class="pinglun content-last-item efct-button">
+                    <i class="fa fa-comment"></i>
+                </button>
             
         </div>
     
-</div>
 
 
             </div>
@@ -704,6 +543,11 @@ L R X: Let&rsquo;s say the sequence sorted in ascending order is A[1], A[2], …
                 
 <div class="zhuti-r-0">
     <div class="zhuti-r-1">
+        
+            <div class="button-r">
+                <button class="button-mulu efct-button" type="button"><span><i class="fa fa-bars"></i></span><span class="bars-text"> content</span></button>
+                <button class="button-comment efct-button" type="button"><span><i class="fa fa-comment"></i></span><span class="comment-text"> comment</span></button>
+            </div>
         
         <div id="r1">
             
@@ -773,53 +617,16 @@ L R X: Let&rsquo;s say the sequence sorted in ascending order is A[1], A[2], …
 
 
 
+    
+    
+
 
 <div class="other">
     <div class="other-up">
-        <div class="other-qita text-wbd">latest Posts</div>
+        <div class="other-qita text-wbd">Related Posts</div>
         <div class="xian"></div>
     </div>
     <div class="list">
-        
-            <a href="http://localhost:1313/posts/algorithm/highscore_kit/dfsbfs/target_number/">
-                
-<a href="http://localhost:1313/posts/algorithm/highscore_kit/dfsbfs/target_number/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                High Score Kit: DFS&amp;BFS#2
-            </div>
-            <div class="other-summary">Problem You are given an array of non-negative integers and a target number. Your task is to find how many ways you can add and subtract the given numbers to achieve the target number. The order of numbers in the array must be preserved. For example, with the array [1, 1, 1, 1, 1], there are five ways to reach the target number 3:</div>
-            <div class="other-date">2024-4-11</div>
-        </div>
-    </div>
-</a>
-            </a>
-        
-            <a href="http://localhost:1313/posts/algorithm/highscore_kit/bruteforce/wire_cut/">
-                
-<a href="http://localhost:1313/posts/algorithm/highscore_kit/bruteforce/wire_cut/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                High Score Kit: Brute Force#2
-            </div>
-            <div class="other-summary">Problem In a power grid network composed of n transmission towers connected in a tree structure via wires, you are tasked with dividing the network into two parts by cutting one of the wires. The goal is to make the number of transmission towers in each part as equal as possible.</div>
-            <div class="other-date">2024-4-11</div>
-        </div>
-    </div>
-</a>
-            </a>
         
             <a href="http://localhost:1313/posts/algorithm/highscore_kit/bruteforce/fatigue/">
                 
@@ -835,6 +642,26 @@ L R X: Let&rsquo;s say the sequence sorted in ascending order is A[1], A[2], …
                 High Score Kit: Brute Force#1
             </div>
             <div class="other-summary">Problem In the XX game, there is a fatigue system represented by non-negative integers, allowing players to explore dungeons by using a certain amount of fatigue. Each dungeon requires a &ldquo;minimum required fatigue&rdquo; to start exploring and consumes a certain amount of &ldquo;fatigue&rdquo; upon completion. For example, to explore a dungeon with a &ldquo;minimum required fatigue&rdquo; of 80 and a &ldquo;consumption fatigue&rdquo; of 20, a player&rsquo;s current remaining fatigue must be at least 80, and it will decrease by 20 after exploring the dungeon.</div>
+            <div class="other-date">2024-4-11</div>
+        </div>
+    </div>
+</a>
+            </a>
+        
+            <a href="http://localhost:1313/posts/algorithm/highscore_kit/dfsbfs/target_number/">
+                
+<a href="http://localhost:1313/posts/algorithm/highscore_kit/dfsbfs/target_number/">
+    <div class="list-item">
+        <div class="icon-other-root">
+            
+                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
+            
+        </div>
+        <div class="list-right">
+            <div class="other-title">
+                High Score Kit: DFS&amp;BFS#2
+            </div>
+            <div class="other-summary">Problem You are given an array of non-negative integers and a target number. Your task is to find how many ways you can add and subtract the given numbers to achieve the target number. The order of numbers in the array must be preserved. For example, with the array [1, 1, 1, 1, 1], there are five ways to reach the target number 3:</div>
             <div class="other-date">2024-4-11</div>
         </div>
     </div>
@@ -902,17 +729,93 @@ For a given scientist who has published n papers, if h of these papers have at l
 </a>
             </a>
         
+            <a href="http://localhost:1313/posts/algorithm/highscore_kit/sorting/maximum_number/">
+                
+<a href="http://localhost:1313/posts/algorithm/highscore_kit/sorting/maximum_number/">
+    <div class="list-item">
+        <div class="icon-other-root">
+            
+                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
+            
+        </div>
+        <div class="list-right">
+            <div class="other-title">
+                High Score Kit: Sorting#2
+            </div>
+            <div class="other-summary">Problem Given an array of non-negative integers, your task is to determine the largest number that can be formed by concatenating the integers together. For example, with the integers [6, 10, 2], you can form the numbers [6102, 6210, 1062, 1026, 2610, 2106] through different arrangements. The largest number from these combinations is 6210.</div>
+            <div class="other-date">2024-4-10</div>
+        </div>
+    </div>
+</a>
+            </a>
+        
     </div>
 </div>
         </div>
         <div id="r2">
-            
+            <div id="vcomments"></div>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script type="text/javascript">
+    new Valine({
+        el: '#vcomments',
+        appId: "1bY2Xk28MG2rZwn5yhAgSf7J-MdYXbMMI",
+        appKey: "0PMhHHKR1uBcp1aw5bXHvge7",
+        avatar: "robohash",
+        placeholder: "댓글을 입력하세요",
+        requiredFields: ["nick"],
+        visitor:  true ,
+        pageSize:  10 ,
+        recordIP:  null ,
+        lang: 'en'
+});
+</script>
+
         </div> 
     </div>
 </div>
 
             </div>
         </div>
+    </div>
+</div>
+
+    
+
+<div class="sponsor">
+    <div class="sponsor-self">
+        <div class="sponsor-title">Sponsor</div>
+        <div class="sponsor-btn">
+            
+                
+                    
+                        <div class="sponsor-btn-1 border-r">Wechat</div>
+                    
+                
+                
+            
+                
+                    
+                        <div class="sponsor-btn-2 border-l">Alipay</div>
+                    
+                
+                
+            
+        </div>
+        
+        <div class="sponsor-img">
+            
+                
+                    <img class="sponsor-img-1" src="/images/sponsor/wechat.jpeg" alt="">
+                
+                
+            
+                
+                    <img class="sponsor-img-2" src="/images/sponsor/alipay.jpeg" alt="" style="display: none;">
+                
+                
+            
+        </div>
+        <div class="cancel efct-button">cancel</div>
     </div>
 </div>
 
@@ -1033,7 +936,7 @@ For a given scientist who has published n papers, if h of these papers have at l
     var search_found = "Found";
     var search_result = "result";
     var search_results = "results";
-    var enable_mermaid =  null ;
+    var enable_mermaid =  false ;
 
     var baseURL = "http://localhost:1313/";
 </script>
