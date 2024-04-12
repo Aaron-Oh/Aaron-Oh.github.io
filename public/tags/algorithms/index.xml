@@ -2,14 +2,45 @@
 <rss version="2.0">
     <channel>
         <title>Jay Log</title>
-        <link>http://jaym-oh.github.io/</link>
+        <link>http://localhost:1313/</link>
         <description></description>
         <language>en-us</language>
         <generator>Hugo -- gohugo.io</generator>
     
         <item>
+            <title>High Score Kit_Sorting#1</title>
+            <link>http://localhost:1313/posts/algorithm/highscore_kit/sorting/kth_number/</link>
+            <description>&lt;![CDATA[<h1 id="problem">Problem</h1>
+<p>To find a number at the k-th position after slicing and sorting the array from the i-th to j-th number, consider the following:<br>
+For example, if the array is [1, 5, 2, 6, 3, 7, 4], i = 2, j = 5, and k = 3,<br>
+slicing the array from the 2nd to the 5th number yields [5, 2, 6, 3].<br>
+Sorting the array obtained from step 1 results in [2, 3, 5, 6].<br>
+The number at the 3rd position of the array from step 2 is 5.<br>
+Write a function <code>solution</code> that returns an array of results obtained by applying the aforementioned operation to every element of a 2D array <code>commands</code>, where <code>commands</code> contains elements [i, j, k], given the array <code>array</code> and <code>commands</code> as parameters.</p>
+<p>Constraints:</p>
+<ul>
+<li>The length of <code>array</code> is between 1 and 100, inclusive.</li>
+<li>Each element of <code>array</code> is between 1 and 100, inclusive.</li>
+<li>The length of <code>commands</code> is between 1 and 50, inclusive.</li>
+<li>Each element of <code>commands</code> has a length of 3.</li>
+</ul>
+<p>Example:<br>
+Input:</p>
+<ul>
+<li>array = [1, 5, 2, 6, 3, 7, 4]</li>
+<li>commands = [[2, 5, 3], [4, 4, 1], [1, 7, 3]]<br>
+Output: [5, 6, 3]</li>
+</ul>
+<hr>
+<h1 id="how-to-approach">How to Approach?</h1>
+]]></description>
+            <pubDate>Wed, 10 Apr 2024 17:20:00 &#43;0000</pubDate>
+            <guid isPermaLink="true">http://localhost:1313/posts/algorithm/highscore_kit/sorting/kth_number/</guid>
+        </item>
+    
+        <item>
             <title>Sorting Problem</title>
-            <link>http://jaym-oh.github.io/posts/algorithm/sorting/sorting_2/</link>
+            <link>http://localhost:1313/posts/algorithm/sorting/sorting_2/</link>
             <description>&lt;![CDATA[<h1 id="problem">Problem</h1>
 <p>Jay likes sequences, so he use to playing with a sequence of size N. He will transform the sequence according to K queries, and the format and process of the queries are as follows:</p>
 <ul>
@@ -123,19 +154,19 @@ Output:
 </div>
 </div>]]></description>
             <pubDate>Fri, 29 Mar 2024 17:20:00 &#43;0000</pubDate>
-            <guid isPermaLink="true">http://jaym-oh.github.io/posts/algorithm/sorting/sorting_2/</guid>
+            <guid isPermaLink="true">http://localhost:1313/posts/algorithm/sorting/sorting_2/</guid>
         </item>
     
         <item>
             <title>How to Sort Data</title>
-            <link>http://jaym-oh.github.io/posts/algorithm/sorting/sorting_1/</link>
+            <link>http://localhost:1313/posts/algorithm/sorting/sorting_1/</link>
             <description>&lt;![CDATA[<h1 id="introduction">Introduction</h1>
 <h2 id="what-this-post-focus-on">What this post focus on</h2>
 <h2 id="this-posting-will-cover-almost-every-concept-of--how-to-sort-primary-plus-ill-post-realistic-algorithm-problem-of-our-real-world-so-that-you-can-apply-those-concept-to-real-world-problem-and-learn-how-to-use-it-i-really-hope-so">This posting will cover almost every concept of  <code>How to sort (primary)</code>. Plus, I&rsquo;ll post realistic algorithm problem of our real world so that you can apply those concept to real world problem and learn how to use it. I really hope so.</h2>
 <p>Let&rsquo;s see the below example.</p>
 ]]></description>
             <pubDate>Fri, 29 Mar 2024 16:00:00 &#43;0000</pubDate>
-            <guid isPermaLink="true">http://jaym-oh.github.io/posts/algorithm/sorting/sorting_1/</guid>
+            <guid isPermaLink="true">http://localhost:1313/posts/algorithm/sorting/sorting_1/</guid>
         </item>
     
     </channel>

@@ -2,14 +2,14 @@
 <rss version="2.0">
     <channel>
         <title>Jay Log</title>
-        <link>http://jaym-oh.github.io/</link>
+        <link>http://localhost:1313/</link>
         <description></description>
         <language>en-us</language>
         <generator>Hugo -- gohugo.io</generator>
     
         <item>
             <title>How to use Extended Markdown</title>
-            <link>http://jaym-oh.github.io/posts/markdown/extendedmd/</link>
+            <link>http://localhost:1313/posts/markdown/extendedmd/</link>
             <description>&lt;![CDATA[<h1 id="code">Code</h1>
 <h2 id="code-in-line">Code in line</h2>
 <p>Example: basic: &ldquo;<code>name</code>&rdquo;<br>
@@ -447,7 +447,7 @@ you can add &lsquo;id&rsquo; into the tap container and if two containers have s
 </div><pre tabindex="0"><code class="language-math" data-lang="math">블럭 내 공식입니다：$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 </code></pre><p>more usage in here: mathjax: <a href="https://www.mathjax.org">https://www.mathjax.org</a></p>]]></description>
             <pubDate>Sat, 12 Feb 2022 09:00:00 &#43;0000</pubDate>
-            <guid isPermaLink="true">http://jaym-oh.github.io/posts/markdown/extendedmd/</guid>
+            <guid isPermaLink="true">http://localhost:1313/posts/markdown/extendedmd/</guid>
         </item>
     
     </channel>

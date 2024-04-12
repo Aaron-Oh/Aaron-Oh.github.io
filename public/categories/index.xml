@@ -2,41 +2,49 @@
 <rss version="2.0">
     <channel>
         <title>Jay Log</title>
-        <link>http://jaym-oh.github.io/</link>
+        <link>http://localhost:1313/</link>
         <description></description>
         <language>en-us</language>
         <generator>Hugo -- gohugo.io</generator>
     
         <item>
+            <title>HighScoreKit</title>
+            <link>http://localhost:1313/categories/highscorekit/</link>
+            <description>&lt;![CDATA[]]></description>
+            <pubDate>Wed, 10 Apr 2024 21:35:00 &#43;0000</pubDate>
+            <guid isPermaLink="true">http://localhost:1313/categories/highscorekit/</guid>
+        </item>
+    
+        <item>
             <title>Algorithms</title>
-            <link>http://jaym-oh.github.io/categories/algorithms/</link>
+            <link>http://localhost:1313/categories/algorithms/</link>
             <description>&lt;![CDATA[]]></description>
             <pubDate>Fri, 29 Mar 2024 17:20:00 &#43;0000</pubDate>
-            <guid isPermaLink="true">http://jaym-oh.github.io/categories/algorithms/</guid>
+            <guid isPermaLink="true">http://localhost:1313/categories/algorithms/</guid>
         </item>
     
         <item>
             <title>Database</title>
-            <link>http://jaym-oh.github.io/categories/database/</link>
+            <link>http://localhost:1313/categories/database/</link>
             <description>&lt;![CDATA[]]></description>
             <pubDate>Fri, 29 Mar 2024 14:00:00 &#43;0000</pubDate>
-            <guid isPermaLink="true">http://jaym-oh.github.io/categories/database/</guid>
+            <guid isPermaLink="true">http://localhost:1313/categories/database/</guid>
         </item>
     
         <item>
             <title>Docker</title>
-            <link>http://jaym-oh.github.io/categories/docker/</link>
+            <link>http://localhost:1313/categories/docker/</link>
             <description>&lt;![CDATA[]]></description>
             <pubDate>Mon, 03 Apr 2023 15:24:00 &#43;0000</pubDate>
-            <guid isPermaLink="true">http://jaym-oh.github.io/categories/docker/</guid>
+            <guid isPermaLink="true">http://localhost:1313/categories/docker/</guid>
         </item>
     
         <item>
             <title>Make Your Own Blog</title>
-            <link>http://jaym-oh.github.io/categories/make-your-own-blog/</link>
+            <link>http://localhost:1313/categories/make-your-own-blog/</link>
             <description>&lt;![CDATA[]]></description>
             <pubDate>Sat, 12 Feb 2022 09:00:00 &#43;0000</pubDate>
-            <guid isPermaLink="true">http://jaym-oh.github.io/categories/make-your-own-blog/</guid>
+            <guid isPermaLink="true">http://localhost:1313/categories/make-your-own-blog/</guid>
         </item>
     
     </channel>

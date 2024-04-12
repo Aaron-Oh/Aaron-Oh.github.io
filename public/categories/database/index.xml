@@ -2,14 +2,14 @@
 <rss version="2.0">
     <channel>
         <title>Jay Log</title>
-        <link>http://jaym-oh.github.io/</link>
+        <link>http://localhost:1313/</link>
         <description></description>
         <language>en-us</language>
         <generator>Hugo -- gohugo.io</generator>
     
         <item>
             <title>ch15. Data type in DB</title>
-            <link>http://jaym-oh.github.io/posts/database/db_15_2/</link>
+            <link>http://localhost:1313/posts/database/db_15_2/</link>
             <description>&lt;![CDATA[<h1 id="enum">ENUM</h1>
 <ul>
 <li>테이블의 구조에 나열된 목록 중 하나의 값을 가질 수 있다.</li>
@@ -558,12 +558,12 @@
 </ul>
 ]]></description>
             <pubDate>Fri, 29 Mar 2024 14:00:00 &#43;0000</pubDate>
-            <guid isPermaLink="true">http://jaym-oh.github.io/posts/database/db_15_2/</guid>
+            <guid isPermaLink="true">http://localhost:1313/posts/database/db_15_2/</guid>
         </item>
     
         <item>
             <title>ch15. Data type in DB</title>
-            <link>http://jaym-oh.github.io/posts/database/db_15_1/</link>
+            <link>http://localhost:1313/posts/database/db_15_1/</link>
             <description>&lt;![CDATA[<h1 id="저장-공간">저장 공간</h1>
 <ul>
 <li>
@@ -1310,7 +1310,7 @@
 </div>
 </div>]]></description>
             <pubDate>Fri, 29 Mar 2024 08:00:00 &#43;0000</pubDate>
-            <guid isPermaLink="true">http://jaym-oh.github.io/posts/database/db_15_1/</guid>
+            <guid isPermaLink="true">http://localhost:1313/posts/database/db_15_1/</guid>
         </item>
     
     </channel>

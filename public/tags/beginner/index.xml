@@ -2,23 +2,23 @@
 <rss version="2.0">
     <channel>
         <title>Jay Log</title>
-        <link>http://jaym-oh.github.io/</link>
+        <link>http://localhost:1313/</link>
         <description></description>
         <language>en-us</language>
         <generator>Hugo -- gohugo.io</generator>
     
         <item>
             <title>Building your own Docker images</title>
-            <link>http://jaym-oh.github.io/posts/docker/docker_3/</link>
+            <link>http://localhost:1313/posts/docker/docker_3/</link>
             <description>&lt;![CDATA[<h1 id="using-a-container-image-from-docker-hub">Using a container image from Docker Hub</h1>
 ]]></description>
             <pubDate>Mon, 03 Apr 2023 15:24:00 &#43;0000</pubDate>
-            <guid isPermaLink="true">http://jaym-oh.github.io/posts/docker/docker_3/</guid>
+            <guid isPermaLink="true">http://localhost:1313/posts/docker/docker_3/</guid>
         </item>
     
         <item>
             <title>Understanding Docker and Running Hello World</title>
-            <link>http://jaym-oh.github.io/posts/docker/docker_2/</link>
+            <link>http://localhost:1313/posts/docker/docker_2/</link>
             <description>&lt;![CDATA[<h1 id="running-hello-world-in-a-container">Running Hello World in a container</h1>
 <p>Let&rsquo;s just simply run below code:</p>
 <div class="highlight"><div class="chroma">
@@ -206,12 +206,12 @@ This is a good way to tidy up your containers, but use it with caution, because 
 <p>The only way to interact with the Docker Engine is through the API, and there are different options for giving access to the API and securing it. The CLI works by sending requests to the API.</p>
 ]]></description>
             <pubDate>Sat, 01 Apr 2023 16:45:00 &#43;0000</pubDate>
-            <guid isPermaLink="true">http://jaym-oh.github.io/posts/docker/docker_2/</guid>
+            <guid isPermaLink="true">http://localhost:1313/posts/docker/docker_2/</guid>
         </item>
     
         <item>
             <title>Before you begin</title>
-            <link>http://jaym-oh.github.io/posts/docker/docker_1/</link>
+            <link>http://localhost:1313/posts/docker/docker_1/</link>
             <description>&lt;![CDATA[<p>Welecome to the <code>Docker</code> series and I&rsquo;m gonna study this book, <code>Learn Docker in a Month of Lunches</code>(2020), by own my word.</p>
 <p>This series consists of 4 parts:</p>
 <ol>
@@ -242,7 +242,7 @@ Now let’s look at what people are doing with containers—I’ll cover the fiv
 Every chapter starts with a short introduction to the topic, followed by try-it-now exercises where you put the ideas into practice using Docker. Then there’s a recap with some more detail that fills in some of the questions you may have from diving in. Lastly there’s a hands-on lab for you to go the next stage.
 All the topics center around tasks that are genuinely useful in the real world. You’ll learn how to be immediately effective with the topic during the chapter, and you’ll fin- ish by understanding how to apply the new skill. Let’s start running some containers!</p>]]></description>
             <pubDate>Tue, 28 Mar 2023 09:00:00 &#43;0000</pubDate>
-            <guid isPermaLink="true">http://jaym-oh.github.io/posts/docker/docker_1/</guid>
+            <guid isPermaLink="true">http://localhost:1313/posts/docker/docker_1/</guid>
         </item>
     
     </channel>

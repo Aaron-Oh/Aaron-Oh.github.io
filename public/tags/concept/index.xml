@@ -2,21 +2,21 @@
 <rss version="2.0">
     <channel>
         <title>Jay Log</title>
-        <link>http://jaym-oh.github.io/</link>
+        <link>http://localhost:1313/</link>
         <description></description>
         <language>en-us</language>
         <generator>Hugo -- gohugo.io</generator>
     
         <item>
             <title>How to Sort Data</title>
-            <link>http://jaym-oh.github.io/posts/algorithm/sorting/sorting_1/</link>
+            <link>http://localhost:1313/posts/algorithm/sorting/sorting_1/</link>
             <description>&lt;![CDATA[<h1 id="introduction">Introduction</h1>
 <h2 id="what-this-post-focus-on">What this post focus on</h2>
 <h2 id="this-posting-will-cover-almost-every-concept-of--how-to-sort-primary-plus-ill-post-realistic-algorithm-problem-of-our-real-world-so-that-you-can-apply-those-concept-to-real-world-problem-and-learn-how-to-use-it-i-really-hope-so">This posting will cover almost every concept of  <code>How to sort (primary)</code>. Plus, I&rsquo;ll post realistic algorithm problem of our real world so that you can apply those concept to real world problem and learn how to use it. I really hope so.</h2>
 <p>Let&rsquo;s see the below example.</p>
 ]]></description>
             <pubDate>Fri, 29 Mar 2024 16:00:00 &#43;0000</pubDate>
-            <guid isPermaLink="true">http://jaym-oh.github.io/posts/algorithm/sorting/sorting_1/</guid>
+            <guid isPermaLink="true">http://localhost:1313/posts/algorithm/sorting/sorting_1/</guid>
         </item>
     
     </channel>
