@@ -8,8 +8,8 @@
         <generator>Hugo -- gohugo.io</generator>
     
         <item>
-            <title>High Score Kit: DFS&amp;BFS#2</title>
-            <link>http://localhost:1313/posts/algorithm/highscore_kit/dfsbfs/target_number/</link>
+            <title>High Score Kit: DFS&amp;BFS#1</title>
+            <link>http://localhost:1313/posts/algorithm/programmers/highscore_kit/dfsbfs/target_number/</link>
             <description>&lt;![CDATA[<h1 id="problem">Problem</h1>
 <p>You are given an array of non-negative integers and a target number. Your task is to find how many ways you can add and subtract the given numbers to achieve the target number. The order of numbers in the array must be preserved. For example, with the array [1, 1, 1, 1, 1], there are five ways to reach the target number 3:</p>
 <ul>
@@ -69,7 +69,7 @@
 <hr>
 <h1 id="how-to-approach">How to Approach?</h1>
 <h2 id="step1-initialize-variables-in-loop">Step1: Initialize variables in loop</h2>
-<h1 id="final-code">Final Code</h1>
+<h1 id="code">Code</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -116,7 +116,7 @@
 </div>
 </div>]]></description>
             <pubDate>Thu, 11 Apr 2024 15:25:00 &#43;0000</pubDate>
-            <guid isPermaLink="true">http://localhost:1313/posts/algorithm/highscore_kit/dfsbfs/target_number/</guid>
+            <guid isPermaLink="true">http://localhost:1313/posts/algorithm/programmers/highscore_kit/dfsbfs/target_number/</guid>
         </item>
     
     </channel>

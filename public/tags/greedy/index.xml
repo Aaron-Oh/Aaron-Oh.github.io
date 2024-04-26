@@ -1,0 +1,99 @@
+&lt;?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Jay Log</title>
+        <link>http://localhost:1313/</link>
+        <description></description>
+        <language>en-us</language>
+        <generator>Hugo -- gohugo.io</generator>
+    
+        <item>
+            <title>High Score Kit: Greedy#1</title>
+            <link>http://localhost:1313/posts/algorithm/programmers/highscore_kit/greedy/make_large_number/</link>
+            <description>&lt;![CDATA[<h1 id="problem">Problem</h1>
+<p>Given a number, your task is to remove <code>k</code> digits from the number in such a way that the remaining digits form the largest possible number. The number is provided as a string <code>number</code> and the integer <code>k</code> represents the number of digits to remove. Your function <code>solution</code> should return the resulting largest number as a string.</p>
+<h2 id="constraints">Constraints</h2>
+<ul>
+<li><code>number</code> is a string representing a number that is at least two digits long and up to 1,000,000 digits.</li>
+<li><code>k</code> is a natural number that is at least 1 and less than the number of digits in <code>number</code>.</li>
+</ul>
+<h2 id="example-inputs-and-outputs">Example Inputs and Outputs</h2>
+<table>
+<thead>
+<tr>
+<th>number</th>
+<th>k</th>
+<th>return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&ldquo;1924&rdquo;</td>
+<td>2</td>
+<td>&ldquo;94&rdquo;</td>
+</tr>
+<tr>
+<td>&ldquo;1231234&rdquo;</td>
+<td>3</td>
+<td>&ldquo;3234&rdquo;</td>
+</tr>
+<tr>
+<td>&ldquo;4177252841&rdquo;</td>
+<td>4</td>
+<td>&ldquo;775841&rdquo;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="explanation-of-examples">Explanation of Examples</h3>
+<ul>
+<li><strong>Example 1:</strong>
+<ul>
+<li>Removing two digits from &ldquo;1924&rdquo; can create the numbers [19, 12, 14, 92, 94, 24]. The largest number among them is &ldquo;94&rdquo;.</li>
+</ul>
+</li>
+<li><strong>Example 2:</strong>
+<ul>
+<li>From &ldquo;1231234&rdquo;, removing three digits can create several combinations, with &ldquo;3234&rdquo; being the largest possible result.</li>
+</ul>
+</li>
+<li><strong>Example 3:</strong>
+<ul>
+<li>For &ldquo;4177252841&rdquo;, the largest number formed by removing four digits is &ldquo;775841&rdquo;.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="how-to-approach">How to Approach?</h1>
+<h2 id="step1-initialize-variables-in-loop">Step1: Initialize variables in loop</h2>
+<h1 id="code">Code</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">solution</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">number</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">answer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">answer</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
+            <pubDate>Thu, 11 Apr 2024 17:20:00 &#43;0000</pubDate>
+            <guid isPermaLink="true">http://localhost:1313/posts/algorithm/programmers/highscore_kit/greedy/make_large_number/</guid>
+        </item>
+    
+    </channel>
+</rss>

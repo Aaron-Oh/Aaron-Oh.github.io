@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mandalart Chart</title>
+<style>
+  .mandalart-chart {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: 2px;
+  }
+  .mandalart-cell {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    position: relative;
+  }
+  .mandalart-cell.color {
+    background-color: #f0f0f0;
+  }
+  .mandalart-cell.color.center {
+    background-color: #cccccc;
+  }
+  .mandalart-cell::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+  }
+</style>
+</head>
+<body>
+<div class="mandalart-chart">
+  <!-- Generate cells with loop or by hand -->
+  <div class="mandalart-cell color center">*</div>
+  <!-- Repeat for all cells, adding 'color' class for colored cells and 'center' for the center cell -->
+</div>
+</body>
+</html>
