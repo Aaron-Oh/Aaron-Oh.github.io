@@ -21,7 +21,7 @@
 </ol>
 <p>For example, if 3 people are playing:</p>
 <ul>
-<li>tank → kick → know → wheel → land → dream → mother → robot → tank
+<li>tank → kick → know → wheel → land → dream → mother → robot → tank<br>
 The game progresses as follows:</li>
 <li>Player 1: tank</li>
 <li>Player 2: kick</li>
@@ -65,7 +65,7 @@ The game progresses as follows:</li>
 </tr>
 </tbody>
 </table>
-<h3 id="explanation-of-examples">Explanation of Examples</h3>
+<h2 id="explanation-of-examples">Explanation of Examples</h2>
 <ul>
 <li><strong>Example 1:</strong>
 <ul>
@@ -85,6 +85,7 @@ The game progresses as follows:</li>
 </ul>
 <hr>
 <h1 id="how-to-approach">How to Approach?</h1>
+<h2 id="step1">step1.</h2>
 <h1 id="code">Code</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

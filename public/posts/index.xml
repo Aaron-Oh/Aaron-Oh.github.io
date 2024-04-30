@@ -8,6 +8,97 @@
         <generator>Hugo -- gohugo.io</generator>
     
         <item>
+            <title>Tournament</title>
+            <link>http://localhost:1313/posts/algorithm/programmers/lv2/tournament/</link>
+            <description>&lt;![CDATA[<h1 id="problem">Problem</h1>
+<p>In the Jay&rsquo;s game tournament, N players compete in a knockout format. Each player is sequentially assigned a number from 1 to N. The matches are arranged as 1 vs 2, 3 vs 4, &hellip;, N-1 vs N. The winner of each game advances to the next round, where they receive new sequential numbers starting from 1 for the advancing players. For instance, if player 2 beats player 1, in the next round, they receive number 1, and so on until only one player remains.</p>
+<p>Given the number of participants <code>N</code>, and two specific participants <code>A</code> and <code>B</code>, you need to determine in which round players <code>A</code> and <code>B</code> will meet, assuming both players always win until they meet each other.</p>
+<h2 id="constraints">Constraints</h2>
+<ul>
+<li><code>N</code> is a natural number between 21 and 220, and it&rsquo;s always a power of two, so no byes occur in the tournament.</li>
+<li><code>A</code> and <code>B</code> are natural numbers less than or equal to <code>N</code> (A ≠ B).</li>
+</ul>
+<h2 id="example-inputs-and-outputs">Example Inputs and Outputs</h2>
+<table>
+<thead>
+<tr>
+<th>N</th>
+<th>A</th>
+<th>B</th>
+<th>answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8</td>
+<td>4</td>
+<td>7</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="explanation-of-example">Explanation of Example</h3>
+<ul>
+<li>
+<p><strong>First Round:</strong></p>
+<ul>
+<li>Player 4 competes against player 3, and player 7 competes against player 8. Assuming both win, player 4 becomes number 2 in the next round, and player 7 becomes number 4.</li>
+</ul>
+</li>
+<li>
+<p><strong>Second Round:</strong></p>
+<ul>
+<li>Player 2 (formerly player 4) now competes against player 1, and player 4 (formerly player 7) competes against player 3. Both win again.</li>
+</ul>
+</li>
+<li>
+<p><strong>Third Round:</strong></p>
+<ul>
+<li>Players 1 and 2 meet, where player 1 is the former player 2, and player 2 is the former player 4. Since these are the new identities of players 4 and 7, they meet in this round.</li>
+</ul>
+</li>
+</ul>
+<h2 id="therefore-players-a-4-and-b-7-meet-in-the-third-round-hence-the-answer-is-3">Therefore, players A (4) and B (7) meet in the third round, hence the answer is 3.</h2>
+<h1 id="how-to-approach">How to approach?</h1>
+<h1 id="code">Code</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">solution</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">round</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">2</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">2</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">round</span><span class="o">++</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">round</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
+            <pubDate>Mon, 29 Apr 2024 09:20:00 &#43;0000</pubDate>
+            <guid isPermaLink="true">http://localhost:1313/posts/algorithm/programmers/lv2/tournament/</guid>
+        </item>
+    
+        <item>
             <title>Last and First</title>
             <link>http://localhost:1313/posts/algorithm/programmers/lv2/last-and-first/</link>
             <description>&lt;![CDATA[<h1 id="problem">Problem</h1>
@@ -21,7 +112,7 @@
 </ol>
 <p>For example, if 3 people are playing:</p>
 <ul>
-<li>tank → kick → know → wheel → land → dream → mother → robot → tank
+<li>tank → kick → know → wheel → land → dream → mother → robot → tank<br>
 The game progresses as follows:</li>
 <li>Player 1: tank</li>
 <li>Player 2: kick</li>
@@ -65,7 +156,7 @@ The game progresses as follows:</li>
 </tr>
 </tbody>
 </table>
-<h3 id="explanation-of-examples">Explanation of Examples</h3>
+<h2 id="explanation-of-examples">Explanation of Examples</h2>
 <ul>
 <li><strong>Example 1:</strong>
 <ul>
@@ -85,6 +176,7 @@ The game progresses as follows:</li>
 </ul>
 <hr>
 <h1 id="how-to-approach">How to Approach?</h1>
+<h2 id="step1">step1.</h2>
 <h1 id="code">Code</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

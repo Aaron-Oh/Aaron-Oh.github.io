@@ -3,24 +3,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jay Log | Last and First</title>
-    <meta name="description" content="Problem Several people are playing the game of English word chain where each player takes turns saying a word that must begin with the last letter of the previous word. Here are the rules:
-Players take turns in a sequence from 1 to n. After the last player, it starts again with the first player. ">
-    <link rel="canonical" href="http://localhost:1313/posts/algorithm/programmers/lv2/last-and-first/" />
+    <title>Jay Log | Tournament</title>
+    <meta name="description" content="Problem In the Jay&rsquo;s game tournament, N players compete in a knockout format. Each player is sequentially assigned a number from 1 to N. The matches are arranged as 1 vs 2, 3 vs 4, &hellip;, N-1 vs N. The winner of each game advances to the next round, where they receive new sequential numbers starting from 1 for the advancing players. ">
+    <link rel="canonical" href="http://localhost:1313/posts/algorithm/programmers/lv2/tournament/" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <meta property="og:title" content="Last and First" />
-<meta property="og:description" content="Problem Several people are playing the game of English word chain where each player takes turns saying a word that must begin with the last letter of the previous word. Here are the rules:
-Players take turns in a sequence from 1 to n. After the last player, it starts again with the first player." />
+    <meta property="og:title" content="Tournament" />
+<meta property="og:description" content="Problem In the Jay&rsquo;s game tournament, N players compete in a knockout format. Each player is sequentially assigned a number from 1 to N. The matches are arranged as 1 vs 2, 3 vs 4, &hellip;, N-1 vs N. The winner of each game advances to the next round, where they receive new sequential numbers starting from 1 for the advancing players." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/posts/algorithm/programmers/lv2/last-and-first/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-04-25T13:20:00+00:00" />
-<meta property="article:modified_time" content="2024-04-25T00:00:00+00:00" />
-<meta property="og:see_also" content="http://localhost:1313/posts/algorithm/programmers/lv2/tournament/" />
+<meta property="og:url" content="http://localhost:1313/posts/algorithm/programmers/lv2/tournament/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-04-29T09:20:00+00:00" />
+<meta property="article:modified_time" content="2024-04-29T00:00:00+00:00" />
+<meta property="og:see_also" content="http://localhost:1313/posts/algorithm/programmers/lv2/last-and-first/" />
 
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Last and First"/>
-<meta name="twitter:description" content="Problem Several people are playing the game of English word chain where each player takes turns saying a word that must begin with the last letter of the previous word. Here are the rules:
-Players take turns in a sequence from 1 to n. After the last player, it starts again with the first player."/>
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Tournament"/>
+<meta name="twitter:description" content="Problem In the Jay&rsquo;s game tournament, N players compete in a knockout format. Each player is sequentially assigned a number from 1 to N. The matches are arranged as 1 vs 2, 3 vs 4, &hellip;, N-1 vs N. The winner of each game advances to the next round, where they receive new sequential numbers starting from 1 for the advancing players."/>
 
     
 
@@ -207,11 +204,11 @@ Players take turns in a sequence from 1 to n. After the last player, it starts a
             </div>
         
         <div class="hero-content">
-            <div class="hero-title">Last and First</div>
+            <div class="hero-title">Tournament</div>
             <div class="hero-subtitle">Lv2</div>
             <div class="hero-date">
-                    <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-4-25 &nbsp;</span>
-                    <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-4-25 &nbsp;</span>
+                    <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-4-29 &nbsp;</span>
+                    <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-4-29 &nbsp;</span>
                     <span class="no-wrap"><i class="fa fa-folder"></i>
                         includedIn:
                         
@@ -223,8 +220,8 @@ Players take turns in a sequence from 1 to n. After the last player, it starts a
                     </span>    
             </div>
             <div class="timelong">
-                <span class="no-wrap"><i class="fa fa-pencil"></i> wordsCount: 578 &nbsp;</span>
-                <span class="no-wrap"><i class="fa fa-clock-o"></i> readingTime: 3 mins &nbsp;</span>
+                <span class="no-wrap"><i class="fa fa-pencil"></i> wordsCount: 348 &nbsp;</span>
+                <span class="no-wrap"><i class="fa fa-clock-o"></i> readingTime: 2 mins &nbsp;</span>
                 <span class="no-wrap"><i class="fa fa-eye"></i> viewers: <span id="busuanzi_value_page_pv"></span></span>
             </div>
         </div>
@@ -261,81 +258,55 @@ Players take turns in a sequence from 1 to n. After the last player, it starts a
         <div class="content">
             <div class="content-self">
                 <h1 id="problem">Problem</h1>
-<p>Several people are playing the game of English word chain where each player takes turns saying a word that must begin with the last letter of the previous word. Here are the rules:</p>
-<ol>
-<li>Players take turns in a sequence from 1 to <code>n</code>.</li>
-<li>After the last player, it starts again with the first player.</li>
-<li>The word must start with the last letter of the word the previous player said.</li>
-<li>A word cannot be repeated.</li>
-<li>A word must be more than one letter.</li>
-</ol>
-<p>For example, if 3 people are playing:</p>
-<ul>
-<li>tank → kick → know → wheel → land → dream → mother → robot → tank<br>
-The game progresses as follows:</li>
-<li>Player 1: tank</li>
-<li>Player 2: kick</li>
-<li>Player 3: know</li>
-<li>Player 1: wheel (continues&hellip;)</li>
-</ul>
-<p>The game ends when a player repeats a word previously said or says a word that does not follow the rule of starting with the last letter of the previous word.</p>
-<p>Given the number of players <code>n</code> and the list of words <code>words</code> spoken in order, the task is to determine the first player to be disqualified and on which turn they are disqualified. If no player is disqualified based on the provided words, return [0, 0].</p>
+<p>In the Jay&rsquo;s game tournament, N players compete in a knockout format. Each player is sequentially assigned a number from 1 to N. The matches are arranged as 1 vs 2, 3 vs 4, &hellip;, N-1 vs N. The winner of each game advances to the next round, where they receive new sequential numbers starting from 1 for the advancing players. For instance, if player 2 beats player 1, in the next round, they receive number 1, and so on until only one player remains.</p>
+<p>Given the number of participants <code>N</code>, and two specific participants <code>A</code> and <code>B</code>, you need to determine in which round players <code>A</code> and <code>B</code> will meet, assuming both players always win until they meet each other.</p>
 <h2 id="constraints">Constraints</h2>
 <ul>
-<li>The number of players <code>n</code> is a natural number between 2 and 10.</li>
-<li><code>words</code> is an array of words used in the game, its length is between <code>n</code> and 100.</li>
-<li>Each word&rsquo;s length is between 2 and 50 characters.</li>
-<li>All words consist of lowercase English letters.</li>
-<li>The meaning of the words is not considered in this game.</li>
+<li><code>N</code> is a natural number between 21 and 220, and it&rsquo;s always a power of two, so no byes occur in the tournament.</li>
+<li><code>A</code> and <code>B</code> are natural numbers less than or equal to <code>N</code> (A ≠ B).</li>
 </ul>
-<h2 id="example">Example</h2>
+<h2 id="example-inputs-and-outputs">Example Inputs and Outputs</h2>
 <table>
 <thead>
 <tr>
-<th>n</th>
-<th>words</th>
-<th>result</th>
+<th>N</th>
+<th>A</th>
+<th>B</th>
+<th>answer</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>8</td>
+<td>4</td>
+<td>7</td>
 <td>3</td>
-<td>[&ldquo;tank&rdquo;, &ldquo;kick&rdquo;, &ldquo;know&rdquo;, &ldquo;wheel&rdquo;, &ldquo;land&rdquo;, &ldquo;dream&rdquo;, &ldquo;mother&rdquo;, &ldquo;robot&rdquo;, &ldquo;tank&rdquo;]</td>
-<td>[3, 3]</td>
-</tr>
-<tr>
-<td>5</td>
-<td>[&ldquo;hello&rdquo;, &ldquo;observe&rdquo;, &ldquo;effect&rdquo;, &ldquo;take&rdquo;, &ldquo;either&rdquo;, &ldquo;recognize&rdquo;, &ldquo;encourage&rdquo;, &ldquo;ensure&rdquo;, &ldquo;establish&rdquo;, &ldquo;hang&rdquo;, &ldquo;gather&rdquo;, &ldquo;refer&rdquo;, &ldquo;reference&rdquo;, &ldquo;estimate&rdquo;, &ldquo;executive&rdquo;]</td>
-<td>[0, 0]</td>
-</tr>
-<tr>
-<td>2</td>
-<td>[&ldquo;hello&rdquo;, &ldquo;one&rdquo;, &ldquo;even&rdquo;, &ldquo;never&rdquo;, &ldquo;now&rdquo;, &ldquo;world&rdquo;, &ldquo;draw&rdquo;]</td>
-<td>[1, 3]</td>
 </tr>
 </tbody>
 </table>
-<h2 id="explanation-of-examples">Explanation of Examples</h2>
+<h3 id="explanation-of-example">Explanation of Example</h3>
 <ul>
-<li><strong>Example 1:</strong>
+<li>
+<p><strong>First Round:</strong></p>
 <ul>
-<li>With 3 players, the sequence of words goes as: Player 1: tank, wheel, mother; Player 2: kick, land, robot; Player 3: know, dream, tank. Player 3 repeats the word &ldquo;tank&rdquo; which was already said, resulting in their disqualification on their third turn.</li>
+<li>Player 4 competes against player 3, and player 7 competes against player 8. Assuming both win, player 4 becomes number 2 in the next round, and player 7 becomes number 4.</li>
 </ul>
 </li>
-<li><strong>Example 2:</strong>
+<li>
+<p><strong>Second Round:</strong></p>
 <ul>
-<li>5 players participate, and the sequence goes smoothly without any repetitions or rule violations, resulting in no disqualifications.</li>
+<li>Player 2 (formerly player 4) now competes against player 1, and player 4 (formerly player 7) competes against player 3. Both win again.</li>
 </ul>
 </li>
-<li><strong>Example 3:</strong>
+<li>
+<p><strong>Third Round:</strong></p>
 <ul>
-<li>With 2 players, Player 1 fails to follow the sequence properly on their third turn by saying &ldquo;now,&rdquo; which does not start with the required letter from the previous word, leading to their disqualification.</li>
+<li>Players 1 and 2 meet, where player 1 is the former player 2, and player 2 is the former player 4. Since these are the new identities of players 4 and 7, they meet in this round.</li>
 </ul>
 </li>
 </ul>
-<hr>
-<h1 id="how-to-approach">How to Approach?</h1>
-<h2 id="step1">step1.</h2>
+<h2 id="therefore-players-a-4-and-b-7-meet-in-the-third-round-hence-the-answer-is-3">Therefore, players A (4) and B (7) meet in the third round, hence the answer is 3.</h2>
+<h1 id="how-to-approach">How to approach?</h1>
 <h1 id="code">Code</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -352,55 +323,19 @@ The game progresses as follows:</li>
 </span><span class="lnt">11
 </span><span class="lnt">12
 </span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashSet</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Set</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="nf">solution</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">words</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">seenWords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">player</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">turn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">solution</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">round</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Initialize with the first word</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">lastWord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">words</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">seenWords</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">lastWord</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">words</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">currentWord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">words</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">player</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">1</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">turn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">1</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// Check if the word is correct: not repeated and starts with the last character of the last word</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">seenWords</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">currentWord</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="n">currentWord</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">1</span><span class="w"> </span><span class="o">||</span><span class="n">currentWord</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">0</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">lastWord</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">lastWord</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">1</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="p">{</span><span class="n">player</span><span class="p">,</span><span class="w"> </span><span class="n">turn</span><span class="p">};</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// Add current word to the set and update lastWord</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">seenWords</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">currentWord</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">lastWord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentWord</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">2</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">2</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">round</span><span class="o">++</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// If no errors, return [0, 0] to indicate no failures</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="p">{</span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">round</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
@@ -423,9 +358,9 @@ The game progresses as follows:</li>
                     <span class="down-type-item">
                         <div class="type-text">
                             <a href='
-                                        /tags/set
+                                        /tags/math
                                     '>
-                                <i class="fa fa-tag"></i> Set
+                                <i class="fa fa-tag"></i> Math
                             </a>
                         </div>
                     </span>
@@ -449,23 +384,13 @@ The game progresses as follows:</li>
                     
     
         
-        <a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/greedy/make_large_number/" class="pre">
+        <a href="http://localhost:1313/posts/algorithm/programmers/lv2/last-and-first/" class="pre pre-last" style="text-align: center;">
             <span class="pre-icon"><i class="fa fa-hand-o-left"></i></span>
             <div class="pre-title-root">
-                <span>High Score Kit: Greedy#1</span>
+                <span>Last and First</span>
             </div>
         </a>
         
-
-        
-        <a href="http://localhost:1313/posts/algorithm/programmers/lv2/tournament/" class="next">
-            <div class="next-title-root">
-                <span>Tournament</span>
-            </div>
-            <span class="next-icon"><i class="fa fa-hand-o-right"></i></span>
-        </a>
-        
-
     
     
 
@@ -581,9 +506,9 @@ The game progresses as follows:</li>
     </div>
     <div class="list">
         
-            <a href="http://localhost:1313/posts/algorithm/programmers/lv2/tournament/">
+            <a href="http://localhost:1313/posts/algorithm/programmers/lv2/last-and-first/">
                 
-<a href="http://localhost:1313/posts/algorithm/programmers/lv2/tournament/">
+<a href="http://localhost:1313/posts/algorithm/programmers/lv2/last-and-first/">
     <div class="list-item">
         <div class="icon-other-root">
             
@@ -592,10 +517,11 @@ The game progresses as follows:</li>
         </div>
         <div class="list-right">
             <div class="other-title">
-                Tournament
+                Last and First
             </div>
-            <div class="other-summary">Problem In the Jay&rsquo;s game tournament, N players compete in a knockout format. Each player is sequentially assigned a number from 1 to N. The matches are arranged as 1 vs 2, 3 vs 4, &hellip;, N-1 vs N. The winner of each game advances to the next round, where they receive new sequential numbers starting from 1 for the advancing players.</div>
-            <div class="other-date">2024-4-29</div>
+            <div class="other-summary">Problem Several people are playing the game of English word chain where each player takes turns saying a word that must begin with the last letter of the previous word. Here are the rules:
+Players take turns in a sequence from 1 to n. After the last player, it starts again with the first player.</div>
+            <div class="other-date">2024-4-25</div>
         </div>
     </div>
 </a>

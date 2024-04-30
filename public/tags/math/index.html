@@ -3,24 +3,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jay Log | Last and First</title>
-    <meta name="description" content="Problem Several people are playing the game of English word chain where each player takes turns saying a word that must begin with the last letter of the previous word. Here are the rules:
-Players take turns in a sequence from 1 to n. After the last player, it starts again with the first player. ">
-    <link rel="canonical" href="http://localhost:1313/posts/algorithm/programmers/lv2/last-and-first/" />
+    <title>Jay Log | Math</title>
+    <meta name="description" content=" ">
+    <link rel="canonical" href="http://localhost:1313/tags/math/" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <meta property="og:title" content="Last and First" />
-<meta property="og:description" content="Problem Several people are playing the game of English word chain where each player takes turns saying a word that must begin with the last letter of the previous word. Here are the rules:
-Players take turns in a sequence from 1 to n. After the last player, it starts again with the first player." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/posts/algorithm/programmers/lv2/last-and-first/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-04-25T13:20:00+00:00" />
-<meta property="article:modified_time" content="2024-04-25T00:00:00+00:00" />
-<meta property="og:see_also" content="http://localhost:1313/posts/algorithm/programmers/lv2/tournament/" />
+    <meta property="og:title" content="Math" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:1313/tags/math/" />
 
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Last and First"/>
-<meta name="twitter:description" content="Problem Several people are playing the game of English word chain where each player takes turns saying a word that must begin with the last letter of the previous word. Here are the rules:
-Players take turns in a sequence from 1 to n. After the last player, it starts again with the first player."/>
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Math"/>
+<meta name="twitter:description" content=""/>
 
     
 
@@ -192,41 +186,29 @@ Players take turns in a sequence from 1 to n. After the last player, it starts a
 
 
         <div id="content">
+    
 
 
 
 
+
+
+    
+        
+    
 
 
 
 
     <div class="hero">
         
-            <div class="hero-img">
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt="">
-            </div>
-        
+            
+                <div class="hero-img">
+                    <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt="">
+                </div>
+            
         <div class="hero-content">
-            <div class="hero-title">Last and First</div>
-            <div class="hero-subtitle">Lv2</div>
-            <div class="hero-date">
-                    <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-4-25 &nbsp;</span>
-                    <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-4-25 &nbsp;</span>
-                    <span class="no-wrap"><i class="fa fa-folder"></i>
-                        includedIn:
-                        
-                            <a href='
-                                /categories/lv2
-                            '>
-                                Lv2
-                            </a>
-                    </span>    
-            </div>
-            <div class="timelong">
-                <span class="no-wrap"><i class="fa fa-pencil"></i> wordsCount: 578 &nbsp;</span>
-                <span class="no-wrap"><i class="fa fa-clock-o"></i> readingTime: 3 mins &nbsp;</span>
-                <span class="no-wrap"><i class="fa fa-eye"></i> viewers: <span id="busuanzi_value_page_pv"></span></span>
-            </div>
+            <h1 class="hero-title">Tag: Math</h1>
         </div>
     </div>
 
@@ -245,7 +227,7 @@ Players take turns in a sequence from 1 to n. After the last player, it starts a
     
 
 
-<div class="content-root">
+<div class="terms-body">
     <div class="long">
         <button class="tosides-1 text-wbd">
             <i class="fa fa-arrow-right"></i>
@@ -258,237 +240,101 @@ Players take turns in a sequence from 1 to n. After the last player, it starts a
         </button>
     </div>
     
-        <div class="content">
-            <div class="content-self">
-                <h1 id="problem">Problem</h1>
-<p>Several people are playing the game of English word chain where each player takes turns saying a word that must begin with the last letter of the previous word. Here are the rules:</p>
-<ol>
-<li>Players take turns in a sequence from 1 to <code>n</code>.</li>
-<li>After the last player, it starts again with the first player.</li>
-<li>The word must start with the last letter of the word the previous player said.</li>
-<li>A word cannot be repeated.</li>
-<li>A word must be more than one letter.</li>
-</ol>
-<p>For example, if 3 people are playing:</p>
-<ul>
-<li>tank → kick → know → wheel → land → dream → mother → robot → tank<br>
-The game progresses as follows:</li>
-<li>Player 1: tank</li>
-<li>Player 2: kick</li>
-<li>Player 3: know</li>
-<li>Player 1: wheel (continues&hellip;)</li>
-</ul>
-<p>The game ends when a player repeats a word previously said or says a word that does not follow the rule of starting with the last letter of the previous word.</p>
-<p>Given the number of players <code>n</code> and the list of words <code>words</code> spoken in order, the task is to determine the first player to be disqualified and on which turn they are disqualified. If no player is disqualified based on the provided words, return [0, 0].</p>
-<h2 id="constraints">Constraints</h2>
-<ul>
-<li>The number of players <code>n</code> is a natural number between 2 and 10.</li>
-<li><code>words</code> is an array of words used in the game, its length is between <code>n</code> and 100.</li>
-<li>Each word&rsquo;s length is between 2 and 50 characters.</li>
-<li>All words consist of lowercase English letters.</li>
-<li>The meaning of the words is not considered in this game.</li>
-</ul>
-<h2 id="example">Example</h2>
-<table>
-<thead>
-<tr>
-<th>n</th>
-<th>words</th>
-<th>result</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>3</td>
-<td>[&ldquo;tank&rdquo;, &ldquo;kick&rdquo;, &ldquo;know&rdquo;, &ldquo;wheel&rdquo;, &ldquo;land&rdquo;, &ldquo;dream&rdquo;, &ldquo;mother&rdquo;, &ldquo;robot&rdquo;, &ldquo;tank&rdquo;]</td>
-<td>[3, 3]</td>
-</tr>
-<tr>
-<td>5</td>
-<td>[&ldquo;hello&rdquo;, &ldquo;observe&rdquo;, &ldquo;effect&rdquo;, &ldquo;take&rdquo;, &ldquo;either&rdquo;, &ldquo;recognize&rdquo;, &ldquo;encourage&rdquo;, &ldquo;ensure&rdquo;, &ldquo;establish&rdquo;, &ldquo;hang&rdquo;, &ldquo;gather&rdquo;, &ldquo;refer&rdquo;, &ldquo;reference&rdquo;, &ldquo;estimate&rdquo;, &ldquo;executive&rdquo;]</td>
-<td>[0, 0]</td>
-</tr>
-<tr>
-<td>2</td>
-<td>[&ldquo;hello&rdquo;, &ldquo;one&rdquo;, &ldquo;even&rdquo;, &ldquo;never&rdquo;, &ldquo;now&rdquo;, &ldquo;world&rdquo;, &ldquo;draw&rdquo;]</td>
-<td>[1, 3]</td>
-</tr>
-</tbody>
-</table>
-<h2 id="explanation-of-examples">Explanation of Examples</h2>
-<ul>
-<li><strong>Example 1:</strong>
-<ul>
-<li>With 3 players, the sequence of words goes as: Player 1: tank, wheel, mother; Player 2: kick, land, robot; Player 3: know, dream, tank. Player 3 repeats the word &ldquo;tank&rdquo; which was already said, resulting in their disqualification on their third turn.</li>
-</ul>
-</li>
-<li><strong>Example 2:</strong>
-<ul>
-<li>5 players participate, and the sequence goes smoothly without any repetitions or rule violations, resulting in no disqualifications.</li>
-</ul>
-</li>
-<li><strong>Example 3:</strong>
-<ul>
-<li>With 2 players, Player 1 fails to follow the sequence properly on their third turn by saying &ldquo;now,&rdquo; which does not start with the required letter from the previous word, leading to their disqualification.</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h1 id="how-to-approach">How to Approach?</h1>
-<h2 id="step1">step1.</h2>
-<h1 id="code">Code</h1>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashSet</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Set</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="nf">solution</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">words</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">seenWords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">player</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">turn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Initialize with the first word</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">lastWord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">words</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">seenWords</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">lastWord</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">words</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">currentWord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">words</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">player</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">1</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">turn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">1</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// Check if the word is correct: not repeated and starts with the last character of the last word</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">seenWords</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">currentWord</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="n">currentWord</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">1</span><span class="w"> </span><span class="o">||</span><span class="n">currentWord</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">0</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">lastWord</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">lastWord</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">1</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="p">{</span><span class="n">player</span><span class="p">,</span><span class="w"> </span><span class="n">turn</span><span class="p">};</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// Add current word to the set and update lastWord</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">seenWords</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">currentWord</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">lastWord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentWord</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// If no errors, return [0, 0] to indicate no failures</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="p">{</span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">};</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-            </div>
+        <div class="terms-row">
             
-                <div class="tags">
+            <div class="terms-root">
+                
+                
+
+
+
+<div class="card-large">
+    <div class="card-large-img">
+
+        
+                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt='image loading failed'>
+        
+    </div>
+    <div class="card-large-content">
+        <div class="up-title"><a href="/posts/algorithm/programmers/lv2/tournament/">Tournament</a></div>
+        <div class="up-date">
+            <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-4-29 &nbsp;</span>
+            <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-4-29 &nbsp;</span>
+            <span class="no-wrap"><i class="fa fa-folder"></i>
+                
+                    includedIn:
                     
-                    <span class="down-type-item">
-                        <div class="type-text">
-                            <a href='
-                                        /tags/algorithms
+                        <a href='
+                                        /categories/lv2
                                     '>
-                                <i class="fa fa-tag"></i> Algorithms
+                                Lv2
                             </a>
-                        </div>
-                    </span>
-                    
-                    <span class="down-type-item">
-                        <div class="type-text">
-                            <a href='
-                                        /tags/set
-                                    '>
-                                <i class="fa fa-tag"></i> Set
-                            </a>
-                        </div>
-                    </span>
-                    
-                    <span class="down-type-item">
-                        <div class="type-text">
-                            <a href='
-                                        /tags/java
-                                    '>
-                                <i class="fa fa-tag"></i> Java
-                            </a>
-                        </div>
-                    </span>
-                    
-                </div>
-            
+                
+            </span>
         </div>
-        
-            
-                <div class="pre-next">
-                    
-    
-        
-        <a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/greedy/make_large_number/" class="pre">
-            <span class="pre-icon"><i class="fa fa-hand-o-left"></i></span>
-            <div class="pre-title-root">
-                <span>High Score Kit: Greedy#1</span>
-            </div>
+        <div class="down-summary">Problem In the Jay&rsquo;s game tournament, N players compete in a knockout format. Each player is sequentially assigned a number from 1 to N. The matches are arranged as 1 vs 2, 3 vs 4, &hellip;, N-1 vs N. The winner of each game advances to the next round, where they receive new sequential numbers starting from 1 for the advancing players.</div>
+    </div>
+    <div class="card-readmore">
+        <a href="http://localhost:1313/posts/algorithm/programmers/lv2/tournament/">
+            <span><i class="fa fa-arrow-right"></i></span>
         </a>
-        
-
-        
-        <a href="http://localhost:1313/posts/algorithm/programmers/lv2/tournament/" class="next">
-            <div class="next-title-root">
-                <span>Tournament</span>
-            </div>
-            <span class="next-icon"><i class="fa fa-hand-o-right"></i></span>
-        </a>
-        
-
-    
-    
-
-                </div>
-            
-        
-    
+    </div>
 </div>
 
+
+
     
-        <div class="content-last">
-            
-                <button class="aixin content-last-item efct-button">
-                    <i class="fa fa-heart"></i>
-                </button>
-            
-            
-                <button class="pinglun content-last-item efct-button">
-                    <i class="fa fa-comment"></i>
-                </button>
+
+
+    <div class="down-type">
+        
+        <span class="down-type-item">
+            <div class="shuxian-root">
+                <div class="shuxian"></div>
+            </div>
+            <div class="type-text">
+                <a href='
+                            /tags/algorithms
+                        '>
+                    <i class="fa fa-tag"></i> Algorithms
+                </a>
+            </div>
+        </span>
+        
+        <span class="down-type-item">
+            <div class="shuxian-root">
+                <div class="shuxian"></div>
+            </div>
+            <div class="type-text">
+                <a href='
+                            /tags/math
+                        '>
+                    <i class="fa fa-tag"></i> Math
+                </a>
+            </div>
+        </span>
+        
+        <span class="down-type-item">
+            <div class="shuxian-root">
+                <div class="shuxian"></div>
+            </div>
+            <div class="type-text">
+                <a href='
+                            /tags/java
+                        '>
+                    <i class="fa fa-tag"></i> Java
+                </a>
+            </div>
+        </span>
+        
+    </div>
+
+<div class="dang"></div>
+            </div>
             
         </div>
     
+</div>
 
 
             </div>
@@ -496,11 +342,6 @@ The game progresses as follows:</li>
                 
 <div class="zhuti-r-0">
     <div class="zhuti-r-1">
-        
-            <div class="button-r">
-                <button class="button-mulu efct-button" type="button"><span><i class="fa fa-bars"></i></span><span class="bars-text"> content</span></button>
-                <button class="button-comment efct-button" type="button"><span><i class="fa fa-comment"></i></span><span class="comment-text"> comment</span></button>
-            </div>
         
         <div id="r1">
             
@@ -570,13 +411,10 @@ The game progresses as follows:</li>
 
 
 
-    
-    
-
 
 <div class="other">
     <div class="other-up">
-        <div class="other-qita text-wbd">Related Posts</div>
+        <div class="other-qita text-wbd">latest Posts</div>
         <div class="xian"></div>
     </div>
     <div class="list">
@@ -596,6 +434,27 @@ The game progresses as follows:</li>
             </div>
             <div class="other-summary">Problem In the Jay&rsquo;s game tournament, N players compete in a knockout format. Each player is sequentially assigned a number from 1 to N. The matches are arranged as 1 vs 2, 3 vs 4, &hellip;, N-1 vs N. The winner of each game advances to the next round, where they receive new sequential numbers starting from 1 for the advancing players.</div>
             <div class="other-date">2024-4-29</div>
+        </div>
+    </div>
+</a>
+            </a>
+        
+            <a href="http://localhost:1313/posts/algorithm/programmers/lv2/last-and-first/">
+                
+<a href="http://localhost:1313/posts/algorithm/programmers/lv2/last-and-first/">
+    <div class="list-item">
+        <div class="icon-other-root">
+            
+                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
+            
+        </div>
+        <div class="list-right">
+            <div class="other-title">
+                Last and First
+            </div>
+            <div class="other-summary">Problem Several people are playing the game of English word chain where each player takes turns saying a word that must begin with the last letter of the previous word. Here are the rules:
+Players take turns in a sequence from 1 to n. After the last player, it starts again with the first player.</div>
+            <div class="other-date">2024-4-25</div>
         </div>
     </div>
 </a>
@@ -681,93 +540,17 @@ The game progresses as follows:</li>
 </a>
             </a>
         
-            <a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/bruteforce/fatigue/">
-                
-<a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/bruteforce/fatigue/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                High Score Kit: Brute Force#1
-            </div>
-            <div class="other-summary">Problem In the XX game, there is a fatigue system represented by non-negative integers, allowing players to explore dungeons by using a certain amount of fatigue. Each dungeon requires a &ldquo;minimum required fatigue&rdquo; to start exploring and consumes a certain amount of &ldquo;fatigue&rdquo; upon completion. For example, to explore a dungeon with a &ldquo;minimum required fatigue&rdquo; of 80 and a &ldquo;consumption fatigue&rdquo; of 20, a player&rsquo;s current remaining fatigue must be at least 80, and it will decrease by 20 after exploring the dungeon.</div>
-            <div class="other-date">2024-4-11</div>
-        </div>
-    </div>
-</a>
-            </a>
-        
     </div>
 </div>
         </div>
         <div id="r2">
-            <div id="vcomments"></div>
-<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-<script type="text/javascript">
-    new Valine({
-        el: '#vcomments',
-        appId: "1bY2Xk28MG2rZwn5yhAgSf7J-MdYXbMMI",
-        appKey: "0PMhHHKR1uBcp1aw5bXHvge7",
-        avatar: "robohash",
-        placeholder: "댓글을 입력하세요",
-        requiredFields: ["nick"],
-        visitor:  true ,
-        pageSize:  10 ,
-        recordIP:  null ,
-        lang: 'en'
-});
-</script>
-
+            
         </div> 
     </div>
 </div>
 
             </div>
         </div>
-    </div>
-</div>
-
-    
-
-<div class="sponsor">
-    <div class="sponsor-self">
-        <div class="sponsor-title">Sponsor</div>
-        <div class="sponsor-btn">
-            
-                
-                    
-                        <div class="sponsor-btn-1 border-r">Wechat</div>
-                    
-                
-                
-            
-                
-                    
-                        <div class="sponsor-btn-2 border-l">Alipay</div>
-                    
-                
-                
-            
-        </div>
-        
-        <div class="sponsor-img">
-            
-                
-                    <img class="sponsor-img-1" src="/images/sponsor/wechat.jpeg" alt="">
-                
-                
-            
-                
-                    <img class="sponsor-img-2" src="/images/sponsor/alipay.jpeg" alt="" style="display: none;">
-                
-                
-            
-        </div>
-        <div class="cancel efct-button">cancel</div>
     </div>
 </div>
 
@@ -900,7 +683,7 @@ The game progresses as follows:</li>
     var search_found = "Found";
     var search_result = "result";
     var search_results = "results";
-    var enable_mermaid =  false ;
+    var enable_mermaid =  null ;
 
     var baseURL = "http://localhost:1313/";
 </script>
