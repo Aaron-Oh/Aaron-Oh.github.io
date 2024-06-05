@@ -210,6 +210,14 @@ This is a good way to tidy up your containers, but use it with caution, because 
         </item>
     
         <item>
+            <title>Deploying Distributed Applications as Stacks in Docker Swarm</title>
+            <link>http://localhost:1313/posts/docker/docker_13/</link>
+            <description>&lt;![CDATA[]]></description>
+            <pubDate>Sat, 01 Apr 2023 16:21:00 &#43;0000</pubDate>
+            <guid isPermaLink="true">http://localhost:1313/posts/docker/docker_13/</guid>
+        </item>
+    
+        <item>
             <title>Before you begin</title>
             <link>http://localhost:1313/posts/docker/docker_1/</link>
             <description>&lt;![CDATA[<p>Welecome to the <code>Docker</code> series and I&rsquo;m gonna study this book, <code>Learn Docker in a Month of Lunches</code>(2020), by own my word.</p>

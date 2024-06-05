@@ -8,58 +8,73 @@
         <generator>Hugo -- gohugo.io</generator>
     
         <item>
-            <title>Tournament</title>
-            <link>http://localhost:1313/posts/algorithm/programmers/lv2/tournament/</link>
+            <title>tuple</title>
+            <link>http://localhost:1313/posts/algorithm/programmers/lv2/tuple/</link>
             <description>&lt;![CDATA[<h1 id="problem">Problem</h1>
-<p>In the Jay&rsquo;s game tournament, N players compete in a knockout format. Each player is sequentially assigned a number from 1 to N. The matches are arranged as 1 vs 2, 3 vs 4, &hellip;, N-1 vs N. The winner of each game advances to the next round, where they receive new sequential numbers starting from 1 for the advancing players. For instance, if player 2 beats player 1, in the next round, they receive number 1, and so on until only one player remains.</p>
-<p>Given the number of participants <code>N</code>, and two specific participants <code>A</code> and <code>B</code>, you need to determine in which round players <code>A</code> and <code>B</code> will meet, assuming both players always win until they meet each other.</p>
+<p>A &ldquo;tuple&rdquo; is defined as an ordered collection of elements which can include duplicate values and each element is assigned an order. A tuple with <code>n</code> elements <code>(a1, a2, a3, ..., an)</code> can be expressed using the set notation in various ways, with any ordering of the subsets as:</p>
+<pre tabindex="0"><code>{{a1}, {a1, a2}, {a1, a2, a3}, ..., {a1, a2, a3, ..., an}}
+</code></pre><p>For example, the tuple <code>(2, 1, 3, 4)</code> can be represented as:</p>
+<pre tabindex="0"><code>{{2}, {2, 1}, {2, 1, 3}, {2, 1, 3, 4}}
+</code></pre><p>The sets can be permuted, but they still represent the same tuple:</p>
+<pre tabindex="0"><code>{{2, 1, 3, 4}, {2}, {2, 1, 3}, {2, 1}}
+{{1, 2, 3}, {2, 1}, {1, 2, 4, 3}, {2}}
+</code></pre><p>Given a string <code>s</code> that represents a tuple in the form of a set of sets, you need to determine the elements of the tuple in their correct order. The string <code>s</code> is formatted with numbers and the characters <code>{</code>, <code>}</code>, and <code>,</code>.</p>
 <h2 id="constraints">Constraints</h2>
 <ul>
-<li><code>N</code> is a natural number between 21 and 220, and it&rsquo;s always a power of two, so no byes occur in the tournament.</li>
-<li><code>A</code> and <code>B</code> are natural numbers less than or equal to <code>N</code> (A ≠ B).</li>
+<li>The length of <code>s</code> is between 5 and 1,000,000.</li>
+<li><code>s</code> consists of numbers, <code>{</code>, <code>}</code>, and <code>,</code>. No number starts with 0.</li>
+<li><code>s</code> always correctly represents a tuple with no duplicate elements.</li>
+<li>The elements of the tuple are natural numbers between 1 and 100,000.</li>
+<li>The output array will have between 1 and 500 elements.</li>
 </ul>
 <h2 id="example-inputs-and-outputs">Example Inputs and Outputs</h2>
 <table>
 <thead>
 <tr>
-<th>N</th>
-<th>A</th>
-<th>B</th>
-<th>answer</th>
+<th>s</th>
+<th>result</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>8</td>
-<td>4</td>
-<td>7</td>
-<td>3</td>
+<td>&ldquo;{{2},{2,1},{2,1,3},{2,1,3,4}}&rdquo;</td>
+<td>[2, 1, 3, 4]</td>
+</tr>
+<tr>
+<td>&ldquo;{{1,2,3},{2,1},{1,2,4,3},{2}}&rdquo;</td>
+<td>[2, 1, 3, 4]</td>
+</tr>
+<tr>
+<td>&ldquo;{{20,111},{111}}&rdquo;</td>
+<td>[111, 20]</td>
+</tr>
+<tr>
+<td>&ldquo;{{123}}&rdquo;</td>
+<td>[123]</td>
+</tr>
+<tr>
+<td>&ldquo;{{4,2,3},{3},{2,3,4,1},{2,3}}&rdquo;</td>
+<td>[3, 2, 4, 1]</td>
 </tr>
 </tbody>
 </table>
-<h3 id="explanation-of-example">Explanation of Example</h3>
+<h3 id="explanation-of-examples">Explanation of Examples</h3>
 <ul>
-<li>
-<p><strong>First Round:</strong></p>
-<ul>
-<li>Player 4 competes against player 3, and player 7 competes against player 8. Assuming both win, player 4 becomes number 2 in the next round, and player 7 becomes number 4.</li>
+<li><strong>Example 1</strong>:
+The order in the sets varies but consistently starts from a smaller set to the full set representing the tuple. The tuple <code>(2, 1, 3, 4)</code> is formed by determining which elements appear as the sets grow.</li>
+<li><strong>Example 2</strong>:
+Although the sets are given in a different order, they still indicate the same tuple as example 1.</li>
+<li><strong>Example 3</strong>:
+<code>(111, 20)</code> is represented, and while the order in the set might suggest <code>(20, 111)</code>, the tuple format ensures that <code>111</code> appears first since it&rsquo;s isolated in a set by itself initially.</li>
+<li><strong>Example 4</strong>:
+A single-element tuple is directly indicated.</li>
+<li><strong>Example 5</strong>:
+By analyzing the growth of sets from smaller to larger, it can be discerned that the tuple is <code>(3, 2, 4, 1)</code>.</li>
 </ul>
-</li>
-<li>
-<p><strong>Second Round:</strong></p>
-<ul>
-<li>Player 2 (formerly player 4) now competes against player 1, and player 4 (formerly player 7) competes against player 3. Both win again.</li>
-</ul>
-</li>
-<li>
-<p><strong>Third Round:</strong></p>
-<ul>
-<li>Players 1 and 2 meet, where player 1 is the former player 2, and player 2 is the former player 4. Since these are the new identities of players 4 and 7, they meet in this round.</li>
-</ul>
-</li>
-</ul>
-<h2 id="therefore-players-a-4-and-b-7-meet-in-the-third-round-hence-the-answer-is-3">Therefore, players A (4) and B (7) meet in the third round, hence the answer is 3.</h2>
-<h1 id="how-to-approach">How to approach?</h1>
+<p>The challenge involves parsing the string to extract sets, then determining the tuple order by the size of these sets and the introduction of new elements in each subsequent set.</p>
+<hr>
+<h1 id="how-to-approach">How to Approach?</h1>
+<p>find one element tuple -&gt; transform to integer and remove from total</p>
 <h1 id="code">Code</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -76,26 +91,52 @@
 </span><span class="lnt">11
 </span><span class="lnt">12
 </span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">solution</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">round</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="nf">solution</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Remove the outermost braces and split the string by &#34;},{&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">tuples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">2</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">2</span><span class="p">).</span><span class="na">split</span><span class="p">(</span><span class="s">&#34;\\},\\{&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Arrays</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">tuples</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="na">length</span><span class="p">());</span><span class="w"> </span><span class="c1">// Sort by length</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">2</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">2</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">round</span><span class="o">++</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">seen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Process each group of numbers</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">tuple</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">tuples</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">nums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tuple</span><span class="p">.</span><span class="na">split</span><span class="p">(</span><span class="s">&#34;,&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">num</span><span class="p">.</span><span class="na">trim</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">seen</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">value</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Add only if not already added</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="n">result</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">value</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">round</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Convert List&lt;Integer&gt; to int[]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">mapToInt</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">i</span><span class="p">).</span><span class="na">toArray</span><span class="p">();</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div>]]></description>
-            <pubDate>Mon, 29 Apr 2024 09:20:00 &#43;0000</pubDate>
-            <guid isPermaLink="true">http://localhost:1313/posts/algorithm/programmers/lv2/tournament/</guid>
+            <pubDate>Wed, 01 May 2024 10:20:00 &#43;0000</pubDate>
+            <guid isPermaLink="true">http://localhost:1313/posts/algorithm/programmers/lv2/tuple/</guid>
         </item>
     
         <item>
@@ -277,6 +318,97 @@
         </item>
     
         <item>
+            <title>Tournament</title>
+            <link>http://localhost:1313/posts/algorithm/programmers/lv2/tournament/</link>
+            <description>&lt;![CDATA[<h1 id="problem">Problem</h1>
+<p>In the Jay&rsquo;s game tournament, N players compete in a knockout format. Each player is sequentially assigned a number from 1 to N. The matches are arranged as 1 vs 2, 3 vs 4, &hellip;, N-1 vs N. The winner of each game advances to the next round, where they receive new sequential numbers starting from 1 for the advancing players. For instance, if player 2 beats player 1, in the next round, they receive number 1, and so on until only one player remains.</p>
+<p>Given the number of participants <code>N</code>, and two specific participants <code>A</code> and <code>B</code>, you need to determine in which round players <code>A</code> and <code>B</code> will meet, assuming both players always win until they meet each other.</p>
+<h2 id="constraints">Constraints</h2>
+<ul>
+<li><code>N</code> is a natural number between 21 and 220, and it&rsquo;s always a power of two, so no byes occur in the tournament.</li>
+<li><code>A</code> and <code>B</code> are natural numbers less than or equal to <code>N</code> (A ≠ B).</li>
+</ul>
+<h2 id="example">Example</h2>
+<table>
+<thead>
+<tr>
+<th>N</th>
+<th>A</th>
+<th>B</th>
+<th>answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8</td>
+<td>4</td>
+<td>7</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="explanation-of-example">Explanation of Example</h3>
+<ul>
+<li>
+<p><strong>First Round:</strong></p>
+<ul>
+<li>Player 4 competes against player 3, and player 7 competes against player 8. Assuming both win, player 4 becomes number 2 in the next round, and player 7 becomes number 4.</li>
+</ul>
+</li>
+<li>
+<p><strong>Second Round:</strong></p>
+<ul>
+<li>Player 2 (formerly player 4) now competes against player 1, and player 4 (formerly player 7) competes against player 3. Both win again.</li>
+</ul>
+</li>
+<li>
+<p><strong>Third Round:</strong></p>
+<ul>
+<li>Players 1 and 2 meet, where player 1 is the former player 2, and player 2 is the former player 4. Since these are the new identities of players 4 and 7, they meet in this round.</li>
+</ul>
+</li>
+</ul>
+<h2 id="therefore-players-a-4-and-b-7-meet-in-the-third-round-hence-the-answer-is-3">Therefore, players A (4) and B (7) meet in the third round, hence the answer is 3.</h2>
+<h1 id="how-to-approach">How to approach?</h1>
+<h1 id="code">Code</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">solution</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">round</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">2</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">2</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">round</span><span class="o">++</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">round</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
+            <pubDate>Thu, 25 Apr 2024 09:20:00 &#43;0000</pubDate>
+            <guid isPermaLink="true">http://localhost:1313/posts/algorithm/programmers/lv2/tournament/</guid>
+        </item>
+    
+        <item>
             <title>Last and First</title>
             <link>http://localhost:1313/posts/algorithm/programmers/lv2/last-and-first/</link>
             <description>&lt;![CDATA[<h1 id="problem">Problem</h1>
@@ -425,7 +557,7 @@ The game progresses as follows:</li>
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div>]]></description>
-            <pubDate>Thu, 25 Apr 2024 13:20:00 &#43;0000</pubDate>
+            <pubDate>Tue, 23 Apr 2024 13:20:00 &#43;0000</pubDate>
             <guid isPermaLink="true">http://localhost:1313/posts/algorithm/programmers/lv2/last-and-first/</guid>
         </item>
     
@@ -3244,6 +3376,14 @@ This is a good way to tidy up your containers, but use it with caution, because 
 ]]></description>
             <pubDate>Sat, 01 Apr 2023 16:45:00 &#43;0000</pubDate>
             <guid isPermaLink="true">http://localhost:1313/posts/docker/docker_2/</guid>
+        </item>
+    
+        <item>
+            <title>Deploying Distributed Applications as Stacks in Docker Swarm</title>
+            <link>http://localhost:1313/posts/docker/docker_13/</link>
+            <description>&lt;![CDATA[]]></description>
+            <pubDate>Sat, 01 Apr 2023 16:21:00 &#43;0000</pubDate>
+            <guid isPermaLink="true">http://localhost:1313/posts/docker/docker_13/</guid>
         </item>
     
         <item>

@@ -3,21 +3,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jay Log | Sorting Problem</title>
-    <meta name="description" content="Let&#39;s learn how to sort data ">
-    <link rel="canonical" href="http://localhost:1313/posts/algorithm/programmers/sorting/sorting_2/" />
+    <title>Jay Log | PART III: Running at Scale With a Container Orchestrator</title>
+    <meta name="description" content=" ">
+    <link rel="canonical" href="http://localhost:1313/series/part-iii-running-at-scale-with-a-container-orchestrator/" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <meta property="og:title" content="Sorting Problem" />
-<meta property="og:description" content="Let&#39;s learn how to sort data" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/posts/algorithm/programmers/sorting/sorting_2/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-03-29T17:20:00+00:00" />
-<meta property="article:modified_time" content="2024-03-29T00:00:00+00:00" />
-<meta property="og:see_also" content="http://localhost:1313/posts/algorithm/programmers/highscore_kit/sorting/h_index/" /><meta property="og:see_also" content="http://localhost:1313/posts/algorithm/programmers/highscore_kit/sorting/maximum_number/" /><meta property="og:see_also" content="http://localhost:1313/posts/algorithm/programmers/highscore_kit/sorting/kth_number/" /><meta property="og:see_also" content="http://localhost:1313/posts/algorithm/programmers/sorting/sorting_1/" />
+    <meta property="og:title" content="PART III: Running at Scale With a Container Orchestrator" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:1313/series/part-iii-running-at-scale-with-a-container-orchestrator/" />
 
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Sorting Problem"/>
-<meta name="twitter:description" content="Let&#39;s learn how to sort data"/>
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="PART III: Running at Scale With a Container Orchestrator"/>
+<meta name="twitter:description" content=""/>
 
     
 
@@ -189,41 +186,29 @@
 
 
         <div id="content">
+    
 
 
 
 
+
+
+    
+        
+    
 
 
 
 
     <div class="hero">
         
-            <div class="hero-img">
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/default.jpg" alt="">
-            </div>
-        
+            
+                <div class="hero-img">
+                    <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/docker.jpg" alt="">
+                </div>
+            
         <div class="hero-content">
-            <div class="hero-title">Sorting Problem</div>
-            <div class="hero-subtitle">with java</div>
-            <div class="hero-date">
-                    <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-3-29 &nbsp;</span>
-                    <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-3-29 &nbsp;</span>
-                    <span class="no-wrap"><i class="fa fa-folder"></i>
-                        includedIn:
-                        
-                            <a href='
-                                /categories/algorithms
-                            '>
-                                Algorithms
-                            </a>
-                    </span>    
-            </div>
-            <div class="timelong">
-                <span class="no-wrap"><i class="fa fa-pencil"></i> wordsCount: 393 &nbsp;</span>
-                <span class="no-wrap"><i class="fa fa-clock-o"></i> readingTime: 2 mins &nbsp;</span>
-                <span class="no-wrap"><i class="fa fa-eye"></i> viewers: <span id="busuanzi_value_page_pv"></span></span>
-            </div>
+            <h1 class="hero-title">Series: PART III: Running at Scale With a Container Orchestrator</h1>
         </div>
     </div>
 
@@ -242,7 +227,7 @@
     
 
 
-<div class="content-root">
+<div class="terms-body">
     <div class="long">
         <button class="tosides-1 text-wbd">
             <i class="fa fa-arrow-right"></i>
@@ -255,203 +240,88 @@
         </button>
     </div>
     
-        <div class="content">
-            <div class="content-self">
-                <h1 id="problem">Problem</h1>
-<p>Jay likes sequences, so he use to playing with a sequence of size N. He will transform the sequence according to K queries, and the format and process of the queries are as follows:</p>
-<ul>
-<li>L R X: Let&rsquo;s say the sequence sorted in ascending order is A[1], A[2], …, A[N].</li>
-<li>First, add X to A[L], A[L+1], …, A[R].</li>
-<li>Then, sort the sequence again in ascending order.</li>
-</ul>
-<p>Print the sequence after performing all the queries in order.</p>
-<h2 id="input">Input</h2>
-<blockquote>
-<p>tip
-The first line is given with N and K separated by a space. (1 ≤ N ≤ 100000, 1 ≤ K ≤ 1000)<br>
-The second line is given with N integers that make up the sequence, each having an absolute value of less than or equal to 10^18.<br>
-From the third line to the (K+2)th line, the queries L R X are given. (1 ≤ L ≤ R ≤ N, |X| ≤ 10^9)</p>
-</blockquote>
-<h2 id="output">Output</h2>
-<blockquote>
-<p>tip
-Print the sequence after performing all the queries in order.</p>
-</blockquote>
-<hr>
-<p><code>Example: (tip)</code></p>
-<pre tabindex="0"><code class="language-math" data-lang="math">\(Input:  
-7 3  
-1 2 3 4 5 6 7  
-1 6 3  
-2 7 -4  
-4 5 6  
+        <div class="terms-row">
+            
+            <div class="terms-root">
+                
+                
 
-Output: 
-1 2 3 4 5 9 10\)
-</code></pre><hr>
-<h1 id="how-to-approach">How to Approach?</h1>
-<p>Though there is no single correct solution, there are effective ones. I usally take follow steps:</p>
-<ol>
-<li>we need a <code>input function</code></li>
-<li><code>validation function</code> to prove user input proper or not</li>
-<li><code>print function</code> to print out our output</li>
-<li><code>do function</code> (This can be further divided into several actions)</li>
-<li>(if we need)<code>calculate function</code></li>
-</ol>
-<h2 id="step1-input-function">step1. Input function</h2>
-<p>First we need <code>input function</code>. In java, there exist some other input method but I usually use this method:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.BufferedReader</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.InputStreamReader</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.StringTokenizer</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">getUserInput</span><span class="p">(</span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Long</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sequence</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nk</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">BufferedReader</span><span class="w"> </span><span class="n">br</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">));</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">StringTokenizer</span><span class="w"> </span><span class="n">st</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringTokenizer</span><span class="p">(</span><span class="n">br</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">nk</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">st</span><span class="p">.</span><span class="na">nextToken</span><span class="p">());</span><span class="w"> </span><span class="c1">// N</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">nk</span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">st</span><span class="p">.</span><span class="na">nextToken</span><span class="p">());</span><span class="w"> </span><span class="c1">// K</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">st</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringTokenizer</span><span class="p">(</span><span class="n">br</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span><span class="w"> </span><span class="c1">// Tokenizing the sequence line</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">st</span><span class="p">.</span><span class="na">hasMoreTokens</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">sequence</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">Long</span><span class="p">.</span><span class="na">parseLong</span><span class="p">(</span><span class="n">st</span><span class="p">.</span><span class="na">nextToken</span><span class="p">()));</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><p>By using BufferedReader, you can quickly get input values.</p>
-<h2 id="step2-validation-function">step2. validation function</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">n</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-</span></span><span class="line"><span class="cl"><span class="n">sequence</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">while</span><span class="p">(</span><span class="n">k</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">sequence</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">x</span>
-</span></span><span class="line"><span class="cl">    <span class="n">sequence</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="n">k</span> <span class="o">-=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">sequence</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
-            </div>
-            
-                <div class="tags">
+
+
+<div class="card-large">
+    <div class="card-large-img">
+
+        
+                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/docker.jpg" alt='image loading failed'>
+        
+    </div>
+    <div class="card-large-content">
+        <div class="up-title"><a href="/posts/docker/docker_13/">Deploying Distributed Applications as Stacks in Docker Swarm</a></div>
+        <div class="up-date">
+            <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2023-4-1 &nbsp;</span>
+            <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2023-4-1 &nbsp;</span>
+            <span class="no-wrap"><i class="fa fa-folder"></i>
+                
+                    includedIn:
                     
-                    <span class="down-type-item">
-                        <div class="type-text">
-                            <a href='
-                                        /tags/algorithms
+                        <a href='
+                                        /categories/docker
                                     '>
-                                <i class="fa fa-tag"></i> Algorithms
+                                Docker
                             </a>
-                        </div>
-                    </span>
-                    
-                    <span class="down-type-item">
-                        <div class="type-text">
-                            <a href='
-                                        /tags/problem
-                                    '>
-                                <i class="fa fa-tag"></i> Problem
-                            </a>
-                        </div>
-                    </span>
-                    
-                    <span class="down-type-item">
-                        <div class="type-text">
-                            <a href='
-                                        /tags/sorting
-                                    '>
-                                <i class="fa fa-tag"></i> Sorting
-                            </a>
-                        </div>
-                    </span>
-                    
-                </div>
-            
+                
+            </span>
         </div>
-        
-            
-                <div class="pre-next">
-                    
-    
-        
-        <a href="http://localhost:1313/posts/algorithm/programmers/sorting/sorting_1/" class="pre">
-            <span class="pre-icon"><i class="fa fa-hand-o-left"></i></span>
-            <div class="pre-title-root">
-                <span>How to Sort Data</span>
-            </div>
+        <div class="down-summary"></div>
+    </div>
+    <div class="card-readmore">
+        <a href="http://localhost:1313/posts/docker/docker_13/">
+            <span><i class="fa fa-arrow-right"></i></span>
         </a>
-        
-
-        
-        <a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/sorting/kth_number/" class="next">
-            <div class="next-title-root">
-                <span>High Score Kit: Sorting#1</span>
-            </div>
-            <span class="next-icon"><i class="fa fa-hand-o-right"></i></span>
-        </a>
-        
-
-    
-    
-
-                </div>
-            
-        
-    
+    </div>
 </div>
 
+
+
     
-        <div class="content-last">
-            
-                <button class="aixin content-last-item efct-button">
-                    <i class="fa fa-heart"></i>
-                </button>
-            
-            
-                <button class="pinglun content-last-item efct-button">
-                    <i class="fa fa-comment"></i>
-                </button>
+
+
+    <div class="down-type">
+        
+        <span class="down-type-item">
+            <div class="shuxian-root">
+                <div class="shuxian"></div>
+            </div>
+            <div class="type-text">
+                <a href='
+                            /tags/docker
+                        '>
+                    <i class="fa fa-tag"></i> Docker
+                </a>
+            </div>
+        </span>
+        
+        <span class="down-type-item">
+            <div class="shuxian-root">
+                <div class="shuxian"></div>
+            </div>
+            <div class="type-text">
+                <a href='
+                            /tags/beginner
+                        '>
+                    <i class="fa fa-tag"></i> Beginner
+                </a>
+            </div>
+        </span>
+        
+    </div>
+
+<div class="dang"></div>
+            </div>
             
         </div>
     
+</div>
 
 
             </div>
@@ -459,11 +329,6 @@ Output:
                 
 <div class="zhuti-r-0">
     <div class="zhuti-r-1">
-        
-            <div class="button-r">
-                <button class="button-mulu efct-button" type="button"><span><i class="fa fa-bars"></i></span><span class="bars-text"> content</span></button>
-                <button class="button-comment efct-button" type="button"><span><i class="fa fa-comment"></i></span><span class="comment-text"> comment</span></button>
-            </div>
         
         <div id="r1">
             
@@ -533,97 +398,13 @@ Output:
 
 
 
-    
-    
-
 
 <div class="other">
     <div class="other-up">
-        <div class="other-qita text-wbd">Related Posts</div>
+        <div class="other-qita text-wbd">latest Posts</div>
         <div class="xian"></div>
     </div>
     <div class="list">
-        
-            <a href="http://localhost:1313/posts/algorithm/programmers/sorting/sorting_1/">
-                
-<a href="http://localhost:1313/posts/algorithm/programmers/sorting/sorting_1/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                How to Sort Data
-            </div>
-            <div class="other-summary">Introduction What this post focus on This posting will cover almost every concept of How to sort (primary). Plus, I&rsquo;ll post realistic algorithm problem of our real world so that you can apply those concept to real world problem and learn how to use it. I really hope so. Let&rsquo;s see the below example.</div>
-            <div class="other-date">2024-3-29</div>
-        </div>
-    </div>
-</a>
-            </a>
-        
-            <a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/sorting/h_index/">
-                
-<a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/sorting/h_index/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                High Score Kit: Sorting#3
-            </div>
-            <div class="other-summary">Problem The H-Index is a metric that measures the productivity and impact of a scientist&rsquo;s research. It represents the highest number h such that the scientist has published h papers that have each been cited at least h times. According to Wikipedia, the H-Index is calculated as follows:
-For a given scientist who has published n papers, if h of these papers have at least h citations each, and the other papers have no more than h citations each, then h is the maximum value for this scientist&rsquo;s H-Index.</div>
-            <div class="other-date">2024-4-10</div>
-        </div>
-    </div>
-</a>
-            </a>
-        
-            <a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/sorting/maximum_number/">
-                
-<a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/sorting/maximum_number/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                High Score Kit: Sorting#2
-            </div>
-            <div class="other-summary">Problem Given an array of non-negative integers, your task is to determine the largest number that can be formed by concatenating the integers together. For example, with the integers [6, 10, 2], you can form the numbers [6102, 6210, 1062, 1026, 2610, 2106] through different arrangements. The largest number from these combinations is 6210.</div>
-            <div class="other-date">2024-4-10</div>
-        </div>
-    </div>
-</a>
-            </a>
-        
-            <a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/sorting/kth_number/">
-                
-<a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/sorting/kth_number/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                High Score Kit: Sorting#1
-            </div>
-            <div class="other-summary">Problem To find a number at the k-th position after slicing and sorting the array from the i-th to j-th number, consider the following: For example, if the array is [1, 5, 2, 6, 3, 7, 4], i = 2, j = 5, and k = 3, slicing the array from the 2nd to the 5th number yields [5, 2, 6, 3].</div>
-            <div class="other-date">2024-4-10</div>
-        </div>
-    </div>
-</a>
-            </a>
         
             <a href="http://localhost:1313/posts/algorithm/programmers/lv2/tuple/">
                 
@@ -666,73 +447,98 @@ For a given scientist who has published n papers, if h of these papers have at l
 </a>
             </a>
         
+            <a href="http://localhost:1313/posts/algorithm/programmers/lv2/tournament/">
+                
+<a href="http://localhost:1313/posts/algorithm/programmers/lv2/tournament/">
+    <div class="list-item">
+        <div class="icon-other-root">
+            
+                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
+            
+        </div>
+        <div class="list-right">
+            <div class="other-title">
+                Tournament
+            </div>
+            <div class="other-summary">Problem In the Jay&rsquo;s game tournament, N players compete in a knockout format. Each player is sequentially assigned a number from 1 to N. The matches are arranged as 1 vs 2, 3 vs 4, &hellip;, N-1 vs N. The winner of each game advances to the next round, where they receive new sequential numbers starting from 1 for the advancing players.</div>
+            <div class="other-date">2024-4-25</div>
+        </div>
+    </div>
+</a>
+            </a>
+        
+            <a href="http://localhost:1313/posts/algorithm/programmers/lv2/last-and-first/">
+                
+<a href="http://localhost:1313/posts/algorithm/programmers/lv2/last-and-first/">
+    <div class="list-item">
+        <div class="icon-other-root">
+            
+                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
+            
+        </div>
+        <div class="list-right">
+            <div class="other-title">
+                Last and First
+            </div>
+            <div class="other-summary">Problem Several people are playing the game of English word chain where each player takes turns saying a word that must begin with the last letter of the previous word. Here are the rules:
+Players take turns in a sequence from 1 to n. After the last player, it starts again with the first player.</div>
+            <div class="other-date">2024-4-23</div>
+        </div>
+    </div>
+</a>
+            </a>
+        
+            <a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/greedy/make_large_number/">
+                
+<a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/greedy/make_large_number/">
+    <div class="list-item">
+        <div class="icon-other-root">
+            
+                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
+            
+        </div>
+        <div class="list-right">
+            <div class="other-title">
+                High Score Kit: Greedy#1
+            </div>
+            <div class="other-summary">Problem Given a number, your task is to remove k digits from the number in such a way that the remaining digits form the largest possible number. The number is provided as a string number and the integer k represents the number of digits to remove. Your function solution should return the resulting largest number as a string.</div>
+            <div class="other-date">2024-4-11</div>
+        </div>
+    </div>
+</a>
+            </a>
+        
+            <a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/dfsbfs/gamemap/">
+                
+<a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/dfsbfs/gamemap/">
+    <div class="list-item">
+        <div class="icon-other-root">
+            
+                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
+            
+        </div>
+        <div class="list-right">
+            <div class="other-title">
+                High Score Kit: DFS&amp;BFS#2
+            </div>
+            <div class="other-summary">Problem In the ROR game, you play on a team that competes to destroy the opposing team&rsquo;s base first, making it advantageous to reach the enemy base as quickly as possible. Suppose you&rsquo;re a team member and are located at position (row: 1, column: 1) on a 5x5 map, while the enemy base is at (row: 5, column: 5).</div>
+            <div class="other-date">2024-4-11</div>
+        </div>
+    </div>
+</a>
+            </a>
+        
     </div>
 </div>
         </div>
         <div id="r2">
-            <div id="vcomments"></div>
-<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-<script type="text/javascript">
-    new Valine({
-        el: '#vcomments',
-        appId: "1bY2Xk28MG2rZwn5yhAgSf7J-MdYXbMMI",
-        appKey: "0PMhHHKR1uBcp1aw5bXHvge7",
-        avatar: "robohash",
-        placeholder: "댓글을 입력하세요",
-        requiredFields: ["nick"],
-        visitor:  true ,
-        pageSize:  10 ,
-        recordIP:  null ,
-        lang: 'en'
-});
-</script>
-
+            
         </div> 
     </div>
 </div>
 
             </div>
         </div>
-    </div>
-</div>
-
-    
-
-<div class="sponsor">
-    <div class="sponsor-self">
-        <div class="sponsor-title">Sponsor</div>
-        <div class="sponsor-btn">
-            
-                
-                    
-                        <div class="sponsor-btn-1 border-r">Wechat</div>
-                    
-                
-                
-            
-                
-                    
-                        <div class="sponsor-btn-2 border-l">Alipay</div>
-                    
-                
-                
-            
-        </div>
-        
-        <div class="sponsor-img">
-            
-                
-                    <img class="sponsor-img-1" src="/images/sponsor/wechat.jpeg" alt="">
-                
-                
-            
-                
-                    <img class="sponsor-img-2" src="/images/sponsor/alipay.jpeg" alt="" style="display: none;">
-                
-                
-            
-        </div>
-        <div class="cancel efct-button">cancel</div>
     </div>
 </div>
 
@@ -874,7 +680,7 @@ For a given scientist who has published n papers, if h of these papers have at l
     var search_found = "Found";
     var search_result = "result";
     var search_results = "results";
-    var enable_mermaid =  false ;
+    var enable_mermaid =  null ;
 
     var baseURL = "http://localhost:1313/";
 </script>

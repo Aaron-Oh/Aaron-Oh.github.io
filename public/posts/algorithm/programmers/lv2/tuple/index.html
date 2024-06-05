@@ -3,21 +3,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jay Log | Sorting Problem</title>
-    <meta name="description" content="Let&#39;s learn how to sort data ">
-    <link rel="canonical" href="http://localhost:1313/posts/algorithm/programmers/sorting/sorting_2/" />
+    <title>Jay Log | tuple</title>
+    <meta name="description" content="Problem A &ldquo;tuple&rdquo; is defined as an ordered collection of elements which can include duplicate values and each element is assigned an order. A tuple with n elements (a1, a2, a3, ..., an) can be expressed using the set notation in various ways, with any ordering of the subsets as: ">
+    <link rel="canonical" href="http://localhost:1313/posts/algorithm/programmers/lv2/tuple/" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <meta property="og:title" content="Sorting Problem" />
-<meta property="og:description" content="Let&#39;s learn how to sort data" />
+    <meta property="og:title" content="tuple" />
+<meta property="og:description" content="Problem A &ldquo;tuple&rdquo; is defined as an ordered collection of elements which can include duplicate values and each element is assigned an order. A tuple with n elements (a1, a2, a3, ..., an) can be expressed using the set notation in various ways, with any ordering of the subsets as:" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/posts/algorithm/programmers/sorting/sorting_2/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-03-29T17:20:00+00:00" />
-<meta property="article:modified_time" content="2024-03-29T00:00:00+00:00" />
-<meta property="og:see_also" content="http://localhost:1313/posts/algorithm/programmers/highscore_kit/sorting/h_index/" /><meta property="og:see_also" content="http://localhost:1313/posts/algorithm/programmers/highscore_kit/sorting/maximum_number/" /><meta property="og:see_also" content="http://localhost:1313/posts/algorithm/programmers/highscore_kit/sorting/kth_number/" /><meta property="og:see_also" content="http://localhost:1313/posts/algorithm/programmers/sorting/sorting_1/" />
+<meta property="og:url" content="http://localhost:1313/posts/algorithm/programmers/lv2/tuple/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-05-01T10:20:00+00:00" />
+<meta property="article:modified_time" content="2024-05-01T00:00:00+00:00" />
 
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Sorting Problem"/>
-<meta name="twitter:description" content="Let&#39;s learn how to sort data"/>
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="tuple"/>
+<meta name="twitter:description" content="Problem A &ldquo;tuple&rdquo; is defined as an ordered collection of elements which can include duplicate values and each element is assigned an order. A tuple with n elements (a1, a2, a3, ..., an) can be expressed using the set notation in various ways, with any ordering of the subsets as:"/>
 
     
 
@@ -204,24 +204,24 @@
             </div>
         
         <div class="hero-content">
-            <div class="hero-title">Sorting Problem</div>
-            <div class="hero-subtitle">with java</div>
+            <div class="hero-title">tuple</div>
+            <div class="hero-subtitle">Lv2</div>
             <div class="hero-date">
-                    <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-3-29 &nbsp;</span>
-                    <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-3-29 &nbsp;</span>
+                    <span class="no-wrap"><i class="fa fa-calendar"></i> postedOn: 2024-5-1 &nbsp;</span>
+                    <span class="no-wrap"><i class="fa fa-calendar-check-o"></i> updatedOn: 2024-5-1 &nbsp;</span>
                     <span class="no-wrap"><i class="fa fa-folder"></i>
                         includedIn:
                         
                             <a href='
-                                /categories/algorithms
+                                /categories/lv2
                             '>
-                                Algorithms
+                                Lv2
                             </a>
                     </span>    
             </div>
             <div class="timelong">
-                <span class="no-wrap"><i class="fa fa-pencil"></i> wordsCount: 393 &nbsp;</span>
-                <span class="no-wrap"><i class="fa fa-clock-o"></i> readingTime: 2 mins &nbsp;</span>
+                <span class="no-wrap"><i class="fa fa-pencil"></i> wordsCount: 540 &nbsp;</span>
+                <span class="no-wrap"><i class="fa fa-clock-o"></i> readingTime: 3 mins &nbsp;</span>
                 <span class="no-wrap"><i class="fa fa-eye"></i> viewers: <span id="busuanzi_value_page_pv"></span></span>
             </div>
         </div>
@@ -258,48 +258,71 @@
         <div class="content">
             <div class="content-self">
                 <h1 id="problem">Problem</h1>
-<p>Jay likes sequences, so he use to playing with a sequence of size N. He will transform the sequence according to K queries, and the format and process of the queries are as follows:</p>
+<p>A &ldquo;tuple&rdquo; is defined as an ordered collection of elements which can include duplicate values and each element is assigned an order. A tuple with <code>n</code> elements <code>(a1, a2, a3, ..., an)</code> can be expressed using the set notation in various ways, with any ordering of the subsets as:</p>
+<pre tabindex="0"><code>{{a1}, {a1, a2}, {a1, a2, a3}, ..., {a1, a2, a3, ..., an}}
+</code></pre><p>For example, the tuple <code>(2, 1, 3, 4)</code> can be represented as:</p>
+<pre tabindex="0"><code>{{2}, {2, 1}, {2, 1, 3}, {2, 1, 3, 4}}
+</code></pre><p>The sets can be permuted, but they still represent the same tuple:</p>
+<pre tabindex="0"><code>{{2, 1, 3, 4}, {2}, {2, 1, 3}, {2, 1}}
+{{1, 2, 3}, {2, 1}, {1, 2, 4, 3}, {2}}
+</code></pre><p>Given a string <code>s</code> that represents a tuple in the form of a set of sets, you need to determine the elements of the tuple in their correct order. The string <code>s</code> is formatted with numbers and the characters <code>{</code>, <code>}</code>, and <code>,</code>.</p>
+<h2 id="constraints">Constraints</h2>
 <ul>
-<li>L R X: Let&rsquo;s say the sequence sorted in ascending order is A[1], A[2], …, A[N].</li>
-<li>First, add X to A[L], A[L+1], …, A[R].</li>
-<li>Then, sort the sequence again in ascending order.</li>
+<li>The length of <code>s</code> is between 5 and 1,000,000.</li>
+<li><code>s</code> consists of numbers, <code>{</code>, <code>}</code>, and <code>,</code>. No number starts with 0.</li>
+<li><code>s</code> always correctly represents a tuple with no duplicate elements.</li>
+<li>The elements of the tuple are natural numbers between 1 and 100,000.</li>
+<li>The output array will have between 1 and 500 elements.</li>
 </ul>
-<p>Print the sequence after performing all the queries in order.</p>
-<h2 id="input">Input</h2>
-<blockquote>
-<p>tip
-The first line is given with N and K separated by a space. (1 ≤ N ≤ 100000, 1 ≤ K ≤ 1000)<br>
-The second line is given with N integers that make up the sequence, each having an absolute value of less than or equal to 10^18.<br>
-From the third line to the (K+2)th line, the queries L R X are given. (1 ≤ L ≤ R ≤ N, |X| ≤ 10^9)</p>
-</blockquote>
-<h2 id="output">Output</h2>
-<blockquote>
-<p>tip
-Print the sequence after performing all the queries in order.</p>
-</blockquote>
+<h2 id="example-inputs-and-outputs">Example Inputs and Outputs</h2>
+<table>
+<thead>
+<tr>
+<th>s</th>
+<th>result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&ldquo;{{2},{2,1},{2,1,3},{2,1,3,4}}&rdquo;</td>
+<td>[2, 1, 3, 4]</td>
+</tr>
+<tr>
+<td>&ldquo;{{1,2,3},{2,1},{1,2,4,3},{2}}&rdquo;</td>
+<td>[2, 1, 3, 4]</td>
+</tr>
+<tr>
+<td>&ldquo;{{20,111},{111}}&rdquo;</td>
+<td>[111, 20]</td>
+</tr>
+<tr>
+<td>&ldquo;{{123}}&rdquo;</td>
+<td>[123]</td>
+</tr>
+<tr>
+<td>&ldquo;{{4,2,3},{3},{2,3,4,1},{2,3}}&rdquo;</td>
+<td>[3, 2, 4, 1]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="explanation-of-examples">Explanation of Examples</h3>
+<ul>
+<li><strong>Example 1</strong>:
+The order in the sets varies but consistently starts from a smaller set to the full set representing the tuple. The tuple <code>(2, 1, 3, 4)</code> is formed by determining which elements appear as the sets grow.</li>
+<li><strong>Example 2</strong>:
+Although the sets are given in a different order, they still indicate the same tuple as example 1.</li>
+<li><strong>Example 3</strong>:
+<code>(111, 20)</code> is represented, and while the order in the set might suggest <code>(20, 111)</code>, the tuple format ensures that <code>111</code> appears first since it&rsquo;s isolated in a set by itself initially.</li>
+<li><strong>Example 4</strong>:
+A single-element tuple is directly indicated.</li>
+<li><strong>Example 5</strong>:
+By analyzing the growth of sets from smaller to larger, it can be discerned that the tuple is <code>(3, 2, 4, 1)</code>.</li>
+</ul>
+<p>The challenge involves parsing the string to extract sets, then determining the tuple order by the size of these sets and the introduction of new elements in each subsequent set.</p>
 <hr>
-<p><code>Example: (tip)</code></p>
-<pre tabindex="0"><code class="language-math" data-lang="math">\(Input:  
-7 3  
-1 2 3 4 5 6 7  
-1 6 3  
-2 7 -4  
-4 5 6  
-
-Output: 
-1 2 3 4 5 9 10\)
-</code></pre><hr>
 <h1 id="how-to-approach">How to Approach?</h1>
-<p>Though there is no single correct solution, there are effective ones. I usally take follow steps:</p>
-<ol>
-<li>we need a <code>input function</code></li>
-<li><code>validation function</code> to prove user input proper or not</li>
-<li><code>print function</code> to print out our output</li>
-<li><code>do function</code> (This can be further divided into several actions)</li>
-<li>(if we need)<code>calculate function</code></li>
-</ol>
-<h2 id="step1-input-function">step1. Input function</h2>
-<p>First we need <code>input function</code>. In java, there exist some other input method but I usually use this method:</p>
+<p>find one element tuple -&gt; transform to integer and remove from total</p>
+<h1 id="code">Code</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -318,60 +341,60 @@ Output:
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.BufferedReader</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.InputStreamReader</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.StringTokenizer</span><span class="p">;</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">getUserInput</span><span class="p">(</span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Long</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sequence</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nk</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">BufferedReader</span><span class="w"> </span><span class="n">br</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">));</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">StringTokenizer</span><span class="w"> </span><span class="n">st</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringTokenizer</span><span class="p">(</span><span class="n">br</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">nk</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">st</span><span class="p">.</span><span class="na">nextToken</span><span class="p">());</span><span class="w"> </span><span class="c1">// N</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">nk</span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">st</span><span class="p">.</span><span class="na">nextToken</span><span class="p">());</span><span class="w"> </span><span class="c1">// K</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="nf">solution</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Remove the outermost braces and split the string by &#34;},{&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">tuples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">2</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">2</span><span class="p">).</span><span class="na">split</span><span class="p">(</span><span class="s">&#34;\\},\\{&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Arrays</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">tuples</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="na">length</span><span class="p">());</span><span class="w"> </span><span class="c1">// Sort by length</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">st</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringTokenizer</span><span class="p">(</span><span class="n">br</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span><span class="w"> </span><span class="c1">// Tokenizing the sequence line</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">st</span><span class="p">.</span><span class="na">hasMoreTokens</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">sequence</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">Long</span><span class="p">.</span><span class="na">parseLong</span><span class="p">(</span><span class="n">st</span><span class="p">.</span><span class="na">nextToken</span><span class="p">()));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">seen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashSet</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Process each group of numbers</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">tuple</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">tuples</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">nums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tuple</span><span class="p">.</span><span class="na">split</span><span class="p">(</span><span class="s">&#34;,&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">num</span><span class="p">.</span><span class="na">trim</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">seen</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">value</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Add only if not already added</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="n">result</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">value</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Convert List&lt;Integer&gt; to int[]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">mapToInt</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">i</span><span class="p">).</span><span class="na">toArray</span><span class="p">();</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
-</div>
-</div><p>By using BufferedReader, you can quickly get input values.</p>
-<h2 id="step2-validation-function">step2. validation function</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">n</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-</span></span><span class="line"><span class="cl"><span class="n">sequence</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">while</span><span class="p">(</span><span class="n">k</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">sequence</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">x</span>
-</span></span><span class="line"><span class="cl">    <span class="n">sequence</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="n">k</span> <span class="o">-=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">sequence</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
 </div>
 </div>
             </div>
             
                 <div class="tags">
+                    
+                    <span class="down-type-item">
+                        <div class="type-text">
+                            <a href='
+                                        /tags/java
+                                    '>
+                                <i class="fa fa-tag"></i> Java
+                            </a>
+                        </div>
+                    </span>
                     
                     <span class="down-type-item">
                         <div class="type-text">
@@ -386,19 +409,9 @@ Output:
                     <span class="down-type-item">
                         <div class="type-text">
                             <a href='
-                                        /tags/problem
+                                        /tags/stack
                                     '>
-                                <i class="fa fa-tag"></i> Problem
-                            </a>
-                        </div>
-                    </span>
-                    
-                    <span class="down-type-item">
-                        <div class="type-text">
-                            <a href='
-                                        /tags/sorting
-                                    '>
-                                <i class="fa fa-tag"></i> Sorting
+                                <i class="fa fa-tag"></i> Stack
                             </a>
                         </div>
                     </span>
@@ -412,23 +425,13 @@ Output:
                     
     
         
-        <a href="http://localhost:1313/posts/algorithm/programmers/sorting/sorting_1/" class="pre">
+        <a href="http://localhost:1313/posts/algorithm/programmers/lv2/braket-rotating/" class="pre pre-last" style="text-align: center;">
             <span class="pre-icon"><i class="fa fa-hand-o-left"></i></span>
             <div class="pre-title-root">
-                <span>How to Sort Data</span>
+                <span>braket rotating</span>
             </div>
         </a>
         
-
-        
-        <a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/sorting/kth_number/" class="next">
-            <div class="next-title-root">
-                <span>High Score Kit: Sorting#1</span>
-            </div>
-            <span class="next-icon"><i class="fa fa-hand-o-right"></i></span>
-        </a>
-        
-
     
     
 
@@ -544,107 +547,6 @@ Output:
     </div>
     <div class="list">
         
-            <a href="http://localhost:1313/posts/algorithm/programmers/sorting/sorting_1/">
-                
-<a href="http://localhost:1313/posts/algorithm/programmers/sorting/sorting_1/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                How to Sort Data
-            </div>
-            <div class="other-summary">Introduction What this post focus on This posting will cover almost every concept of How to sort (primary). Plus, I&rsquo;ll post realistic algorithm problem of our real world so that you can apply those concept to real world problem and learn how to use it. I really hope so. Let&rsquo;s see the below example.</div>
-            <div class="other-date">2024-3-29</div>
-        </div>
-    </div>
-</a>
-            </a>
-        
-            <a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/sorting/h_index/">
-                
-<a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/sorting/h_index/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                High Score Kit: Sorting#3
-            </div>
-            <div class="other-summary">Problem The H-Index is a metric that measures the productivity and impact of a scientist&rsquo;s research. It represents the highest number h such that the scientist has published h papers that have each been cited at least h times. According to Wikipedia, the H-Index is calculated as follows:
-For a given scientist who has published n papers, if h of these papers have at least h citations each, and the other papers have no more than h citations each, then h is the maximum value for this scientist&rsquo;s H-Index.</div>
-            <div class="other-date">2024-4-10</div>
-        </div>
-    </div>
-</a>
-            </a>
-        
-            <a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/sorting/maximum_number/">
-                
-<a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/sorting/maximum_number/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                High Score Kit: Sorting#2
-            </div>
-            <div class="other-summary">Problem Given an array of non-negative integers, your task is to determine the largest number that can be formed by concatenating the integers together. For example, with the integers [6, 10, 2], you can form the numbers [6102, 6210, 1062, 1026, 2610, 2106] through different arrangements. The largest number from these combinations is 6210.</div>
-            <div class="other-date">2024-4-10</div>
-        </div>
-    </div>
-</a>
-            </a>
-        
-            <a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/sorting/kth_number/">
-                
-<a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/sorting/kth_number/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                High Score Kit: Sorting#1
-            </div>
-            <div class="other-summary">Problem To find a number at the k-th position after slicing and sorting the array from the i-th to j-th number, consider the following: For example, if the array is [1, 5, 2, 6, 3, 7, 4], i = 2, j = 5, and k = 3, slicing the array from the 2nd to the 5th number yields [5, 2, 6, 3].</div>
-            <div class="other-date">2024-4-10</div>
-        </div>
-    </div>
-</a>
-            </a>
-        
-            <a href="http://localhost:1313/posts/algorithm/programmers/lv2/tuple/">
-                
-<a href="http://localhost:1313/posts/algorithm/programmers/lv2/tuple/">
-    <div class="list-item">
-        <div class="icon-other-root">
-            
-                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
-            
-        </div>
-        <div class="list-right">
-            <div class="other-title">
-                tuple
-            </div>
-            <div class="other-summary">Problem A &ldquo;tuple&rdquo; is defined as an ordered collection of elements which can include duplicate values and each element is assigned an order. A tuple with n elements (a1, a2, a3, ..., an) can be expressed using the set notation in various ways, with any ordering of the subsets as:</div>
-            <div class="other-date">2024-5-1</div>
-        </div>
-    </div>
-</a>
-            </a>
-        
             <a href="http://localhost:1313/posts/algorithm/programmers/lv2/braket-rotating/">
                 
 <a href="http://localhost:1313/posts/algorithm/programmers/lv2/braket-rotating/">
@@ -661,6 +563,107 @@ For a given scientist who has published n papers, if h of these papers have at l
             <div class="other-summary">Problem Define a string as a &ldquo;valid bracket string&rdquo; if it follows the given rules:
 &ldquo;()&rdquo;, &ldquo;[]&rdquo;, and &ldquo;{}&rdquo; are all valid bracket strings. If A is a valid bracket string, then &ldquo;(A)&rdquo;, &ldquo;[A]&rdquo;, and &ldquo;{A}&rdquo; are also valid bracket strings. For example, since &ldquo;[]&rdquo; is a valid bracket string, &ldquo;([])&rdquo; is also valid.</div>
             <div class="other-date">2024-4-27</div>
+        </div>
+    </div>
+</a>
+            </a>
+        
+            <a href="http://localhost:1313/posts/algorithm/programmers/lv2/tournament/">
+                
+<a href="http://localhost:1313/posts/algorithm/programmers/lv2/tournament/">
+    <div class="list-item">
+        <div class="icon-other-root">
+            
+                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
+            
+        </div>
+        <div class="list-right">
+            <div class="other-title">
+                Tournament
+            </div>
+            <div class="other-summary">Problem In the Jay&rsquo;s game tournament, N players compete in a knockout format. Each player is sequentially assigned a number from 1 to N. The matches are arranged as 1 vs 2, 3 vs 4, &hellip;, N-1 vs N. The winner of each game advances to the next round, where they receive new sequential numbers starting from 1 for the advancing players.</div>
+            <div class="other-date">2024-4-25</div>
+        </div>
+    </div>
+</a>
+            </a>
+        
+            <a href="http://localhost:1313/posts/algorithm/programmers/lv2/last-and-first/">
+                
+<a href="http://localhost:1313/posts/algorithm/programmers/lv2/last-and-first/">
+    <div class="list-item">
+        <div class="icon-other-root">
+            
+                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
+            
+        </div>
+        <div class="list-right">
+            <div class="other-title">
+                Last and First
+            </div>
+            <div class="other-summary">Problem Several people are playing the game of English word chain where each player takes turns saying a word that must begin with the last letter of the previous word. Here are the rules:
+Players take turns in a sequence from 1 to n. After the last player, it starts again with the first player.</div>
+            <div class="other-date">2024-4-23</div>
+        </div>
+    </div>
+</a>
+            </a>
+        
+            <a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/stackqueue/feature_improvement_task/">
+                
+<a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/stackqueue/feature_improvement_task/">
+    <div class="list-item">
+        <div class="icon-other-root">
+            
+                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
+            
+        </div>
+        <div class="list-right">
+            <div class="other-title">
+                High Score Kit: Stack&amp;Queue#2
+            </div>
+            <div class="other-summary">Problem The Programmers team is currently performing feature improvement tasks. Each feature can only be released when its progress reaches 100%. However, since the development speed of each feature varies, it is possible for features developed later to be completed earlier. In such cases, a feature that is developed later will be released together with the feature in front of it that is scheduled for earlier release.</div>
+            <div class="other-date">2024-4-10</div>
+        </div>
+    </div>
+</a>
+            </a>
+        
+            <a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/stackqueue/no_duplicate_number/">
+                
+<a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/stackqueue/no_duplicate_number/">
+    <div class="list-item">
+        <div class="icon-other-root">
+            
+                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
+            
+        </div>
+        <div class="list-right">
+            <div class="other-title">
+                High Score Kit: Stack&amp;Queue#1
+            </div>
+            <div class="other-summary">Problem Given an array arr consisting of integers ranging from 0 to 9, the task is to remove consecutive duplicates while preserving the order of the remaining elements. For instance, if arr = [1, 1, 3, 3, 0, 1, 1], the result should be [1, 3, 0, 1]. Similarly, for arr = [4, 4, 4, 3, 3], the result should be [4, 3].</div>
+            <div class="other-date">2024-4-10</div>
+        </div>
+    </div>
+</a>
+            </a>
+        
+            <a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/greedy/make_large_number/">
+                
+<a href="http://localhost:1313/posts/algorithm/programmers/highscore_kit/greedy/make_large_number/">
+    <div class="list-item">
+        <div class="icon-other-root">
+            
+                <div class="icon-other" style="background-image: url( /images/default.jpg );"></div>
+            
+        </div>
+        <div class="list-right">
+            <div class="other-title">
+                High Score Kit: Greedy#1
+            </div>
+            <div class="other-summary">Problem Given a number, your task is to remove k digits from the number in such a way that the remaining digits form the largest possible number. The number is provided as a string number and the integer k represents the number of digits to remove. Your function solution should return the resulting largest number as a string.</div>
+            <div class="other-date">2024-4-11</div>
         </div>
     </div>
 </a>

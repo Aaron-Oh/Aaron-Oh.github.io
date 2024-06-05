@@ -8,10 +8,26 @@
         <generator>Hugo -- gohugo.io</generator>
     
         <item>
+            <title>Stack&amp;Queue</title>
+            <link>http://localhost:1313/series/stackqueue/</link>
+            <description>&lt;![CDATA[]]></description>
+            <pubDate>Wed, 01 May 2024 10:20:00 &#43;0000</pubDate>
+            <guid isPermaLink="true">http://localhost:1313/series/stackqueue/</guid>
+        </item>
+    
+        <item>
+            <title>Math</title>
+            <link>http://localhost:1313/series/math/</link>
+            <description>&lt;![CDATA[]]></description>
+            <pubDate>Thu, 25 Apr 2024 09:20:00 &#43;0000</pubDate>
+            <guid isPermaLink="true">http://localhost:1313/series/math/</guid>
+        </item>
+    
+        <item>
             <title>Set</title>
             <link>http://localhost:1313/series/set/</link>
             <description>&lt;![CDATA[]]></description>
-            <pubDate>Mon, 29 Apr 2024 09:20:00 &#43;0000</pubDate>
+            <pubDate>Tue, 23 Apr 2024 13:20:00 &#43;0000</pubDate>
             <guid isPermaLink="true">http://localhost:1313/series/set/</guid>
         </item>
     
@@ -40,14 +56,6 @@
         </item>
     
         <item>
-            <title>Stack&amp;Queue</title>
-            <link>http://localhost:1313/series/stackqueue/</link>
-            <description>&lt;![CDATA[]]></description>
-            <pubDate>Wed, 10 Apr 2024 21:35:00 &#43;0000</pubDate>
-            <guid isPermaLink="true">http://localhost:1313/series/stackqueue/</guid>
-        </item>
-    
-        <item>
             <title>Sortng</title>
             <link>http://localhost:1313/series/sortng/</link>
             <description>&lt;![CDATA[]]></description>
@@ -69,6 +77,14 @@
             <description>&lt;![CDATA[]]></description>
             <pubDate>Mon, 03 Apr 2023 15:24:00 &#43;0000</pubDate>
             <guid isPermaLink="true">http://localhost:1313/series/part--understnding-docker-containers--images/</guid>
+        </item>
+    
+        <item>
+            <title>PART III: Running at Scale With a Container Orchestrator</title>
+            <link>http://localhost:1313/series/part-iii-running-at-scale-with-a-container-orchestrator/</link>
+            <description>&lt;![CDATA[]]></description>
+            <pubDate>Sat, 01 Apr 2023 16:21:00 &#43;0000</pubDate>
+            <guid isPermaLink="true">http://localhost:1313/series/part-iii-running-at-scale-with-a-container-orchestrator/</guid>
         </item>
     
     </channel>
