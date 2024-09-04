@@ -1,7 +1,7 @@
 &lt;?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
     <channel>
-        <title>Jay Log</title>
+        <title>AI system Researcher</title>
         <link>http://localhost:1313/</link>
         <description></description>
         <language>en-us</language>
@@ -21,11 +21,11 @@
             <description>&lt;![CDATA[<h1 id="jongmin-oh">Jongmin Oh</h1>
 <ul>
 <li><strong>E-mail</strong>: <a href="mailto:dev.jay.oh@gmail.com">dev.jay.oh@gmail.com</a></li>
-<li><strong>GitHub</strong>: <a href="https://github.com/JayM-Oh">JayM-Oh</a></li>
+<li><strong>GitHub</strong>: <a href="https://github.com/Aaron-Oh">Aaron-Oh</a></li>
 </ul>
 <hr>
 <h2 id="about-me">About Me</h2>
-<p>Recently I’m interested in Computer Architecture, Cloud Computing, and AI System(System for AI). Although I have a little idea of AI system, I have a sufficient passion with self-developing and research itself.</p>
+<p>Recently I’m interested in Computer Architecture, Cloud Computing, and AI system(System for AI). Especially, research experience leads my interest to AI system. Although I&rsquo;m a beginner of AI system, I have a sufficient passion with self-developing and research itself.</p>
 <hr>
 <h2 id="education">Education</h2>
 <h3 id="korea-university-seoul-south-korea-mar-2022---aug-2024">Korea University, Seoul, South Korea (Mar 2022 - Aug 2024)</h3>
@@ -40,7 +40,7 @@
 <h2 id="experience">Experience</h2>
 <h3 id="startup-project-blocktalk">StartUp Project: BlockTalk</h3>
 <ul>
-<li><strong>Apr 2024 - present</strong></li>
+<li><strong>Apr 2024 - Jun 2024</strong></li>
 <li><strong>Role: BE &amp; AI</strong></li>
 <li>Using LLM, I&rsquo;m programming chatbot acting on the block chain domain.</li>
 <li>Using Vector DB, Langchain JS, AWS Lambda, Dynamo, S3 etc.</li>
@@ -109,22 +109,31 @@
 </ul>
 <hr>
 <h2 id="research-experience">Research Experience</h2>
-<h3 id="undergraduated-research-internship-in-distributed--cloud-computing-lab-prof-heonchang-yu">Undergraduated Research Internship in Distributed &amp; Cloud Computing lab, Prof. Heonchang Yu</h3>
+<h3 id="undergraduate-research-internship-in-the-casys-lab-prof-youngjin-kwon-kaist">Undergraduate Research Internship in the CASYS lab, Prof. Youngjin Kwon @KAIST.</h3>
+<ul>
+<li><strong>Jun 2024 - present</strong></li>
+<li>CASYS Lab</li>
+<li>Assisting in expanding Low-Rank Adaptation (LoRA) techniques to support multiple models within a unified system. The research focuses on optimizing and scaling LoRA methodologies to accommodate various AI models simultaneously, enhancing system efficiency and flexibility. Involved in both the theoretical framework development and practical implementation phases using advanced machine learning libraries and cloud infrastructure.</li>
+</ul>
+<h3 id="undergraduated-research-internship-in-the-dc-lab-prof-heonchang-yu-korea-univ">Undergraduated Research Internship in the D&amp;C lab, Prof. Heonchang Yu @Korea Univ.</h3>
 <ul>
 <li><strong>Sep 2023 - Dec 2023</strong></li>
+<li>Distributed &amp; Cloud Computing Lab</li>
 <li>Joined D&amp;C lab as part of the ‘SW-Oriented University’</li>
 <li>Study Cloud-Technology like Docker, Kubernetes, Prometheus, grafana etc.</li>
 </ul>
-<h3 id="undergraduated-research-internship-in-os-lab-prof-chuck-yoo">Undergraduated Research Internship in OS lab, Prof. Chuck yoo</h3>
+<h3 id="undergraduated-research-internship-in-the-os-lab-prof-chuck-yoo-korea-univ">Undergraduated Research Internship in the OS lab, Prof. Chuck Yoo @Korea Univ.</h3>
 <ul>
 <li><strong>Sep 2022 - Jun 2023</strong></li>
+<li>Operating System Lab</li>
 <li>Joined team Xsailor in OS lab, a research group analyzing AI System.</li>
 <li>Write a paper <a href="https://github.com/JayM-Oh/JayM-Oh.github.io/blob/main/public/about/Advanced%20Scheduling%20Techniques%20for%20Distributed%20Deep%20Learning%20Training%20in%20Kubernetes%20Clusters.pdf">&ldquo;Advanced Scheduling Techniques for Distributed Deep Learning Training in Kubernetes Clusters&rdquo;</a></li>
 <li>Write a paper <a href="https://www.dbpia.co.kr/pdf/pdfView.do?nodeId=NODE11487083&amp;googleIPSandBox=false&amp;mark=0&amp;ipRange=false&amp;b2cLoginYN=false&amp;aiChatView=B&amp;readTime=5-10&amp;isPDFSizeAllowed=true&amp;accessgl=Y&amp;language=ko_KR&amp;hasTopBanner=true">&ldquo;Comparison and Analysis of Job Placement Policy of  Distributed Deep Learning in Clouds&rdquo;</a></li>
 </ul>
-<h3 id="undergraduated-research-internship-in-mlv-lab-prof-hyunwoo-j-kim">Undergraduated Research Internship in MLV lab, Prof. HyunWoo J. Kim</h3>
+<h3 id="undergraduated-research-internship-in-the-mlv-lab-prof-hyunwoo-j-kim-korea-univ">Undergraduated Research Internship in the MLV lab, Prof. HyunWoo J. Kim @Korea Univ.</h3>
 <ul>
 <li><strong>Jun 2021 - Sep 2021</strong></li>
+<li>Machine Learning &amp; Vision Lab</li>
 <li>Study Self-Supervised learning methodologies like SimCLR, MoCo, DINO. Re-implemented methods for MoCo v3 and SimCLR v2.</li>
 </ul>
 <hr>
